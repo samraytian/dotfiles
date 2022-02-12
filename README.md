@@ -1,6 +1,6 @@
 # dotfiles
 
-Samray's personal configurations and scripts.
+Samray's personal configurations and scripts managed using Stow.
 
 ## Install
 
@@ -12,13 +12,3 @@ Clone into your `$HOME` directory:
 git clone https://github.com/samraytian/dotfiles.git ~
 ```
 
-Run `stow` to symlink everything
-
-```bash
-stow */
-```
-
-or just select what you want
-```bash
-stow zsh
-```
