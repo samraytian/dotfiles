@@ -1,4 +1,4 @@
 all:
-	stow --verbose --target=$$HOME --restow */
+	stow --verbose --ignore='\.DS_Store' --target=$$HOME --restow */
 delete:
-	stow --verbose --target=$$HOME --delete */
+	stow --verbose --ignore='\.DS_Store' --target=$$HOME --delete */
