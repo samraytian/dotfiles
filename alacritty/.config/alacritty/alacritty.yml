@@ -1,0 +1,70 @@
+import:
+  # - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/tokyo_night.yml
+
+window:
+  dimensions:
+    columns: 180 
+    lines: 40 
+  padding:
+    x: 12
+    y: 4
+  opacity: 0.80
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  decorations: buttonless
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #   - SimpleFullscreen (macOS only)
+  startup_mode: Windowed 
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # JetBrainsMono Nerd Font | FiraCode Nerd Font | Cartograph CF
+    family: Cartograph CF
+    style: Regular #Light
+
+  # Bold font face
+  bold:
+    family: Cartograph CF
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Cartograph CF
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Cartograph CF
+    style: Bold Italic
+  
+  offset:
+    x: 0
+    y: 0
+
+  # Point size
+  size: 13
+
+cursor:
+  style:
+    shape: Block
+    blinking: Off
