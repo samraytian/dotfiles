@@ -7,6 +7,9 @@
 \.git
 \.gitignore
 
+*.DS_Store
+
+misc
 makefile
 
 .+~          # emacs backup files
