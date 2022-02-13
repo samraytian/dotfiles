@@ -39,27 +39,27 @@ font:
   # Normal (roman) font face
   normal:
     # JetBrainsMono Nerd Font | FiraCode Nerd Font | Cartograph CF
-    family: Cartograph CF 
+    family: Cartograph CF
     style: Regular #Light
 
   # Bold font face
   bold:
-    family: Cartograph CF 
+    family: Cartograph CF
     style: Bold
 
   # Italic font face
   italic:
-    family: Cartograph CF 
+    family: Cartograph CF
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Cartograph CF 
+    family: Cartograph CF
     style: Bold Italic
   
   offset:
     x: 0
-    y: -6 # Cartograph CF
+    y: -2 # Cartograph CF
 
   # Point size
   size: 13
