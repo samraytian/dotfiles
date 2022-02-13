@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 # open terminal
-# lctrl + cmd - return : open -n -a Alacritty
-lctrl + cmd - return : osascript ~/scripts/new-iterm-window.scpt
+lctrl + cmd - return : open -n -a Alacritty
+# lctrl + cmd - return : osascript ~/scripts/new-iterm-window.scpt
 
 # focus window
 alt - h : yabai -m window --focus west
