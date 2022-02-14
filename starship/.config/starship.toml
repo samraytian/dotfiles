@@ -1,5 +1,11 @@
 # Starship Configuration
 
+# Prompt format
+format = "$all"
+
+# Show the time prompt to the right
+right_format = "$time"
+
 # Timeout for starship to scan files (in milliseconds).
 scan_timeout = 500
 
@@ -15,6 +21,9 @@ success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
 
 # Packages
+
+[time]
+disabled = false 
 
 [swift]
 disabled = true
