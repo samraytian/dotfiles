@@ -59,7 +59,7 @@ font:
   
   offset:
     x: 0
-    y: -2 # Cartograph CF
+    y: -2 # Cartograph CF: -2, JetBrainsMono Nerd Font: 3
 
   # Point size
   size: 13
