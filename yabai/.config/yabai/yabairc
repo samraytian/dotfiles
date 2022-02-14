@@ -25,7 +25,7 @@ yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                on
+yabai -m config window_border                off 
 yabai -m config window_border_width          6
 yabai -m config active_window_border_color   0xff3b99fc
 yabai -m config normal_window_border_color   0xff555555
@@ -47,21 +47,20 @@ yabai -m config window_gap                   06
 
 # yabai -m config --space 1 layout float
 
-# yabai -m space 1 --label I
-# yabai -m space 2 --label II
-# yabai -m space 3 --label III
-# yabai -m space 4 --label IV
-# yabai -m space 5 --label V
-# yabai -m space 6 --label VI
-# yabai -m space 7 --label VII
-# yabai -m space 8 --label VIII
-# yabai -m space 9 --label IX
-# yabai -m space 10 --label X
+yabai -m space 1 --label I
+yabai -m space 2 --label II
+yabai -m space 3 --label III
+yabai -m space 4 --label IV
+yabai -m space 5 --label V
+yabai -m space 6 --label VI
+yabai -m space 7 --label VII
+yabai -m space 8 --label VIII
+yabai -m space 9 --label IX
+yabai -m space 10 --label X
 
 # yabai -m rule --add app="Safari" space=1
 # yabai -m rule --add app="iTerm"     space=2
 # yabai -m rule --add app="Alacritty" space=2
-yabai -m rule --add app="邮件" space=3
 yabai -m rule --add app="音乐" space=4
 
 yabai -m rule --add app="^App Store$" manage=off
