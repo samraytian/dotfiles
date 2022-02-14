@@ -56,11 +56,13 @@ fi
 alias vim='nvim'
 alias tree='tree -N'
 
-alias vimyabai='nvim ~/.config/yabai/yabairc'
-alias vimskhd='nvim ~/.config/skhd/skhdrc'
+alias vimzshrc='nvim ~/.zshrc'
+alias vimyabairc='nvim ~/.config/yabai/yabairc'
+alias vimskhdrc='nvim ~/.config/skhd/skhdrc'
 
-alias codeyabai='code ~/.config/yabai/yabairc'
-alias codeskhd='code ~/.config/skhd/skhdrc'
+alias codezshrc='code ~/.zshrc'
+alias codeyabairc='code ~/.config/yabai/yabairc'
+alias codeskhdrc='code ~/.config/skhd/skhdrc'
 
 alias proxyon_clash='export https_proxy=http://127.0.0.1:7890; export http_proxy=http://127.0.0.1:7890; export all_proxy=socks5://127.0.0.1:7890'
 alias proxyon_surge='export https_proxy=http://127.0.0.1:8888; export http_proxy=http://127.0.0.1:8888; export all_proxy=socks5://127.0.0.1:8889'
