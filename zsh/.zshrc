@@ -68,9 +68,6 @@ alias proxyon_clash='export https_proxy=http://127.0.0.1:7890; export http_proxy
 alias proxyon_surge='export https_proxy=http://127.0.0.1:8888; export http_proxy=http://127.0.0.1:8888; export all_proxy=socks5://127.0.0.1:8889'
 alias proxyoff='unset https_proxy; unset http_proxy; unset all_proxy'
 
-# proxy on
-proxyon_surge
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # fzf
