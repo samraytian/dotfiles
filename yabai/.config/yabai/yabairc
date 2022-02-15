@@ -19,14 +19,14 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
-yabai -m config window_shadow                on
+yabai -m config window_topmost               on
+yabai -m config window_shadow                float
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                off 
-yabai -m config window_border_width          6
+yabai -m config window_border                on
+yabai -m config window_border_width          3
 yabai -m config active_window_border_color   0xff3b99fc
 yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xffd75f5f
@@ -47,10 +47,10 @@ yabai -m config window_gap                   06
 
 # yabai -m config --space 1 layout float
 
-yabai -m space 1 --label I
-yabai -m space 2 --label II
-yabai -m space 3 --label III
-yabai -m space 4 --label IV
+yabai -m space 1 --label app
+yabai -m space 2 --label dev
+yabai -m space 3 --label mail
+yabai -m space 4 --label misc
 yabai -m space 5 --label V
 yabai -m space 6 --label VI
 yabai -m space 7 --label VII
@@ -58,25 +58,23 @@ yabai -m space 8 --label VIII
 yabai -m space 9 --label IX
 yabai -m space 10 --label X
 
-# yabai -m rule --add app="Safari" space=1
-# yabai -m rule --add app="iTerm"     space=2
-# yabai -m rule --add app="Alacritty" space=2
-yabai -m rule --add app="音乐" space=4
-
-yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^(Music|音乐)$" space=4
 
 yabai -m rule --add app="^Numi$" manage=off
+yabai -m rule --add app="^Surge$" manage=off
 yabai -m rule --add app="^Things$" manage=off
 yabai -m rule --add app="^Twitter$" manage=off
 yabai -m rule --add app="^Movist Pro$" manage=off
 yabai -m rule --add app="^CleanMyMac X$" manage=off
+# yabai -m rule --add app="^Simulator$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Raycast Preferences$" manage=off
+yabai -m rule --add app="^(Calendar|日历)$" manage=off
+yabai -m rule --add app="^(System Preferences|系统偏好设置)$" manage=off
 
 yabai -m rule --add app="^QQ$" manage=off
 yabai -m rule --add app="^微信$" manage=off
 yabai -m rule --add app="^企业微信$" manage=off
-
-yabai -m rule --add app="^日历$" manage=off
-yabai -m rule --add app="^系统偏好设置$" manage=off
 
 # yabai -m config external_bar all:27:0
 
