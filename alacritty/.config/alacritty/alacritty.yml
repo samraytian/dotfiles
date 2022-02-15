@@ -1,6 +1,14 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
 import:
-  # - ~/.config/alacritty/themes/dracula.yml
+  # Color themes: dracula, tokyo_night
   - ~/.config/alacritty/themes/tokyo_night.yml
+  # Fonts: Default, JetBrainsMono, CartographCF, FiraCode
+  - ~/.config/alacritty/fonts/CartographCF.yml
+
+font:
+  size: 13.0
 
 window:
   dimensions:
@@ -33,36 +41,6 @@ window:
   #   - Fullscreen
   #   - SimpleFullscreen (macOS only)
   startup_mode: Windowed 
-
-# Font configuration
-font:
-  # Normal (roman) font face
-  normal:
-    # JetBrainsMono Nerd Font | FiraCode Nerd Font | Cartograph CF
-    family: Cartograph CF
-    style: Regular #Light
-
-  # Bold font face
-  bold:
-    family: Cartograph CF
-    style: Bold
-
-  # Italic font face
-  italic:
-    family: Cartograph CF
-    style: Italic
-
-  # Bold italic font face
-  bold_italic:
-    family: Cartograph CF
-    style: Bold Italic
-  
-  offset:
-    x: 0
-    y: -2 # Cartograph CF: -2, JetBrainsMono Nerd Font: 3
-
-  # Point size
-  size: 13
 
 cursor:
   style:
