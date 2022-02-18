@@ -25,8 +25,12 @@ error_symbol = "[❯](bold red)"
 [time]
 disabled = false 
 
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+
 [swift]
-disabled = true
+disabled = false 
 
 [ruby]
 disabled = true
