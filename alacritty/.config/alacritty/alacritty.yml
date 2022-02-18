@@ -5,15 +5,15 @@ import:
   # Color themes: dracula, tokyo_night
   - ~/.config/alacritty/themes/tokyo_night.yml
   # Fonts: Default, JetBrainsMono, CartographCF, FiraCode
-  - ~/.config/alacritty/fonts/CartographCF.yml
+  - ~/.config/alacritty/fonts/JetBrainsMono.yml
 
 font:
   size: 13.0
 
 window:
   dimensions:
-    columns: 180 
-    lines: 40 
+    columns: 160 
+    lines: 45
   padding:
     x: 12
     y: 4
