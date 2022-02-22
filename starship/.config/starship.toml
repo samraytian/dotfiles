@@ -29,9 +29,6 @@ disabled = false
 truncation_length = 8
 truncation_symbol = "…/"
 
-[swift]
-disabled = false 
-
 [ruby]
 disabled = true
 
