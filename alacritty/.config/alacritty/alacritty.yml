@@ -4,11 +4,11 @@
 import:
   # Color themes: dracula, tokyo_night
   - ~/.config/alacritty/themes/tokyo_night.yml
-  # Fonts: Default, JetBrainsMono, CartographCF, FiraCode
+  # Fonts: Default JetBrainsMono CartographCF FiraCode
   - ~/.config/alacritty/fonts/JetBrainsMono.yml
 
 font:
-  size: 13.0
+  size: 14.0
 
 window:
   dimensions:
@@ -17,7 +17,7 @@ window:
   padding:
     x: 12
     y: 4
-  opacity: 0.96
+  opacity: 0.90
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
