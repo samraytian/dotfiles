@@ -1,0 +1,84 @@
+# Starship Configuration
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for starship to scan files (in milliseconds).
+scan_timeout = 50
+
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 400
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Format
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$package\
+$rust\
+$python\
+$lua\
+$fill\
+$cmd_duration $jobs\
+$line_break\
+$character
+"""
+
+# Packages
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+# success_symbol = "[➜](bold green)"
+# error_symbol = "[➜](bold red)"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = true
+
+[fill]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_metrics]
+disabled = false
+
+[jobs]
+symbol = " "
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[memory_usage]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold white"
+format = "[$time]($style)"
+
+[swift]
+symbol = "ﯣ "
+format = "[$symbol($version )]($style)"
+detect_files = ["Package.swift"]
+
+[rust]
+symbol = " "
+
+[lua]
+symbol = " "
+
