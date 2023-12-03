@@ -1,0 +1,14 @@
+\.git
+\.gitignore
+
+*.DS_Store
+
+misc
+makefile
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+*.org        # emacs org-mode files
+
+README.md
+LICENSE
