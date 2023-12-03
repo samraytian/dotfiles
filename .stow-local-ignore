@@ -3,12 +3,12 @@
 
 *.DS_Store
 
-misc
-makefile
-
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
-*.org        # emacs org-mode files
+^/.*\.org    # emacs org-mode files
+
+misc
+makefile
 
 README.md
 LICENSE
