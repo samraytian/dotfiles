@@ -58,9 +58,6 @@ alias ll='exa -al --git --icons'
 alias tree='exa --tree'
 alias cat='bat'
 
-# editors
-alias vim="nvim"
-
 # git
 alias gst='git status'
 alias gaa='git add --all'
@@ -69,6 +66,42 @@ alias gcmsg='git commit -m'
 alias gla='git log --graph'
 alias glo='git log --pretty=oneline'
 alias glao='git log --graph --pretty=oneline'
+
+# vim
+alias vim="nvim"
+
+# emacs
+brew_emacs_service=""
+
+function emacsd() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    if [[ -z "$brew_emacs_service" ]]; then
+      brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
+    fi
+    brew services start $brew_emacs_service
+  else
+    emacs --daemon
+  fi
+}
+
+function emacsd-stop() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    if [[ -z "$brew_emacs_service" ]]; then
+      brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
+    fi
+    brew services stop $brew_emacs_service
+  else
+    emacsclient -e "(kill-emacs)"
+  fi
+}
+
+function emacsd-restart() {
+  emacsd-stop
+  emacsd
+}
+
+alias ec="emacsclient -c -n"
+alias et="emacsclient -t"
 
 # ====================
 # Utilities
