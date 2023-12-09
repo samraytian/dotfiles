@@ -8,6 +8,7 @@
 ^/.*\.org    # emacs org-mode files
 
 misc
+icons
 makefile
 
 README.md

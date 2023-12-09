@@ -35,5 +35,5 @@ fi
 if [ -n "$(pgrep Emacs)" ]; then
     active_emacs_frame
 else
-    open -a /opt/homebrew/bin/Emacs
+    open -a /opt/homebrew/opt/emacs-plus@29/Emacs.app
 fi
