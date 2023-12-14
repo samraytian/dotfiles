@@ -2,15 +2,15 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Emacs
+# @raycast.title Emacs Client
 # @raycast.mode silent
 
 # Optional parameters:
 # @raycast.icon ./icons/emacs-elrumo2-64.png
-# @raycast.packageName Samray Scripts
+# @raycast.packageName emacsclient
 
 # Documentation:
-# @raycast.description Open emacsclient frame while emacs is in daemon mode, otherwise launch Emacs app instead.
+# @raycast.description Open emacsclient frame.
 # @raycast.author samraytain
 # @raycast.authorURL https://raycast.com/samraytain
 
@@ -24,6 +24,11 @@ function active_emacs_frame() {
     osascript -e 'tell application "Emacs" to activate'
 }
 
+if [ -n "$(pgrep Emacs)" ]; then
+    active_emacs_frame
+    exit 0
+fi
+
 if [ "$SERVER_IS_RUNNING" = "t" ]; then
     if [ "$FRAME_EXISTS" = "nil" ]; then
         emacsclient -c -n "$@"
@@ -32,8 +37,5 @@ if [ "$SERVER_IS_RUNNING" = "t" ]; then
     exit 0
 fi
 
-if [ -n "$(pgrep Emacs)" ]; then
-    active_emacs_frame
-else
-    open -a /opt/homebrew/opt/emacs-plus@29/Emacs.app
-fi
+# Fallback to open Emacs.app
+open -a Emacs.app
