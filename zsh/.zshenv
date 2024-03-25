@@ -19,7 +19,3 @@ if [[ $(uname -s) == 'Darwin' ]]; then
         eval $(/opt/homebrew/bin/brew shellenv)
     fi
 fi
-
-# Ruby & Gem
-# export GEM_HOME="$HOME/.gem"
-# export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"

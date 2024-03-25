@@ -5,6 +5,7 @@
 set -o emacs
 
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 export LESSHISTFILE=-
 
@@ -35,6 +36,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 source $ZSH/oh-my-zsh.sh
+
+# ====================
+# Path
+# ====================
+
+# Ruby
+export PATH="/opt/homebrew/lib/ruby/gems/3.2.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # ====================
 # Editor
