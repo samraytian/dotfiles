@@ -4,15 +4,17 @@
 # General configurations
 live_config_reload = true
 
+[shell]
+program = "zsh"
+
 # Environment variables to set when running the command.
 [env]
 TERM = "xterm-256color"
 
 # Window configurations
 [window]
-decorations = "buttonless"
-dynamic_padding = false
-padding.x = 12
-padding.y = 12
-opacity = 1.0
-blur = false
+decorations = "Transparent"
+dimensions = { columns = 140, lines = 48 }
+padding = { x = 12, y = 12 }
+opacity = 0.90
+blur = true 
