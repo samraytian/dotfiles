@@ -4,6 +4,14 @@
 # General configurations
 live_config_reload = true
 
+import = [
+    # Color Themes
+    "~/.config/alacritty/themes/gruvbox-dark.toml"
+    # "~/.config/alacritty/themes/gruvbox-light.toml"
+    # "~/.config/alacritty/themes/tokyo-night.toml"
+    # "~/.config/alacritty/themes/tokyo-night-storm.toml"
+]
+
 [shell]
 program = "zsh"
 
