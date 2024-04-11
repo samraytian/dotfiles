@@ -1,0 +1,6 @@
+[font]
+size = 13.0
+normal = { family = "MonaspiceNe Nerd Font Mono", style = "Regular" }
+bold = { family = "MonaspiceNe Nerd Font Mono", style = "Bold" }
+italic = { family = "MonaspiceNe Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "MonaspiceNe Nerd Font Mono", style = "Bold Italic" }
