@@ -130,4 +130,3 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 
 # starship
 eval "$(starship init zsh)"
-eval "$(gh copilot alias -- zsh)"
