@@ -42,8 +42,17 @@ source $ZSH/oh-my-zsh.sh
 # ====================
 
 # Ruby
-export PATH="/opt/homebrew/lib/ruby/gems/3.2.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK="${ANDROID_HOME}"
+export ANDROID_NDK="${ANDROID_HOME}/ndk-bundle"
+
+export PATH="${PATH}:${ANDROID_HOME}/tools"
+export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
+export PATH="${PATH}:${ANDROID_HOME}/tools/bin"
+export PATH="${PATH}:${ANDROID_HOME}/emulator"
 
 # ====================
 # Editor
