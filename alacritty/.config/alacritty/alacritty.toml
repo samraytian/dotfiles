@@ -31,6 +31,7 @@ style = "Beam"
 
 [font]
 size = 13.0
+offset = { x = 0, y = 3 }
 normal = { family = "MonaspiceNe Nerd Font Mono", style = "Regular" }
 bold = { family = "MonaspiceNe Nerd Font Mono", style = "Bold" }
 italic = { family = "MonaspiceNe Nerd Font Mono", style = "Italic" }
