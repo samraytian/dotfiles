@@ -24,7 +24,7 @@ TERM = "xterm-256color"
 
 [window]
 decorations = "Transparent"
-dimensions = { columns = 145, lines = 45 }
+# dimensions = { columns = 145, lines = 45 }
 padding = { x = 12, y = 12 }
 # opacity = 0.90
 # blur = true
