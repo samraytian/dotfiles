@@ -1,20 +1,5 @@
 #!/bin/bash
 
-## Starship prompt upgrade
-
-if ! command -v starship &> /dev/null; then
-  echo "Starship is not installed. Please install it first."
-  exit 1
-fi
-
-STARSHIP_PROMPT_PATH=~/.config/zsh/source/starship-prompt.zsh
-
-if [ ! -f $STARSHIP_PROMPT_PATH ]; then
-  touch $STARSHIP_PROMPT_PATH
-fi
-
-starship init zsh > $STARSHIP_PROMPT_PATH
-
 ## gh copilot alias upgrade
 
 if ! command -v gh copilot &> /dev/null; then
@@ -30,5 +15,5 @@ fi
 
 gh copilot alias -- zsh > $GH_COPILOT_ALIAS_PATH
 
-echo "zshrc source files upgraded!"
+echo "zsh integration upgraded!"
 exit 0

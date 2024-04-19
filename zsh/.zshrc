@@ -129,7 +129,7 @@ alias et="emacsclient -t"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 # starship
-source ~/.config/zsh/source/starship-prompt.zsh
+eval "$(starship init zsh)"
 
 # gh copilot
 source ~/.config/zsh/source/gh-copilot-alias.zsh
