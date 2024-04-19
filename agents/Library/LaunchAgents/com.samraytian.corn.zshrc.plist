@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.samraytian.corn.starship</string>
+    <string>com.samraytian.corn.zshrc</string>
 
     <key>ProgramArguments</key>
     <array>
-        <string>~/.config/zsh/scripts/upgrade-starship-prompt.sh</string>
+        <string>~/.config/zsh/zshrc-upgrade.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -27,10 +27,10 @@
     </array>
 
     <key>StandardOutPath</key>
-    <string>/tmp/samraytian/log/launchd</string>
+    <string>/tmp/samraytian/log/corn.zshrc.out</string>
 
     <key>StandardErrorPath</key>
-    <string>/tmp/samraytian/log/launchd</string>
+    <string>/tmp/samraytian/log/corn.zshrc.error</string>
 
 </dict>
 </plist>
