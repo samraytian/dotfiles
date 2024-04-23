@@ -128,8 +128,14 @@ alias et="emacsclient -t"
 # gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# starship
+# starship prompt
 eval "$(starship init zsh)"
 
-# gh copilot
+# the fuch alias
+eval $(thefuck --alias)
+
+# gh copilot alias
 source ~/.config/zsh/source/gh-copilot-alias.zsh
+
+# fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
