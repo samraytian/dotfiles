@@ -71,9 +71,9 @@ export VISUAL="$EDITOR"
 # ====================
 
 # linux common tools
-alias ls='exa'
-alias ll='exa -al --git --icons'
-alias tree='exa --tree'
+alias ls='eza'
+alias ll='eza -al --git --icons'
+alias tree='eza --tree'
 alias cat='bat'
 
 # git
