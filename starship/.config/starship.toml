@@ -4,15 +4,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Timeout for starship to scan files (in milliseconds).
-scan_timeout = 50
+scan_timeout = 30
 
 # Timeout for commands executed by starship (in milliseconds).
-command_timeout = 400
+command_timeout = 500
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Format
+# format = "$all"
 format = """
 $username\
 $hostname\
@@ -22,6 +22,7 @@ $git_state\
 $git_status\
 $git_metrics\
 $package\
+$swift\
 $rust\
 $python\
 $lua\
@@ -34,8 +35,8 @@ $character
 # Packages
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[➜](bold red)"
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
 # success_symbol = "[➜](bold green)"
 # error_symbol = "[➜](bold red)"
 
@@ -47,38 +48,13 @@ truncate_to_repo = true
 [fill]
 symbol = " "
 
-[git_branch]
-symbol = " "
-
 [git_metrics]
-disabled = false
+disabled = true
 
-[jobs]
-symbol = " "
-style = "bold red"
-number_threshold = 1
-format = "[$symbol]($style)"
+[time]
+disabled = true
 
 [cmd_duration]
 format = "[$duration]($style)"
 style = "yellow"
-
-[memory_usage]
-symbol = " "
-
-[time]
-disabled = false
-style = "bold white"
-format = "[$time]($style)"
-
-[swift]
-symbol = "ﯣ "
-format = "[$symbol($version )]($style)"
-detect_files = ["Package.swift"]
-
-[rust]
-symbol = " "
-
-[lua]
-symbol = " "
 
