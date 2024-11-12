@@ -1,43 +1,4 @@
 # ====================
-# Oh-My-ZSH
-# ====================
-
-set -o emacs
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export TERM=xterm-256color
-export LESSHISTFILE=-
-
-# Install zsh-autosuggestions & zsh-syntax-highlighting
-#
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# 
-plugins=(
-    git 
-    gitignore 
-    tmux 
-    macos 
-    xcode 
-    extract 
-    autojump 
-    colored-man-pages 
-    zsh-autosuggestions 
-    zsh-syntax-highlighting)
-
-export ZSH="$HOME/.oh-my-zsh"
-export UPDATE_ZSH_DAYS=7
-
-DISABLE_AUTO_TITLE="false"
-ENABLE_CORRECTION="false"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
-source $ZSH/oh-my-zsh.sh
-
-# ====================
 # Path
 # ====================
 
@@ -125,11 +86,23 @@ alias et="emacsclient -t"
 # Utilities
 # ====================
 
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 # starship prompt
 eval "$(starship init zsh)"
+
+# zoxide, a faster way to navigate your filesystem
+eval "$(zoxide init zsh --cmd j)"
+
+# fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 
 # the fuch alias
 eval $(thefuck --alias)
@@ -137,5 +110,3 @@ eval $(thefuck --alias)
 # gh copilot alias
 source ~/.config/zsh/source/gh-copilot-alias.zsh
 
-# fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
