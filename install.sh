@@ -32,6 +32,9 @@ set -e
 # neovim
 [ -x "$(command -v nvim)" ] || brew install neovim
 
+# tmux
+[ -x "$(command -v tmux)" ] || brew install tmux
+
 # starship
 [ -x "$(command -v starship)" ] || brew install starship
 
