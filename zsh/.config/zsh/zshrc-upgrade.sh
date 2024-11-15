@@ -1,10 +1,17 @@
 #!/bin/bash
 
+set -e
+
 ## gh copilot alias upgrade
 
+if ! command -v gh &> /dev/null; then
+  echo "gh is not installed. Install it with 'brew install gh'"
+  brew install gh
+fi
+
 if ! command -v gh copilot &> /dev/null; then
-  echo "gh copilot is not installed. Please install it first."
-  exit 1
+  echo "gh copilot extension is not installed. Install it with 'gh extension install github/gh-copilot'"
+  gh extension install github/gh-copilot
 fi
 
 GH_COPILOT_ALIAS_PATH=~/.config/zsh/source/gh-copilot-alias.zsh
