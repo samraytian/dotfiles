@@ -8,6 +8,12 @@ set -e
 # stow
 [ -x "$(command -v stow)" ] || brew install stow
 
+# neovim
+[ -x "$(command -v nvim)" ] || brew install neovim
+
+# tmux
+[ -x "$(command -v tmux)" ] || brew install tmux
+
 # bat
 [ -x "$(command -v bat)" ] || brew install bat
 
@@ -28,12 +34,6 @@ set -e
 
 # thefuck
 [ -x "$(command -v thefuck)" ] || brew install thefuck
-
-# neovim
-[ -x "$(command -v nvim)" ] || brew install neovim
-
-# tmux
-[ -x "$(command -v tmux)" ] || brew install tmux
 
 # starship
 [ -x "$(command -v starship)" ] || brew install starship
