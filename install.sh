@@ -23,9 +23,6 @@ set -e
 # zoxide
 [ -x "$(command -v zoxide)" ] || brew install zoxide
 
-# fd
-[ -x "$(command -v fd)" ] || brew install fd
-
 # fzf
 [ -x "$(command -v fzf)" ] || brew install fzf
 
