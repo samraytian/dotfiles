@@ -10,6 +10,8 @@
 misc
 icons
 makefile
+install.sh
+uninstall.sh
 
 README.md
 LICENSE
