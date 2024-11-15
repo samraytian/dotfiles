@@ -21,15 +21,13 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
-$package\
-$swift\
+$fill\
 $rust\
 $python\
 $lua\
-$fill\
 $cmd_duration $jobs\
 $line_break\
-$character
+$character\
 """
 
 # Packages
@@ -46,7 +44,7 @@ truncation_symbol = "…/"
 truncate_to_repo = true
 
 [fill]
-symbol = " "
+symbol = ' '
 
 [git_metrics]
 disabled = true
