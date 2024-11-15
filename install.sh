@@ -29,6 +29,9 @@ set -e
 # thefuck
 [ -x "$(command -v thefuck)" ] || brew install thefuck
 
+# neovim
+[ -x "$(command -v nvim)" ] || brew install neovim
+
 # starship
 [ -x "$(command -v starship)" ] || brew install starship
 
