@@ -4,13 +4,6 @@
 setopt SHARE_HISTORY
 
 # ====================
-# Path
-# ====================
-
-# Ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-# ====================
 # Editor
 # ====================
 

@@ -17,6 +17,11 @@ if [[ -f "$CARGO_HOME/env" ]]; then
   source "$CARGO_HOME/env"
 fi
 
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
 # Homebrew
 if [[ $(uname -s) == 'Darwin' ]]; then
   eval $(/opt/homebrew/bin/brew shellenv)
