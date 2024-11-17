@@ -16,4 +16,4 @@ for dir in */; do
   fi
 done
 
-stow --verbose --delete --target="$HOME" --dir=. $PACKAGES --ignore='\.DS_Store'
+stow --verbose --delete --target="$HOME" --dir=. "$PACKAGES" --ignore='\.DS_Store'

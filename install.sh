@@ -55,4 +55,4 @@ for dir in */; do
   fi
 done
 
-stow --verbose --restow --target=$HOME --dir=. $PACKAGES --ignore='\.DS_Store'
+stow --verbose --restow --target="$HOME" --dir=. "$PACKAGES" --ignore='\.DS_Store'
