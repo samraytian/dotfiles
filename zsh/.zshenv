@@ -2,6 +2,7 @@
 [[ -z "$XDG_CONFIG_HOME" ]] && export XDG_CONFIG_HOME="$HOME/.config"
 [[ -z "$XDG_CACHE_HOME" ]] && export XDG_CACHE_HOME="$HOME/.cache"
 [[ -z "$XDG_DATA_HOME" ]] && export XDG_DATA_HOME="$HOME/.local/share"
+[[ -z "$XDG_STATE_HOME" ]] && export XDG_STATE_HOME="$HOME/.local/state"
 
 # Zsh
 SHELL_SESSIONS_DISABLE=1
@@ -21,6 +22,9 @@ fi
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
+# Others
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
 # Homebrew
 if [[ $(uname -s) == 'Darwin' ]]; then
