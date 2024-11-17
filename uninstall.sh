@@ -3,7 +3,7 @@
 set -e
 
 PACKAGES=""
-EXCLUDES=". .. .git icons"
+EXCLUDES="icons"
 
 for dir in */; do
   dir=${dir%/}
