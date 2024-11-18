@@ -4,18 +4,6 @@
 setopt SHARE_HISTORY
 
 # ====================
-# Editor
-# ====================
-
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
-export VISUAL="$EDITOR"
-
-# ====================
 # Alias
 # ====================
 
@@ -34,6 +22,18 @@ alias gcmsg='git commit -m'
 alias gla='git log --graph'
 alias glo='git log --pretty=oneline'
 alias glao='git log --graph --pretty=oneline'
+
+# ====================
+# Editor
+# ====================
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+export VISUAL="$EDITOR"
 
 # vim
 alias vim="nvim"
