@@ -4,17 +4,6 @@
 setopt SHARE_HISTORY
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
-# Homebrew
-if [[ $(uname -s) == 'Darwin' ]]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
-
-# Ruby
-if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
-  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
-fi
-
 # ====================
 # Alias
 # ====================
