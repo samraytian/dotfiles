@@ -40,6 +40,11 @@ export VISUAL="$EDITOR"
 # alias vim="nvim" # default Neovim
 alias vim="NVIM_APPNAME=lazyvim nvim" # LazyVim
 
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=$config nvim $@; break; done
+}
+
 # emacs
 brew_emacs_service=""
 
