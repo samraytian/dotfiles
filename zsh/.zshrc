@@ -35,7 +35,7 @@ fi
 
 export VISUAL="$EDITOR"
 
-# vim
+# nvim
 alias vim="nvim"
 
 # emacs
