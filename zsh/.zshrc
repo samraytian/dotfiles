@@ -21,7 +21,8 @@ export VISUAL="$EDITOR"
 
 # linux common tools
 alias ls='eza'
-alias ll='eza -al --git --icons'
+alias ll='eza -l --git --icons'
+alias la='eza -al --git --icons'
 alias tree='eza --tree'
 alias cat='bat'
 
@@ -40,7 +41,7 @@ alias vim="nvim"
 # emacs
 brew_emacs_service=""
 
-function emacsd() {
+function emacs-service-start() {
   if [[ "$(uname)" == "Darwin" ]]; then
     if [[ -z "$brew_emacs_service" ]]; then
       brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
@@ -51,7 +52,7 @@ function emacsd() {
   fi
 }
 
-function emacsd-stop() {
+function emacs-service-stop() {
   if [[ "$(uname)" == "Darwin" ]]; then
     if [[ -z "$brew_emacs_service" ]]; then
       brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
@@ -62,9 +63,9 @@ function emacsd-stop() {
   fi
 }
 
-function emacsd-restart() {
-  emacsd-stop
-  emacsd
+function emacs-service-restart() {
+  emacs-service-stop
+  emacs-service-start
 }
 
 alias ec="emacsclient -c -n"
@@ -92,7 +93,7 @@ eval "$(zoxide init zsh --cmd j)"
 # fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-# the fuch alias
+# the fuck alias
 eval $(thefuck --alias)
 
 # gh copilot alias
