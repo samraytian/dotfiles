@@ -1,0 +1,32 @@
+{
+  "title": "Tap left_control for ESC or Hold for Ctrl",
+  "rules": [
+    {
+      "description": "Tap left_control for ESC or Hold for Ctrl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
