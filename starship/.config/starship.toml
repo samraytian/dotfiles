@@ -4,7 +4,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Timeout for starship to scan files (in milliseconds).
-scan_timeout = 30
+scan_timeout = 60
 
 # Timeout for commands executed by starship (in milliseconds).
 command_timeout = 500
