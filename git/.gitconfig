@@ -1,3 +1,2 @@
-[user]
-	email = samray.tian@gmail.com
-	name = Samray
+[pager]
+  branch = false
