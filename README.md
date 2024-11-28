@@ -13,7 +13,7 @@ Samray's personal configurations and scripts managed using Stow.
 - Clone into your `$HOME` directory:
 
 ```bash
-git clone https://github.com/samraytian/dotfiles.git ~/dotfiles
+git clone https://github.com/samraytian/dotfiles.git ~/.dotfiles
 ```
 
 - Run the `install.sh` script:
