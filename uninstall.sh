@@ -2,18 +2,11 @@
 
 set -e
 
-PACKAGES=""
 EXCLUDES="icons"
 
 for dir in */; do
   dir=${dir%/}
   if [[ ! "$EXCLUDES" =~ $dir ]]; then
-    if [[ -z "$PACKAGES" ]]; then
-      PACKAGES="$dir"
-    else
-      PACKAGES="$PACKAGES $dir"
-    fi
+    stow --verbose --delete --target="$HOME" --dir=. "$dir" --ignore='\.DS_Store'
   fi
 done
-
-stow --verbose --delete --target="$HOME" --dir=. "$PACKAGES" --ignore='\.DS_Store'

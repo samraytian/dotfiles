@@ -41,18 +41,12 @@ set -e
 # zsh-syntax-highlighting
 [ -d "$(brew --prefix)/share/zsh-syntax-highlighting" ] || brew install zsh-syntax-highlighting
 
-PACKAGES=""
-EXCLUDES=". .. .git icons"
+
+EXCLUDES="icons"
 
 for dir in */; do
   dir=${dir%/}
   if [[ ! "$EXCLUDES" =~ $dir ]]; then
-    if [[ -z "$PACKAGES" ]]; then
-      PACKAGES="$dir"
-    else
-      PACKAGES="$PACKAGES $dir"
-    fi
+    stow --verbose --restow --target="$HOME" --dir=. "$dir" --ignore='\.DS_Store'
   fi
 done
-
-stow --verbose --restow --target="$HOME" --dir=. "$PACKAGES" --ignore='\.DS_Store'
