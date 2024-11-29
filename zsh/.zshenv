@@ -10,6 +10,10 @@ ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$ZSH_VERSION"
 [[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
 
+# Node.js
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
@@ -17,3 +21,9 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 if [[ -f "$CARGO_HOME/env" ]]; then
   source "$CARGO_HOME/env"
 fi
+
+# Ruby
+export GEM_HOME="$XDG_DATA_HOME/gem"
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
+
+# 
