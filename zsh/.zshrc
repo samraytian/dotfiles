@@ -46,6 +46,7 @@ export VISUAL="$EDITOR"
 
 # nvim
 # alias vim="nvim" # default Neovim
+alias nvim="NVIM_APPNAME=lazyvim nvim"
 alias vim="NVIM_APPNAME=lazyvim nvim" # LazyVim
 
 vv() {
