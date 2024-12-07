@@ -2,7 +2,7 @@
 
 set -e
 
-EXCLUDES="icons"
+EXCLUDES=""
 
 for dir in */; do
   dir=${dir%/}
@@ -10,3 +10,4 @@ for dir in */; do
     stow --verbose --delete --target="$HOME" --dir=. "$dir" --ignore='\.DS_Store'
   fi
 done
+

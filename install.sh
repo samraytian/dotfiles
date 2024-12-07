@@ -41,8 +41,7 @@ set -e
 # zsh-syntax-highlighting
 [ -d "$(brew --prefix)/share/zsh-syntax-highlighting" ] || brew install zsh-syntax-highlighting
 
-
-EXCLUDES="icons"
+EXCLUDES=""
 
 for dir in */; do
   dir=${dir%/}
