@@ -1,0 +1,14 @@
+# IDE files
+*.idea/
+*.vscode/
+*.cursor/
+.cursorrules
+buildServer.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
