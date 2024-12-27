@@ -1,0 +1,8 @@
+font-family = JetBrains Mono
+font-size = 13
+
+theme = dark:catppuccin-frappe,light:catppuccin-latte
+
+window-width = 145
+window-height = 45
+
