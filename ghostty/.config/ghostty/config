@@ -1,7 +1,7 @@
-font-family = JetBrains Mono
-font-size = 13
+font-family = Hack Nerd Font Mono
+font-size = 14
 
-theme = dark:catppuccin-frappe,light:catppuccin-latte
+theme = catppuccin-mocha
 
 window-width = 145
 window-height = 45
