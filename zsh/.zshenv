@@ -16,6 +16,7 @@ export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 
 # Flutter
 export PATH=$HOME/Developer/flutter/bin:$PATH
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"

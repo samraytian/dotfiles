@@ -3,6 +3,7 @@
 *.vscode/
 *.cursor/
 .cursorrules
+.cursorignore
 buildServer.json
 
 # OS generated files
@@ -11,4 +12,9 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Flutter FVM Cache
+.fvm/versions/
+.fvm/release
+.fvm/version
 
