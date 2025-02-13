@@ -12,6 +12,3 @@ fi
 # Python
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
-# Added by Toolbox App
-export PATH="$PATH:/Users/samray/Library/Application Support/JetBrains/Toolbox/scripts"
-
