@@ -1,8 +1,16 @@
-font-family = Hack Nerd Font Mono
-font-size = 14
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
 
+# theme = dark:catppuccin-frappe,light:catppuccin-latte
 theme = catppuccin-mocha
+
+font-family = Hack Nerd Font Mono
+font-size = 13
+font-thicken = false
 
 window-width = 145
 window-height = 45
+
+window-padding-balance = true
+window-padding-color = extend
 
