@@ -1,10 +1,13 @@
-# IDE files
+# IDEA IDE files
 *.idea/
+
+# VSCode IDE files
 *.vscode/
+
+# Flutter files
 *.cursor/
 .cursorrules
 .cursorignore
-buildServer.json
 
 # OS generated files
 .DS_Store
@@ -17,4 +20,9 @@ Thumbs.db
 .fvm/versions/
 .fvm/release
 .fvm/version
+
+# Swift
+buildServer.json
+
+## Project Specific
 
