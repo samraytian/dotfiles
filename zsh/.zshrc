@@ -18,7 +18,7 @@ export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
 # linux common tools
 alias ls='eza'
-alias ll='eza -l --git --icons'
+alias ll='eza -al --git --icons'
 alias la='eza -al --git --icons'
 alias tree='eza --tree'
 alias cat='bat'
