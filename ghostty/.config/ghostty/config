@@ -2,7 +2,8 @@
 # equals doesn't matter.
 
 # theme = dark:catppuccin-frappe,light:catppuccin-latte
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
+theme = GruvboxDarkHard
 
 font-family = Hack Nerd Font Mono
 font-size = 13
