@@ -4,7 +4,7 @@
 # VSCode IDE files
 *.vscode/
 
-# Flutter files
+# Cursor IDE files
 *.cursor/
 .cursorrules
 .cursorignore
@@ -17,6 +17,7 @@ Thumbs.db
 *.log
 
 # Flutter FVM Cache
+.dart_tool/
 .fvm/versions/
 .fvm/release
 .fvm/version
