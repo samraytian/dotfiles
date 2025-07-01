@@ -14,16 +14,16 @@ set -e
 # tmux
 [ -x "$(command -v tmux)" ] || brew install tmux
 
-# bat
+# bat, an cat clone with syntax highlighting and Git integration
 [ -x "$(command -v bat)" ] || brew install bat
 
-# eza
+# eza, a replacement for ls
 [ -x "$(command -v eza)" ] || brew install eza
 
-# zoxide
+# zoxide, a smarter cd command
 [ -x "$(command -v zoxide)" ] || brew install zoxide
 
-# fzf
+# fzf, a command-line fuzzy finder
 [ -x "$(command -v fzf)" ] || brew install fzf
 
 # gh

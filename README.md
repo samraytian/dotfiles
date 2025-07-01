@@ -37,11 +37,11 @@ cd ~/dotfiles
 - To install a package:
 
 ```bash
-stow --verbose <package>
+stow --v <package>
 ```
 
 - To uninstall a package:
 
 ```bash
-stow --verbose --delete <package>
+stow --vD <package>
 ```

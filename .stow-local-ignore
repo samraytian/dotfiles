@@ -1,17 +1,13 @@
+\.DS_Store
 \.git
 \.gitignore
-
-*.DS_Store
+LICENSE.*
+README.*
 
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
 ^/.*\.org    # emacs org-mode files
 
-misc
-icons
 makefile
 install.sh
 uninstall.sh
-
-README.md
-LICENSE
