@@ -41,11 +41,4 @@ set -e
 # zsh-syntax-highlighting
 [ -d "$(brew --prefix)/share/zsh-syntax-highlighting" ] || brew install zsh-syntax-highlighting
 
-EXCLUDES=""
-
-for dir in */; do
-  dir=${dir%/}
-  if [[ ! "$EXCLUDES" =~ $dir ]]; then
-    stow --verbose --restow --target="$HOME" --dir=. "$dir" --ignore='\.DS_Store'
-  fi
-done
+stow -v --adopt .

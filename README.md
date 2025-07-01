@@ -22,26 +22,3 @@ git clone https://github.com/samraytian/dotfiles.git ~/.dotfiles
 cd ~/dotfiles
 ./install.sh
 ```
-
-## Uninstall
-
-- Run the `uninstall.sh` script:
-
-```bash
-cd ~/dotfiles
-./uninstall.sh
-```
-
-## Stow Usage
-
-- To install a package:
-
-```bash
-stow --v <package>
-```
-
-- To uninstall a package:
-
-```bash
-stow --vD <package>
-```
