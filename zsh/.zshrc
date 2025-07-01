@@ -112,6 +112,3 @@ eval "$(fzf --zsh)"
 # the fuck alias
 eval $(thefuck --alias)
 
-# gh copilot alias
-source ~/.config/zsh/source/gh-copilot-alias.zsh
-
