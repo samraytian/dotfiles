@@ -112,3 +112,14 @@ eval "$(fzf --zsh)"
 # the fuck alias
 eval $(thefuck --alias)
 
+# Yazi
+# This shell wrapper that provides the ability to change the current working directory 
+# when exiting Yazi by pressing `q`. 
+# Otherwise, press `Q` to quit without changing the directory.
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
