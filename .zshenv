@@ -5,10 +5,11 @@
 [[ -z "$XDG_STATE_HOME" ]] && export XDG_STATE_HOME="$HOME/.local/state"
 
 # Zsh
+[[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
+[[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
+
 SHELL_SESSIONS_DISABLE=1
-ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
-ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$ZSH_VERSION"
-[[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
+ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump-$ZSH_VERSION"
 
 # Node.js
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
