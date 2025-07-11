@@ -1,0 +1,60 @@
+# Starship Configuration
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for starship to scan files (in milliseconds).
+scan_timeout = 60
+
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 500
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# format = "$all"
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$rust\
+$python\
+$lua\
+$package\
+$cmd_duration $jobs\
+$line_break\
+$character\
+"""
+
+# Packages
+
+[package]
+format = "[$symbol$version]($style) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+# success_symbol = "[➜](bold green)"
+# error_symbol = "[➜](bold red)"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = true
+
+[fill]
+symbol = ' '
+
+[git_metrics]
+disabled = true
+
+[time]
+disabled = true
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
