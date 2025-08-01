@@ -2,7 +2,7 @@
 *.idea/
 
 # VSCode IDE files
-*.vscode/
+*.vscode/settings.json
 
 # Cursor IDE files
 *.cursor/
