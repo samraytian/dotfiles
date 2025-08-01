@@ -1,5 +1,5 @@
 # Font settings
-font-family = MesloLGS Nerd Font Mono
+font-family = Hack Nerd Font
 font-size = 13
 font-thicken = true
 
@@ -17,7 +17,7 @@ shell-integration-features = no-cursor
 
 # Appearance
 background-blur = true
-background-opacity = 0.92
+background-opacity = 0.96
 
 window-colorspace = display-p3
 window-padding-balance = false
