@@ -51,39 +51,6 @@ vv() {
   do NVIM_APPNAME=$config nvim $@; break; done
 }
 
-# emacs
-brew_emacs_service=""
-
-function emacs-service-start() {
-  if [[ "$(uname)" == "Darwin" ]]; then
-    if [[ -z "$brew_emacs_service" ]]; then
-      brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
-    fi
-    brew services start $brew_emacs_service
-  else
-    emacs --daemon
-  fi
-}
-
-function emacs-service-stop() {
-  if [[ "$(uname)" == "Darwin" ]]; then
-    if [[ -z "$brew_emacs_service" ]]; then
-      brew_emacs_service="$(brew services list | grep emacs | awk '{print $1}')"
-    fi
-    brew services stop $brew_emacs_service
-  else
-    emacsclient -e "(kill-emacs)"
-  fi
-}
-
-function emacs-service-restart() {
-  emacs-service-stop
-  emacs-service-start
-}
-
-alias ec="emacsclient -c -n"
-alias et="emacsclient -t"
-
 # ====================
 # Utilities
 # ====================
