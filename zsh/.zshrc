@@ -55,15 +55,6 @@ vv() {
 # Utilities
 # ====================
 
-# zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# gitignore
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
 # starship prompt
 eval "$(starship init zsh)"
 
@@ -76,6 +67,15 @@ eval "$(fzf --zsh)"
 # the fuck alias
 eval $(thefuck --alias)
 
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# gitignore
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
 # Yazi
 # This shell wrapper that provides the ability to change the current working directory 
 # when exiting Yazi by pressing `q`. 
@@ -87,3 +87,10 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+if type brew &>/dev/null; then
+	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+	
+	autoload -Uz compinit
+	compinit
+fi

@@ -35,6 +35,9 @@ set -e
 # starship
 [ -x "$(command -v starship)" ] || brew install starship
 
+# zsh-completions
+[ -d "$(brew --prefix)/share/zsh-completions" ] || brew install zsh-completions
+
 # zsh-autosuggestions
 [ -d "$(brew --prefix)/share/zsh-autosuggestions" ] || brew install zsh-autosuggestions
 

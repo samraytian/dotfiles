@@ -8,9 +8,6 @@
 [[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
 [[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
 
-SHELL_SESSIONS_DISABLE=1
-ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump-$ZSH_VERSION"
-
 # Node.js
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
