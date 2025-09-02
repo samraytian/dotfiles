@@ -35,6 +35,9 @@ set -e
 # starship
 [ -x "$(command -v starship)" ] || brew install starship
 
+# git-flow
+[ -x "$(command -v git-flow)" ] || brew install git-flow
+
 # zsh-completions
 [ -d "$(brew --prefix)/share/zsh-completions" ] || brew install zsh-completions
 
