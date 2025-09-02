@@ -5,7 +5,8 @@ font-thicken = true
 
 # Colors
 theme = catppuccin-mocha
-# theme = light:catppuccin-latte,dark:catppuccin-mocha
+#theme = light:"Builtin Solarized Light",dark:"Ghostty Default StyleDark"
+#theme = light:catppuccin-latte,dark:catppuccin-mocha
 
 # macOS behavior
 macos-option-as-alt = true
