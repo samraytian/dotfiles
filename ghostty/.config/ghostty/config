@@ -1,12 +1,12 @@
 # Font settings
-font-family = Hack Nerd Font
-font-size = 13
-font-thicken = true
+font-size = 14
+font-family = Source Code Pro
+font-thicken = false
 
 # Colors
 theme = catppuccin-mocha
-#theme = light:"Builtin Solarized Light",dark:"Ghostty Default StyleDark"
-#theme = light:catppuccin-latte,dark:catppuccin-mocha
+# theme = light:"Builtin Solarized Light",dark:"Ghostty Default StyleDark"
+# theme = light:catppuccin-latte,dark:catppuccin-mocha
 
 # macOS behavior
 macos-option-as-alt = true
