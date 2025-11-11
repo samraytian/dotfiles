@@ -1,7 +1,0 @@
-[mgr]
-linemode = "size_and_mtime"
-show_hidden = true
-
-[tasks]
-image_bound = [ 7680, 7680 ]
-
