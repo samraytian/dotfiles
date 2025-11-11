@@ -13,6 +13,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 
 # Flutter
+export FLUTTER_ROOT="$HOME/Developer/flutter"
 export PATH=$HOME/Developer/flutter/bin:$PATH
 export PATH="$HOME/.pub-cache/bin:$PATH"
 

@@ -1,3 +1,6 @@
+# Local environment files that may contain sensitive information
+.zshenv.local
+
 # IDEA IDE files
 *.idea/
 
