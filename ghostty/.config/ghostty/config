@@ -1,31 +1,25 @@
-# Font settings
+theme = Catppuccin Mocha
+
 font-size = 13
 font-family = Hack Nerd Font
 font-thicken = true
 font-thicken-strength = 128
 
-# Colors
-theme = Neobones Light
-# theme = Builtin Solarized Light
-# theme = light:"Builtin Solarized Light",dark:"Ghostty Default Style Dark"
-# theme = light:"Catppuccin Latte",dark:"Catppuccin Mocha"
-
-# macOS behavior
 macos-option-as-alt = true
 macos-titlebar-style = hidden
+window-decoration = true
 
-# Shell integration
 shell-integration = zsh
 shell-integration-features = no-cursor
+mouse-hide-while-typing = true
 
-# Appearance
 title = " "
-background-blur = false
-background-opacity = 1.00
+background-opacity = 0.90
+background-blur = true
+background-blur-radius = 20
 
-window-colorspace = display-p3
 window-padding-balance = true
-window-padding-x = 12 
+window-padding-x = 12
 window-padding-y = 8
 
 window-height=48
