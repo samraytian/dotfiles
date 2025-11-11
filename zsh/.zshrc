@@ -48,7 +48,7 @@ export VISUAL="$EDITOR"
 
 # nvim
 alias vim="nvim"
-alias nvim="NVIM_APPNAME=lazyvim nvim"
+alias nvim="NVIM_APPNAME=nvchad nvim"
 
 vv() {
   select config in nvchad lazyvim kickstart astrovim
