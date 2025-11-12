@@ -1,4 +1,4 @@
-theme = Catppuccin Mocha
+theme = light:"Neobones Light",dark:"Catppuccin Mocha"
 
 font-size = 13
 font-family = Hack Nerd Font
