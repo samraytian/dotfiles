@@ -21,6 +21,13 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/.fvm_flutter/bin:$PATH"
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 
+# Android & JAVA
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
+
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
