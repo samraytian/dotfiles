@@ -65,6 +65,9 @@ eval "$(starship init zsh)"
 # zoxide, a faster way to navigate your filesystem
 eval "$(zoxide init zsh --cmd j)"
 
+# codex
+eval "$(codex completion zsh)"
+
 # fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
