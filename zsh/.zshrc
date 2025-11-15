@@ -20,7 +20,7 @@ fi
 
 # linux common tools
 alias ls='eza'
-alias ll='eza -al --git'
+alias ll='eza -al --git --icons'
 alias la='eza -al --git --icons'
 alias tree="eza --tree -a -I '.git|.vendor'"
 alias cat='bat'
