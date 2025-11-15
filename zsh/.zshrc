@@ -59,6 +59,13 @@ vv() {
 # Utilities
 # ====================
 
+if type brew &>/dev/null; then
+	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+	
+	autoload -Uz compinit
+	compinit
+fi
+
 # starship prompt
 eval "$(starship init zsh)"
 
@@ -82,10 +89,3 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
-if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-	
-	autoload -Uz compinit
-	compinit
-fi
