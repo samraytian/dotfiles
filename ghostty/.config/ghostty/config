@@ -1,25 +1,24 @@
-theme = light:"Neobones Light",dark:"Catppuccin Mocha"
+theme = light:"Rose Pine Dawn",dark:"Catppuccin Mocha"
 
-font-size = 13
+font-size = 12
 font-family = Hack Nerd Font
 font-thicken = true
 font-thicken-strength = 128
 
 macos-option-as-alt = true
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 window-decoration = true
 
 shell-integration = zsh
 shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
-title = " "
 background-opacity = 0.90
 background-blur = true
-background-blur-radius = 20
+background-blur-radius = 40
 
 window-padding-balance = true
-window-padding-x = 12
+window-padding-x = 8
 window-padding-y = 8
 
 window-height=48
