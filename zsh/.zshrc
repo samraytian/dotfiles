@@ -10,11 +10,6 @@ SAVEHIST=10000
 
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
-# import local environment variables
-if [ -f ~/.zshenv.local ]; then
-  source ~/.zshenv.local
-fi
-
 # ====================
 # Alias
 # ====================
