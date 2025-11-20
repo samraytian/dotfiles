@@ -1,6 +1,7 @@
 # ====================
 # Environment
 # ====================
+set -o emacs
 setopt SHARE_HISTORY
 
 HISTFILE="$XDG_STATE_HOME/zsh/history"
