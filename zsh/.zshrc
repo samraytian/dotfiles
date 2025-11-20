@@ -10,6 +10,8 @@ SAVEHIST=10000
 
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
+export PATH="$HOME/.dotfiles/scripts:$PATH"
+
 # ====================
 # Alias
 # ====================
@@ -59,7 +61,7 @@ if type brew &>/dev/null; then
 	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 	
 	autoload -Uz compinit
-	compinit
+	compinit -d "$ZSH_COMPDUMP"
 fi
 
 # starship prompt
