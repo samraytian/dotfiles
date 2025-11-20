@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+BASE_DIR="$HOME/Developer/estrella"
+DIR_A="$BASE_DIR/scanmaster"
+DIR_B="$BASE_DIR/remote-scanmaster"
+
+EX_FILES=(
+    '.git/'
+    '.github/'
+    '.codex/'
+    'build/'
+    'openspec/'
+    'AGENTS.md'
+    'buildServer.json'
+)
+
+EXCLUDES=()
+for pattern in "${EX_FILES[@]}"; do
+    EXCLUDES+=("--exclude" "$pattern")
+done
+
+sync-directories "${EXCLUDES[@]}" "$DIR_A" "$DIR_B"
