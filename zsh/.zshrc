@@ -11,6 +11,12 @@ SAVEHIST=10000
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
 export PATH="$HOME/.dotfiles/scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# import local environment variables
+if [ -f ~/.zshenv.local ]; then
+  source ~/.zshenv.local
+fi
 
 # ====================
 # Alias
