@@ -8,9 +8,6 @@ set -e
 # stow
 [ -x "$(command -v stow)" ] || brew install stow
 
-# neovim
-[ -x "$(command -v nvim)" ] || brew install neovim
-
 # tmux
 [ -x "$(command -v tmux)" ] || brew install tmux
 
@@ -20,11 +17,15 @@ set -e
 # eza, a replacement for ls
 [ -x "$(command -v eza)" ] || brew install eza
 
+# fzf, a command-line fuzzy finder
+[ -x "$(command -v fzf)" ] || brew install fzf
+
 # zoxide, a smarter cd command
 [ -x "$(command -v zoxide)" ] || brew install zoxide
 
-# fzf, a command-line fuzzy finder
-[ -x "$(command -v fzf)" ] || brew install fzf
+# tree-sitter and tree-sitter-cli
+[ -x "$(command -v tree-sitter)" ] || brew install tree-sitter
+[ -x "$(command -v tree-sitter-cli)" ] || brew install tree-sitter-cli
 
 # gh
 [ -x "$(command -v gh)" ] || brew install gh
