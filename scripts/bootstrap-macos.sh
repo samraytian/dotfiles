@@ -19,6 +19,7 @@ packages=(
   "tree-sitter-cli"
   "gh"
   "git-flow"
+  "watchexec"
   "thefuck"
   "starship"
   "zsh-completions"
