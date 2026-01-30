@@ -24,8 +24,9 @@ fi
 
 # linux common tools
 alias ls='eza'
+alias la='eza -a --git'
 alias ll='eza -al --git'
-alias la='eza -al --git --icons'
+alias lla='eza -al --git --icons'
 alias tree="eza --tree -a -I '.git|.vendor'"
 alias cat='bat'
 
@@ -49,6 +50,10 @@ else
 fi
 
 export VISUAL="$EDITOR"
+
+alias vim='nvim'
+alias lazyvim='NVIM_APPNAME="nvim-lazyvim" nvim'
+alias nvchad='NVIM_APPNAME="nvim-nvchad" nvim'
 
 # ====================
 # Utilities
