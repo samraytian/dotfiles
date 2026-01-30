@@ -1,26 +1,28 @@
-theme = light:"Rose Pine Dawn",dark:"Catppuccin Mocha"
+theme = Rose Pine Moon
+# theme = light:Rose Pine Dawn,dark:Rose Pine Moon
 
-font-size = 12
-font-family = Hack Nerd Font
+# Hack Nerd Font, Maple Mono NF, JetBrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font
+
+font-size = 13
 font-thicken = true
-font-thicken-strength = 128
 
+# Available values: "native", "transparent", "tabs", and "hidden".
+macos-titlebar-style = hidden 
 macos-option-as-alt = true
-macos-titlebar-style = tabs
-window-decoration = true
+window-decoration = false
 
 shell-integration = zsh
 shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
-background-opacity = 0.90
+background-opacity = 1.0
 background-blur = true
 background-blur-radius = 40
 
 window-padding-balance = true
 window-padding-x = 8
-window-padding-y = 8
+window-padding-y = 4
 
-window-height=48
-window-width=140
-
+window-height=45
+window-width=150
