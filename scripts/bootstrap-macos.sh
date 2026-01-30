@@ -17,6 +17,12 @@ set -e
 # eza, a replacement for ls
 [ -x "$(command -v eza)" ] || brew install eza
 
+# ripgrep, a line-oriented search tool that recursively searches the current directory for a regex pattern
+[ -x "$(command -v rg)" ] || brew install ripgrep
+
+# fd, a simple, fast and user-friendly alternative to find
+[ -x "$(command -v fd)" ] || brew install fd
+
 # fzf, a command-line fuzzy finder
 [ -x "$(command -v fzf)" ] || brew install fzf
 
