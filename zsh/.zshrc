@@ -66,21 +66,6 @@ if type brew &>/dev/null; then
 	compinit -d "$ZSH_COMPDUMP"
 fi
 
-# starship prompt
-eval "$(starship init zsh)"
-
-# zoxide, a faster way to navigate your filesystem
-eval "$(zoxide init zsh --cmd j)"
-
-# codex
-eval "$(codex completion zsh)"
-
-# fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-
-# the fuck alias
-eval $(thefuck --alias)
-
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -89,3 +74,18 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# zoxide, a faster way to navigate your filesystem
+eval "$(zoxide init zsh --cmd j)"
+
+# fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# the fuck alias
+eval $(thefuck --alias)
+
+# starship prompt
+eval "$(starship init zsh)"
+
+# codex
+eval "$(codex completion zsh)"
