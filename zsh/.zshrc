@@ -72,9 +72,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# gitignore
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
 # zoxide, a faster way to navigate your filesystem
 eval "$(zoxide init zsh --cmd j)"
 
