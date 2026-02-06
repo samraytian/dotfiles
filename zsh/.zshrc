@@ -29,10 +29,10 @@ alias cat='bat'
 alias gst='git status'
 alias gaa='git add --all'
 alias gco='git checkout'
-alias gcmsg='git commit -m'
-alias gla='git log --graph'
-alias glo='git log --pretty=oneline'
-alias glao='git log --graph --pretty=oneline'
+alias gcmsg="git commit -m"
+alias gca="git commit --amend --no-edit"
+alias gcam="git commit --amend -m"
+alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
 
 # ====================
 # Editor
