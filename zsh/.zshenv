@@ -11,17 +11,12 @@
 export SHELL_SESSIONS_DISABLE=1
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
-# Node.js
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
-
 # Flutter
 export FLUTTER_ROOT="$HOME/Developer/flutter"
 export PATH=$HOME/Developer/flutter/bin:$PATH
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # FVM
-export PATH="$HOME/.fvm_flutter/bin:$PATH"
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 
 # Android & JAVA
