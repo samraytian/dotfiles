@@ -16,6 +16,7 @@ shell-integration = zsh
 shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
+background-opacity-cells = true
 background-opacity = 1.0
 background-blur = true
 background-blur-radius = 40
