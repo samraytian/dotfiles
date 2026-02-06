@@ -38,17 +38,10 @@ alias glao='git log --graph --pretty=oneline'
 # Editor
 # ====================
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
+export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
 alias vim='nvim'
-alias lazyvim='NVIM_APPNAME="nvim-lazyvim" nvim'
-alias nvchad='NVIM_APPNAME="nvim-nvchad" nvim'
 
 # ====================
 # Utilities
