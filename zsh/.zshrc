@@ -4,6 +4,8 @@
 set -o emacs
 setopt SHARE_HISTORY
 
+LANG=en_US.UTF-8
+
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
@@ -49,7 +51,7 @@ alias vim='nvim'
 
 if type brew &>/dev/null; then
 	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-	
+
 	autoload -Uz compinit
 	compinit -d "$ZSH_COMPDUMP"
 fi
