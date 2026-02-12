@@ -8,7 +8,7 @@ font-size = 13
 font-thicken = true
 
 # Available values: "native", "transparent", "tabs", and "hidden".
-macos-titlebar-style = hidden 
+macos-titlebar-style = hidden
 macos-option-as-alt = true
 window-decoration = false
 
