@@ -20,7 +20,6 @@ packages=(
   "gh"
   "git-flow"
   "watchexec"
-  "thefuck"
   "starship"
   "zsh-completions"
   "zsh-autosuggestions"
