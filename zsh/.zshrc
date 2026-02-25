@@ -68,9 +68,6 @@ eval "$(zoxide init zsh --cmd j)"
 # fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-# the fuck alias
-eval $(thefuck --alias)
-
 # starship prompt
 eval "$(starship init zsh)"
 
