@@ -12,8 +12,8 @@ export SHELL_SESSIONS_DISABLE=1
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
 # Flutter
-export FLUTTER_ROOT="$HOME/Developer/flutter"
-export PATH=$HOME/Developer/flutter/bin:$PATH
+export FLUTTER_ROOT="$HOME/dev/sdk/flutter"
+export PATH="$FLUTTER_ROOT/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # FVM
