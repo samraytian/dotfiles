@@ -4,6 +4,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+export TERMINFO=/usr/share/terminfo/
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+
 # Zsh
 [[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
 [[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
@@ -14,6 +17,11 @@ export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 # CocoaPods
 export CP_HOME_DIR="$XDG_DATA_HOME/cocoapods"
 export CP_CACHE_DIR="$XDG_CACHE_HOME/cocoapods"
+
+# Python
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 
 # Flutter
 export FLUTTER_ROOT="$HOME/dev/sdk/flutter"

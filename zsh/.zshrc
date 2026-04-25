@@ -10,8 +10,6 @@ HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
 
-export LESSHISTFILE="$XDG_STATE_HOME"/less/history
-
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
