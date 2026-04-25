@@ -18,6 +18,10 @@ export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 export CP_HOME_DIR="$XDG_DATA_HOME/cocoapods"
 export CP_CACHE_DIR="$XDG_CACHE_HOME/cocoapods"
 
+# NodeJS
+export npm_config_userconfig="$XDG_CONFIG_HOME/npm/config"
+export npm_config_cache="$XDG_CACHE_HOME/npm"
+
 # Python
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
@@ -60,3 +64,6 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
 
 # Codex
 export CODEX_HOME="$XDG_CONFIG_HOME/codex"
+
+# Copilot
+export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
