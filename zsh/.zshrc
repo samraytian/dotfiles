@@ -19,9 +19,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # linux common tools
 alias ls='eza'
-alias la='eza -la --git'
+alias la='eza -a --git'
 alias ll='eza -l --git'
-alias lla='eza -la --git --icons'
+alias lla='eza -la --git'
 alias tree="eza --tree -a -I '.git|.vendor'"
 alias cat='bat'
 
