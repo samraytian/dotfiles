@@ -13,3 +13,6 @@ stow -R -v starship --target="$HOME"
 
 # ghostty
 stow -R -v ghostty --target="$HOME"
+
+# rime
+stow -R -v rime --target="$HOME"
