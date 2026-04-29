@@ -207,6 +207,8 @@ patch:
     # 在以下 app 默认使用英文输入
     com.apple.finder:
       ascii_mode: true
+    com.raycast.macos:
+      ascii_mode: true
     com.googlecode.iterm2:
       vim_mode: true
       ascii_mode: true
