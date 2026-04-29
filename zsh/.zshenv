@@ -28,7 +28,7 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 
 # Flutter
-export FLUTTER_ROOT="$HOME/dev/sdk/flutter"
+export FLUTTER_ROOT="$HOME/Code/sdk/flutter"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
@@ -61,9 +61,6 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle/config"
 export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
-
-# Codex
-export CODEX_HOME="$XDG_CONFIG_HOME/codex"
 
 # Copilot
 export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
