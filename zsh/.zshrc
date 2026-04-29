@@ -41,6 +41,7 @@ alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bol
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
+alias vi='nvim'
 alias vim='nvim'
 
 # ====================
