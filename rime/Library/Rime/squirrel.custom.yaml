@@ -209,6 +209,8 @@ patch:
       ascii_mode: true
     com.raycast.macos:
       ascii_mode: true
+    com.google.Chrome:
+      ascii_mode: true
     com.googlecode.iterm2:
       vim_mode: true
       ascii_mode: true
