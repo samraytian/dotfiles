@@ -28,7 +28,7 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 
 # Flutter
-export FLUTTER_ROOT="$HOME/Code/sdk/flutter"
+export FLUTTER_ROOT="$HOME/Dev/sdk/flutter"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
