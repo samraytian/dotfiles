@@ -5,8 +5,8 @@ patch:
   style:
     # color_scheme: wechat_light
     # 选择皮肤，亮色与暗色主题
-    color_scheme: mint_light_blue
-    color_scheme_dark: mint_dark_blue
+    color_scheme: mint_light_green
+    color_scheme_dark: mint_dark_green
     
     # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
 
