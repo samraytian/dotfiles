@@ -217,6 +217,10 @@ patch:
     com.mitchellh.ghostty:
       vim_mode: true
       ascii_mode: true
+    org.gnu.Emacs:
+      ascii_mode: true
+    com.DanPristupov.Fork:
+      ascii_mode: true
     com.apple.dt.Xcode:
       vim_mode: true
       ascii_mode: true
