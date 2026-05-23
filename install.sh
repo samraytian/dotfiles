@@ -115,9 +115,11 @@ brew install --cask mac-mouse-fix
 
 echo "Installing AI tools..."
 
-curl -fsSL https://claude.ai/install.sh | bash
-brew install --cask codex
 brew install --cask cc-switch
+brew install --cask codex
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://herdr.dev/install.sh | sh
+curl -fsSL https://pi.dev/install.sh | sh
 
 ## =====================
 ## MacOS settings
