@@ -16,3 +16,6 @@ stow -R -v ghostty --target="$HOME"
 
 # rime
 stow -R -v rime --target="$HOME"
+
+# tmux
+stow -R -v tmux --target="$HOME"
