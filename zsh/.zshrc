@@ -10,8 +10,8 @@ HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
 
-export PATH="$HOME/.dotfiles/scripts:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export TERMINFO=/usr/share/terminfo/
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
 # ====================
 # Alias
