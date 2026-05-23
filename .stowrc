@@ -1,8 +1,9 @@
 --ignore=.stowrc
 --ignore=.DS_Store
+--ignore=.claude
 --ignore=.git
 --ignore=.gitignore
---ignore=setup.sh
+--ignore=install.sh
 --ignore=atuin/*
 --ignore=scripts/*
 --ignore=README.md
