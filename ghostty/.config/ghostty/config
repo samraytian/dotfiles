@@ -4,7 +4,7 @@
 term = xterm-256color
 
 # Theme
-theme = Gruvbox Dark Hard
+theme = Catppuccin Mocha
 
 # Font
 # Alternatives: Hack Nerd Font, Source Code Pro, JetBrainsMono Nerd Font
