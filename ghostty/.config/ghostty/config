@@ -1,30 +1,43 @@
-theme = Rose Pine Moon
-# theme = light:Rose Pine Dawn,dark:Rose Pine Moon
+# Reload config with shift + cmd + ,
 
-# Hack Nerd Font, Maple Mono NF, JetBrainsMono Nerd Font
+# Terminal
+term = xterm-256color
+
+# Theme
+theme = Gruvbox Dark Hard
+
+# Font
+# Alternatives: Hack Nerd Font, Source Code Pro, JetBrainsMono Nerd Font
 font-family = JetBrainsMono Nerd Font
-
 font-size = 13
 font-thicken = true
 
-# Available values: "native", "transparent", "tabs", and "hidden".
-macos-titlebar-style = hidden
-macos-option-as-alt = true
-window-decoration = false
-
-shell-integration = zsh
-shell-integration-features = no-cursor
-mouse-hide-while-typing = true
-
+# Background
 background-opacity-cells = true
-background-opacity = 1.0
+background-opacity = 0.9
 background-blur = true
 background-blur-radius = 40
 
+# Window
+window-decoration = auto
 window-padding-color = extend
 window-padding-balance = true
-window-padding-x = 6
-window-padding-y = 0
+window-padding-x = 8, 8
+window-padding-y = 8, 8
+window-height = 44
+window-width = 150
 
-window-height=50
-window-width=150
+# macOS
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+# Shell
+shell-integration = zsh
+shell-integration-features = no-cursor
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
