@@ -61,9 +61,7 @@ export CP_HOME_DIR="$XDG_DATA_HOME/cocoapods"
 export CP_CACHE_DIR="$XDG_CACHE_HOME/cocoapods"
 
 # Flutter
-export FLUTTER_ROOT="$HOME/Dev/sdk/flutter"
-export PATH="$FLUTTER_ROOT/bin:$PATH"
-export PATH="$HOME/.pub-cache/bin:$PATH"
+export PUB_CACHE="$HOME/.pub-cache"
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 
 # AI Tools
