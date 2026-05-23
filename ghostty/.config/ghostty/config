@@ -28,6 +28,7 @@ window-height = 46
 window-width = 150
 
 # macOS
+# Available values are: "native", "transparent", "tabs", and "hidden".
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 
