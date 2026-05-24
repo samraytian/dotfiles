@@ -46,6 +46,7 @@ fi
 
 echo "Installing must-have packages..."
 brew install git
+brew install tmux
 brew install stow
 brew install bat        # cat 的增强版本，支持语法高亮和 Git 状态
 brew install cmake      # 跨平台的开源构建系统，支持多种编译器和平台
@@ -59,9 +60,8 @@ brew install watchexec  # 监视文件系统的变化，并在变化发生时执
 brew install zoxide     # 更智能的 cd 命令，学习你的习惯，轻松跳转到常用目录
 
 echo "Installing terminal utilities..."
-brew install tmux
-brew install starship
 brew install neovim
+brew install starship
 brew install zsh-completions
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
