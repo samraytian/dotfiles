@@ -22,9 +22,9 @@ background-blur-radius = 40
 window-decoration = auto
 window-padding-color = extend
 window-padding-balance = true
-window-padding-x = 8, 8
-window-padding-y = 4, 4
-window-height = 46
+window-padding-x = 8
+window-padding-y = 8,0
+window-height = 49
 window-width = 150
 
 # macOS
