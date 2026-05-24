@@ -85,7 +85,7 @@ echo "Setting up Ruby ..."
 brew install ruby
 
 echo "Setting up Rust ..."
-brew install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "Setting up Lua ..."
 brew install lua
