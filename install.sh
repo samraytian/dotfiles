@@ -44,7 +44,7 @@ else
   echo "✅ Homebrew already installed"
 fi
 
-echo "Installing must-have packages with Homebrew..."
+echo "Installing must-have packages..."
 brew install git
 brew install stow
 brew install bat        # cat 的增强版本，支持语法高亮和 Git 状态
@@ -58,7 +58,7 @@ brew install shellcheck # Shell 脚本的静态分析工具，帮助你发现和
 brew install watchexec  # 监视文件系统的变化，并在变化发生时执行指定的命令，适用于自动化构建、测试和部署等场景
 brew install zoxide     # 更智能的 cd 命令，学习你的习惯，轻松跳转到常用目录
 
-echo "Installing terminal utilities with Homebrew..."
+echo "Installing terminal utilities..."
 brew install tmux
 brew install starship
 brew install neovim
@@ -75,25 +75,25 @@ brew install sqlite
 brew install tree-sitter
 brew install tree-sitter-cli
 
-echo "Setting up Node.js development environment..."
+echo "Setting up Node.js ..."
 brew install node
 
-echo "Setting up Python development environment..."
+echo "Setting up Python ..."
 brew install python
 
-echo "Setting up Ruby development environment..."
+echo "Setting up Ruby ..."
 brew install ruby
 
-echo "Setting up Rust development environment..."
+echo "Setting up Rust ..."
 brew install rust
 
-echo "Setting up Lua development environment..."
+echo "Setting up Lua ..."
 brew install lua
 brew install luajit
 brew install luarocks
 brew install stylua
 
-echo "Setting up Flutter development environment..."
+echo "Setting up Flutter ..."
 brew install --cask flutter
 brew install fvm
 dart --disable-analytics
