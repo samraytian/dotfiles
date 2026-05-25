@@ -1,14 +1,19 @@
+set -o emacs
+
 # ====================
 # Environment
 # ====================
-set -o emacs
-setopt SHARE_HISTORY
-
 LANG=en_US.UTF-8
 
 HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=20000
-SAVEHIST=10000
+HISTSIZE=20000  # 当前会话内存中保留的历史条数
+SAVEHIST=20000  # 写入 HISTFILE 持久化的历史条数（与 HISTSIZE 保持一致，避免退出时被截断）
+
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS    # 新条目会删除旧的相同条目
+setopt HIST_SAVE_NO_DUPS       # 保存到文件时去重
+setopt HIST_FIND_NO_DUPS       # 搜索时不显示重复
+setopt HIST_REDUCE_BLANKS      # 去除多余空格
 
 export TERMINFO=/usr/share/terminfo/
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
