@@ -9,6 +9,11 @@ HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=20000  # 当前会话内存中保留的历史条数
 SAVEHIST=20000  # 写入 HISTFILE 持久化的历史条数（与 HISTSIZE 保持一致，避免退出时被截断）
 
+# 过滤掉首个词不是已知命令的条目（避免 typo 进入历史）
+zshaddhistory() {
+  whence ${${(z)1}[1]} >/dev/null || return 1
+}
+
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS    # 新条目会删除旧的相同条目
 setopt HIST_SAVE_NO_DUPS       # 保存到文件时去重
