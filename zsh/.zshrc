@@ -31,10 +31,10 @@ setopt HIST_REDUCE_BLANKS      # 去除多余空格
 # ====================
 
 # linux common tools
-alias ls='eza'
-alias la='eza -a --git'
-alias ll='eza -la --git'
-alias tree="eza --tree -a -I '.git|.vendor'"
+alias ls='eza .'
+alias la='eza . -a --git'
+alias ll='eza . -la --git'
+alias tree="eza . --tree -a -I '.git|.vendor'"
 alias cat='bat'
 
 # git
