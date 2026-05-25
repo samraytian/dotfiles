@@ -1,11 +1,18 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+
 [character]
 disabled = false
 success_symbol = "[➜](bold fg:green)"
 error_symbol = "[✘](bold fg:red)"
 vimcmd_symbol = "[:](bold fg:yellow)"
+
+[line_break]
+disabled = true
+
+[cmd_duration]
+disabled = true
 
 [aws]
 symbol = "  "
@@ -61,6 +68,7 @@ symbol = "  "
 
 [git_branch]
 symbol = " "
+format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_commit]
 tag_symbol = '  '
