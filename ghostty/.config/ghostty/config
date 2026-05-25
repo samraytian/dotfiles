@@ -4,7 +4,7 @@
 term = xterm-256color
 
 # Theme
-theme = Catppuccin Mocha
+theme = Gruvbox Dark Hard
 
 # Font
 # Alternatives: Hack Nerd Font, Source Code Pro, JetBrainsMono Nerd Font
@@ -14,7 +14,7 @@ font-thicken = true
 
 # Background
 background-opacity-cells = true
-background-opacity = 0.9
+background-opacity = 1.0
 background-blur = true
 background-blur-radius = 40
 
@@ -25,7 +25,7 @@ window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8,0
 window-height = 49
-window-width = 150
+window-width = 168
 
 # macOS
 # Available values are: "native", "transparent", "tabs", and "hidden".
