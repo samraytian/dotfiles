@@ -101,6 +101,7 @@ flutter --disable-analytics
 
 echo "Installing applications with Homebrew Cask..."
 brew install --cask ghostty
+brew install --cask iterm2
 brew install --cask raycast
 brew install --cask visual-studio-code
 brew install --cask font-hack-nerd-font
