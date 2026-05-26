@@ -96,8 +96,6 @@ brew install stylua
 echo "Setting up Flutter ..."
 brew install --cask flutter
 brew install fvm
-dart --disable-analytics
-flutter --disable-analytics
 
 echo "Installing applications with Homebrew Cask..."
 brew install --cask ghostty
