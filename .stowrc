@@ -6,5 +6,6 @@
 --ignore=install.sh
 --ignore=atuin/*
 --ignore=scripts/*
+--ignore=tmux/.config/tmux/plugins/*
 --ignore=README.md
 --ignore=LICENSE
