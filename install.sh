@@ -48,16 +48,18 @@ echo "Installing must-have packages..."
 brew install git
 brew install tmux
 brew install stow
-brew install bat        # cat 的增强版本，支持语法高亮和 Git 状态
-brew install cmake      # 跨平台的开源构建系统，支持多种编译器和平台
-brew install eza        # ls 的增强版本，支持 Git 状态和图标
-brew install fzf        # 模糊查找工具
-brew install fd         # find 的增强版本，更快且更易用
-brew install mole       # CleanMyMac 的命令行替代
-brew install ripgrep    # rg 的增强版本，递归搜索目录中的正则表达式，同时尊重 .gitignore
-brew install shellcheck # Shell 脚本的静态分析工具，帮助你发现和修复脚本中的错误和潜在问题
-brew install watchexec  # 监视文件系统的变化，并在变化发生时执行指定的命令，适用于自动化构建、测试和部署等场景
-brew install zoxide     # 更智能的 cd 命令，学习你的习惯，轻松跳转到常用目录
+brew install bat                    # cat 的增强版本，支持语法高亮和 Git 状态
+brew install cmake                  # 跨平台的开源构建系统，支持多种编译器和平台
+brew install eza                    # ls 的增强版本，支持 Git 状态和图标
+brew install fzf                    # 模糊查找工具
+brew install fd                     # find 的增强版本，更快且更易用
+brew install mole                   # CleanMyMac 的命令行替代
+brew install ripgrep                # rg 的增强版本，递归搜索目录中的正则表达式，同时尊重 .gitignore
+brew install shellcheck             # Shell 脚本的静态分析工具
+brew install shfmt                  # Shell 脚本的格式化工具
+brew install bash-language-server   # Bash 语言服务器，提供代码补全、错误检查等功能
+brew install watchexec              # 监视文件系统的变化，并在变化发生时执行指定的命令，适用于自动化构建、测试和部署等场景
+brew install zoxide                 # 更智能的 cd 命令，学习你的习惯，轻松跳转到常用目录
 
 echo "Installing terminal utilities..."
 brew install neovim
@@ -67,10 +69,10 @@ brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
 echo "Installing DevOps tools ..."
-brew install asc          # App Store Connect API 的命令行工具 https://asccli.sh/
-brew install awscli       # AWS Command Line Interface
-brew install gh           # GitHub CLI
-brew install chezscheme   # Chez Scheme 是一个高性能的 Scheme 实现
+brew install asc        # App Store Connect API 的命令行工具 https://asccli.sh/
+brew install awscli     # AWS Command Line Interface
+brew install gh         # GitHub CLI
+brew install chezscheme # Chez Scheme 是一个高性能的 Scheme 实现
 brew install sqlite
 brew install tree-sitter
 brew install tree-sitter-cli
@@ -125,12 +127,12 @@ curl -fsSL https://pi.dev/install.sh | sh
 ## =====================
 
 echo "Set key repeat rate and delay..."
-defaults write NSGlobalDomain KeyRepeat -int 2          # 设置按键重复的速度，数值越小速度越快
-defaults write NSGlobalDomain InitialKeyRepeat -int 15  # 设置按键重复的延迟，数值越小延迟越短
+defaults write NSGlobalDomain KeyRepeat -int 2         # 设置按键重复的速度，数值越小速度越快
+defaults write NSGlobalDomain InitialKeyRepeat -int 15 # 设置按键重复的延迟，数值越小延迟越短
 
 echo "Set trackpad and mouse tracking speed..."
-defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2  # 设置触控板的跟踪速度，数值越大速度越快
-defaults write NSGlobalDomain com.apple.mouse.scaling -float 2     # 设置鼠标的跟踪速度，数值越大速度越快
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2 # 设置触控板的跟踪速度，数值越大速度越快
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 2    # 设置鼠标的跟踪速度，数值越大速度越快
 
 echo "Enable trackpad tap to click..."
 defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
