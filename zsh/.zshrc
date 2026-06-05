@@ -82,5 +82,8 @@ eval "$(fzf --zsh)"
 # starship prompt
 eval "$(starship init zsh)"
 
-# codex
+# codex completions
 eval "$(codex completion zsh)"
+
+# bun completions
+[ -s "/Users/samray/.local/share/bun/_bun" ] && source "/Users/samray/.local/share/bun/_bun"

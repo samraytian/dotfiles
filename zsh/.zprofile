@@ -18,6 +18,14 @@ export PATH="$HOME/.local/bin:$PATH"
 export SHELL_SESSIONS_DISABLE=1
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
+# Bun
+export BUN_INSTALL="$XDG_DATA_HOME/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Node.js
+export npm_config_userconfig="$XDG_CONFIG_HOME/npm/config"
+export npm_config_cache="$XDG_CACHE_HOME/npm"
+
 # Python
 if [ -d "$(brew --prefix python)/libexec/bin" ]; then
   export PATH="$(brew --prefix python)/libexec/bin:$PATH"
@@ -26,9 +34,6 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 
-# Node.js
-export npm_config_userconfig="$XDG_CONFIG_HOME/npm/config"
-export npm_config_cache="$XDG_CACHE_HOME/npm"
 
 # Ruby
 if [ -d "$(brew --prefix ruby)/bin" ]; then
