@@ -1,0 +1,4 @@
+patch:
+  "switcher/hotkeys":
+    - "Control+Shift+grave"  # 将快捷键改为 Ctrl + Shift + ` 
+
