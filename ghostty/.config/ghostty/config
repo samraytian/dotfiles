@@ -14,7 +14,7 @@ font-thicken = true
 
 # Background
 background-opacity-cells = true
-background-opacity = 1.0
+background-opacity = 0.92
 background-blur = true
 background-blur-radius = 40
 
