@@ -104,6 +104,7 @@ brew install --cask ghostty
 brew install --cask iterm2
 brew install --cask raycast
 brew install --cask visual-studio-code
+brew install --cask input-source-pro
 brew install --cask font-hack-nerd-font
 brew install --cask font-source-code-pro
 brew install --cask font-jetbrains-mono-nerd-font
