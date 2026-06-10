@@ -144,6 +144,9 @@ echo "Enable trackpad three-finger drag..."
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
+echo "Disable CursorUIViewService to prevent cursor lag and memory leak..."
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+
 killall Dock &>/dev/null || true
 
 ## =====================
