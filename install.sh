@@ -62,11 +62,23 @@ brew install watchexec              # 监视文件系统的变化，并在变化
 brew install zoxide                 # 更智能的 cd 命令，学习你的习惯，轻松跳转到常用目录
 
 echo "Installing terminal utilities..."
-brew install neovim
 brew install starship
 brew install zsh-completions
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
+
+echo "Installing Editors and IDEs..."
+brew install --cask visual-studio-code
+
+brew install neovim
+
+brew tap laishulu/homebrew
+brew trust --formula laishulu/homebrew/macism
+berw install macism
+
+brew tap d12frosted/emacs-plus
+brew trust brew trust d12frosted/emacs-plus
+brew install --cask emacs-plus-app
 
 echo "Installing DevOps tools ..."
 brew install asc        # App Store Connect API 的命令行工具 https://asccli.sh/
