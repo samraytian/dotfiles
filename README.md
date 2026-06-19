@@ -6,5 +6,19 @@ Sam's personal dotfiles.
 To set up the dotfiles and bootstrap the environment, you can run the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/bootstrap/bootstrap.sh | bash
 ```
+
+## Managing symlinks
+
+The `dots` command manages the symlinks from `~/.config` (and `$HOME`) to the configs in `packages/`.
+
+```bash
+# Create all symlinks
+~/dotfiles/bin/dots install
+
+# Remove all symlinks
+~/dotfiles/bin/dots uninstall
+```
+
+`uninstall` only removes entries that are symlinks, so your real config files are left untouched.
