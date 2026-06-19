@@ -1,0 +1,56 @@
+#!/bin/bash
+
+set -euo pipefail
+
+PKG_DIR="$HOME/dotfiles/packages"
+
+install() {
+  # Git
+  ln -sfn "$PKG_DIR/git/.gitconfig" "$HOME/.gitconfig"
+
+  # Zsh
+  ln -sfn "$PKG_DIR/zsh/.zshrc" "$HOME/.zshrc"
+  ln -sfn "$PKG_DIR/zsh/.zprofile" "$HOME/.zprofile"
+
+  # Ghostty
+  ln -sfn "$PKG_DIR/ghostty" "$HOME/.config/ghostty"
+
+  # Tmux
+  ln -sfn "$PKG_DIR/tmux" "$HOME/.config/tmux"
+
+  # Starship
+  ln -sfn "$PKG_DIR/starship.toml" "$HOME/.config/starship.toml"
+}
+
+uninstall() {
+  # Git
+  [ -L "$HOME/.gitconfig" ] && rm -f "$HOME/.gitconfig"
+
+  # Zsh
+  [ -L "$HOME/.zshrc" ] && rm -f "$HOME/.zshrc"
+  [ -L "$HOME/.zprofile" ] && rm -f "$HOME/.zprofile"
+
+  # Ghostty
+  [ -L "$HOME/.config/ghostty" ] && rm -f "$HOME/.config/ghostty"
+
+  # Tmux
+  [ -L "$HOME/.config/tmux" ] && rm -f "$HOME/.config/tmux"
+
+  # Starship
+  [ -L "$HOME/.config/starship.toml" ] && rm -f "$HOME/.config/starship.toml"
+
+  return 0
+}
+
+case "${1:-}" in
+  install)
+    install
+    ;;
+  uninstall)
+    uninstall
+    ;;
+  *)
+    echo "Usage: dots {install|uninstall}" >&2
+    exit 1
+    ;;
+esac
