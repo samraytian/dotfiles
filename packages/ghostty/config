@@ -4,7 +4,7 @@
 term = xterm-256color
 
 # Theme
-theme = TokyoNight
+theme = Gruvbox Dark Hard
 
 # Font
 # Nerd Fonts are not necessary in Ghostty
@@ -15,7 +15,7 @@ font-thicken = true
 
 # Background
 background-opacity-cells = true
-background-opacity = 0.92
+background-opacity = 1.0
 background-blur = true
 background-blur-radius = 40
 
