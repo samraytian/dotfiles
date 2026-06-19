@@ -111,3 +111,23 @@ cask "raycast"
 cask "rectangle-pro"
 cask "tableplus"
 cask "telegram"
+
+## =====================
+## App Store
+## =====================
+mas "抖音", id: 1640407382
+mas "企业微信", id: 1189898970
+mas "腾讯会议", id: 1484048379
+mas "微信", id: 836500024
+mas "ColorSlurp", id: 1287239339
+mas "Core Data Lab", id: 1460684638
+mas "Developer", id: 640199958
+mas "Marked 2", id: 890031187
+mas "MindNode Classic", id: 1289197285
+mas "QQ", id: 451108668
+mas "RocketSim", id: 1504940162
+mas "Shadowrocket", id: 932747118
+mas "TestFlight", id: 899247664
+mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
