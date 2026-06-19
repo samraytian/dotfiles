@@ -62,36 +62,36 @@ tap "laishulu/homebrew", trusted: true
 brew "macism"
 
 ## =====================
-## Dev langs & environments
+## Development environment
 ## =====================
 brew "bun"
 brew "cmake"
 brew "chezscheme"
 cask "flutter"
 brew "fvm"
+brew "lua"
+brew "luajit"
+brew "luarocks"
 brew "node"
 brew "ruby"
 brew "rust"
 brew "python"
-brew "swiftlint"
-brew "swiftformat"
 brew "shellcheck"
 brew "shfmt"
+brew "stylua"
+brew "swiftlint"
+brew "swiftformat"
 brew "tree-sitter"
 brew "tree-sitter-cli"
 brew "zig"
 
-# Lua and related tools
-brew "lua"
-brew "luajit"
-brew "luarocks"
-brew "stylua"
-
-# IDE
 cask "visual-studio-code"
 cask "android-studio"
+cask "fork"
 
-# AI tools
+## =====================
+## AI
+## =====================
 brew "codeburn"
 cask "cc-switch"
 cask "claude-code@latest"
