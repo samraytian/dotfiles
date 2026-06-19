@@ -66,6 +66,8 @@ export CP_CACHE_DIR="$XDG_CACHE_HOME/cocoapods"
 # Flutter
 export PUB_CACHE="$XDG_CACHE_HOME/pub-cache"
 export PATH="$PUB_CACHE/bin:$PATH"
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_DATA_HOME/dartServer"
