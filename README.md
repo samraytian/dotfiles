@@ -6,7 +6,7 @@ Sam's personal dotfiles.
 To set up the dotfiles and bootstrap the environment, you can run the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/bootstrap/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bootstrap.sh | bash
 ```
 
 ## Managing symlinks
