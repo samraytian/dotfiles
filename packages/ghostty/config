@@ -30,7 +30,7 @@ window-width = 145
 
 # macOS
 # Available values are: "native", "transparent", "tabs", and "hidden".
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 macos-option-as-alt = true
 
 # Shell
