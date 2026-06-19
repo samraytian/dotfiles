@@ -37,14 +37,6 @@ alias ll='eza . -la --git'
 alias tree="eza . --tree -a -I '.git|.vendor'"
 alias cat='bat'
 
-# git
-alias gst='git status'
-alias gaa='git add --all'
-alias gco='git checkout'
-alias gcmsg="git commit -m"
-alias gca="git commit --amend --no-edit"
-alias gcam="git commit --amend -m"
-
 # ====================
 # Editor
 # ====================
@@ -56,21 +48,32 @@ alias vi='nvim'
 alias vim='nvim'
 
 # ====================
+# Plugins
+# ====================
+
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+zinit ice wait"0" lucid
+
+zinit light-mode for \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-autosuggestions \
+    zsh-users/zsh-completions \
+    OMZP::git \
+    wfxr/forgit
+
+# ====================
 # Utilities
 # ====================
 
 if type brew &>/dev/null; then
 	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
 	autoload -Uz compinit
 	compinit -d "$ZSH_COMPDUMP"
 fi
-
-# zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zoxide, a faster way to navigate your filesystem
 eval "$(zoxide init zsh --cmd j)"
@@ -86,3 +89,6 @@ eval "$(codex completion zsh)"
 
 # bun completions
 [ -s "/Users/samray/.local/share/bun/_bun" ] && source "/Users/samray/.local/share/bun/_bun"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
