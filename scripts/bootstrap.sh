@@ -65,7 +65,7 @@ else
   if [ -z "$(git status --porcelain)" ]; then
     git pull origin main
   else
-    echo "⚠️  Local changes detected, skipping git pull to avoid conflicts."
+    echo "⚠️ Local changes detected, skipping git pull to avoid conflicts."
   fi
   popd >/dev/null || exit 1
 fi
@@ -75,7 +75,7 @@ chmod +x "$HOME/dotfiles/dots"
 "$HOME/dotfiles/dots" install
 
 ## =====================
-## Install packages from Brewfile 
+## Install packages from Brewfile
 ## =====================
 BREWFILE="$HOME/dotfiles/scripts/Brewfile"
 
