@@ -38,11 +38,19 @@ fi
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew analytics off
-  brew update
 else
   echo "✅ Homebrew already installed"
 fi
+
+# Ensure brew is on PATH for this session (Apple Silicon: /opt/homebrew, Intel: /usr/local)
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+brew analytics off
+brew update
 
 ## =====================
 ## Clone dotfiles repository
@@ -51,14 +59,20 @@ fi
 if [ ! -d "$HOME/dotfiles" ]; then
   echo "Cloning dotfiles repository..."
   git clone git@github.com:samraytian/dotfiles.git "$HOME/dotfiles"
+else
+  echo "Dotfiles repository already cloned, pulling latest..."
+  pushd "$HOME/dotfiles" >/dev/null || exit 1
+  if [ -z "$(git status --porcelain)" ]; then
+    git pull origin main
+  else
+    echo "⚠️  Local changes detected, skipping git pull to avoid conflicts."
+  fi
+  popd >/dev/null || exit 1
 fi
 
-echo "Dotfiles repository already cloned, pulling latest..."
-pushd "$HOME/dotfiles" || exit 1
-git pull origin main
-popd || exit 1
-
 echo "Setting up symlinks for dotfiles..."
+chmod +x "$HOME/dotfiles/dots"
+"$HOME/dotfiles/dots" install
 
 ## =====================
 ## Install packages from Brewfile 
@@ -77,7 +91,8 @@ fi
 ## =====================
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Applying macOS settings..."
-  sh "$HOME/dotfiles/bootstrap/setup-macos.sh"
+  chmod +x "$HOME/dotfiles/bootstrap/setup-macos.sh"
+  "$HOME/dotfiles/bootstrap/setup-macos.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"
