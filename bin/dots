@@ -2,43 +2,70 @@
 
 set -euo pipefail
 
+# Match dotfiles (e.g. .gitconfig) when expanding "$src"/*
+shopt -s nullglob dotglob
+
 PKG_DIR="$HOME/dotfiles/packages"
 
+# Package definitions: NAME|TYPE|MODE|DEST
+#   NAME  entry name under PKG_DIR
+#   TYPE  D = directory, F = file
+#   MODE  - = link the entry itself, * = link every file inside the directory
+#   DEST  HOME or CONFIG (target base directory)
+PKGS=(
+  "git|D|*|HOME"
+  "zsh|D|*|HOME"
+  "ghostty|D|-|CONFIG"
+  "tmux|D|-|CONFIG"
+  "starship.toml|F|-|CONFIG"
+)
+
+# Resolve a DEST keyword to an absolute base directory.
+dest_dir() {
+  case "$1" in
+    HOME) printf '%s' "$HOME" ;;
+    CONFIG) printf '%s' "$HOME/.config" ;;
+    *) echo "dots: unknown destination '$1'" >&2; return 1 ;;
+  esac
+}
+
 install() {
-  # Git
-  ln -sfn "$PKG_DIR/git/.gitconfig" "$HOME/.gitconfig"
+  local name mode dest target src f
+  for entry in "${PKGS[@]}"; do
+    IFS='|' read -r name _ mode dest <<< "$entry"
+    target="$(dest_dir "$dest")"
+    src="$PKG_DIR/$name"
+    mkdir -p "$target"
 
-  # Zsh
-  ln -sfn "$PKG_DIR/zsh/.zshrc" "$HOME/.zshrc"
-  ln -sfn "$PKG_DIR/zsh/.zprofile" "$HOME/.zprofile"
-
-  # Ghostty
-  ln -sfn "$PKG_DIR/ghostty" "$HOME/.config/ghostty"
-
-  # Tmux
-  ln -sfn "$PKG_DIR/tmux" "$HOME/.config/tmux"
-
-  # Starship
-  ln -sfn "$PKG_DIR/starship.toml" "$HOME/.config/starship.toml"
+    if [ "$mode" = "*" ]; then
+      # Link every file inside the directory into the target
+      for f in "$src"/*; do
+        ln -sfn "$f" "$target/$(basename "$f")"
+      done
+    else
+      # Link the entry (file or directory) itself
+      ln -sfn "$src" "$target/$name"
+    fi
+  done
 }
 
 uninstall() {
-  # Git
-  [ -L "$HOME/.gitconfig" ] && rm -f "$HOME/.gitconfig"
+  local name mode dest target src f link
+  for entry in "${PKGS[@]}"; do
+    IFS='|' read -r name _ mode dest <<< "$entry"
+    target="$(dest_dir "$dest")"
+    src="$PKG_DIR/$name"
 
-  # Zsh
-  [ -L "$HOME/.zshrc" ] && rm -f "$HOME/.zshrc"
-  [ -L "$HOME/.zprofile" ] && rm -f "$HOME/.zprofile"
-
-  # Ghostty
-  [ -L "$HOME/.config/ghostty" ] && rm -f "$HOME/.config/ghostty"
-
-  # Tmux
-  [ -L "$HOME/.config/tmux" ] && rm -f "$HOME/.config/tmux"
-
-  # Starship
-  [ -L "$HOME/.config/starship.toml" ] && rm -f "$HOME/.config/starship.toml"
-
+    if [ "$mode" = "*" ]; then
+      for f in "$src"/*; do
+        link="$target/$(basename "$f")"
+        [ -L "$link" ] && rm -f "$link"
+      done
+    else
+      link="$target/$name"
+      [ -L "$link" ] && rm -f "$link"
+    fi
+  done
   return 0
 }
 
