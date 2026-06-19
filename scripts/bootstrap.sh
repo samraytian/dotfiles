@@ -77,7 +77,7 @@ chmod +x "$HOME/dotfiles/dots"
 ## =====================
 ## Install packages from Brewfile 
 ## =====================
-BREWFILE="$HOME/dotfiles/bootstrap/Brewfile"
+BREWFILE="$HOME/dotfiles/scripts/Brewfile"
 
 if [ -f "$BREWFILE" ]; then
   echo "Installing packages from Brewfile..."
@@ -91,8 +91,8 @@ fi
 ## =====================
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Applying macOS settings..."
-  chmod +x "$HOME/dotfiles/bootstrap/setup-macos.sh"
-  "$HOME/dotfiles/bootstrap/setup-macos.sh"
+  chmod +x "$HOME/dotfiles/scripts/setup-macos.sh"
+  "$HOME/dotfiles/scripts/setup-macos.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"
