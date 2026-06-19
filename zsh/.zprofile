@@ -34,7 +34,6 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 
-
 # Ruby
 if [ -d "$(brew --prefix ruby)/bin" ]; then
   export PATH="$(brew --prefix ruby)/bin:$PATH"
@@ -59,7 +58,6 @@ export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
-export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
 # iOS / CocoaPods
 export CP_HOME_DIR="$XDG_DATA_HOME/cocoapods"
