@@ -29,6 +29,17 @@ dest_dir() {
   esac
 }
 
+# Symlink $src -> $dst, replacing any existing real file/dir at $dst.
+# Existing symlinks are left for `ln -sfn` to overwrite; only real
+# files/dirs (which `ln` would otherwise link *into*) are removed.
+link_one() {
+  local src="$1" dst="$2"
+  if [ -e "$dst" ] && [ ! -L "$dst" ]; then
+    rm -rf "$dst"
+  fi
+  ln -sfn "$src" "$dst"
+}
+
 install() {
   local name mode dest target src f
   for entry in "${PKGS[@]}"; do
@@ -40,13 +51,15 @@ install() {
     if [ "$mode" = "*" ]; then
       # Link every file inside the directory into the target
       for f in "$src"/*; do
-        ln -sfn "$f" "$target/$(basename "$f")"
+        link_one "$f" "$target/$(basename "$f")"
       done
     else
       # Link the entry (file or directory) itself
-      ln -sfn "$src" "$target/$name"
+      link_one "$src" "$target/$name"
     fi
   done
+  echo "✅ Dotfiles symlinks created"
+  return 0
 }
 
 uninstall() {
@@ -66,6 +79,7 @@ uninstall() {
       [ -L "$link" ] && rm -f "$link"
     fi
   done
+  echo "✅ Dotfiles symlinks removed"
   return 0
 }
 

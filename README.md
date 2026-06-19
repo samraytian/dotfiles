@@ -15,10 +15,10 @@ The `dots` command manages the symlinks from `~/.config` (and `$HOME`) to the co
 
 ```bash
 # Create all symlinks
-~/dotfiles/bin/dots install
+~/dotfiles/dots install
 
 # Remove all symlinks
-~/dotfiles/bin/dots uninstall
+~/dotfiles/dots uninstall
 ```
 
 `uninstall` only removes entries that are symlinks, so your real config files are left untouched.
