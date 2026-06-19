@@ -91,7 +91,7 @@ cask "cc-switch"
 cask "claude-code@latest"
 cask "codex"
 cask "codex-app"
-cask "codexbar"
+brew "codeburn"
 
 # Applications
 cask "google-chrome"
