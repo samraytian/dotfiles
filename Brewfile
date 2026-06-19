@@ -1,0 +1,100 @@
+## =====================
+## Install Core formulae
+## =====================
+
+brew "git"
+brew "bat"          # cat clone with syntax highlighting and Git integration
+brew "eza"          # ls clone with more features
+brew "fd"           # find clone with more features
+brew "fzf"          # fuzzy finder
+brew "jq"           # JSON processor
+brew "ripgrep"      # faster grep clone
+brew "delta"        # syntax highlighting pager for git and diff output
+brew "zoxide"       # zoxide is a smarter cd command, inspired by z and autojump
+
+## =====================
+## Neovim
+## =====================
+brew "neovim"
+
+## =====================
+## Emacs
+## =====================
+tap "d12frosted/emacs-plus", trusted: true
+cask "emacs-plus-app"
+
+## =====================
+## Terminal utilities
+## =====================
+cask "ghostty"
+cask "iterm2"
+
+brew "tmux"
+brew "lazygit"
+
+brew "asc"          # App Store Connect CLI tool https://asccli.sh/
+brew "awscli"       # AWS Command Line Interface
+brew "codeburn"     # See where your AI spend goes
+brew "gh"           # GitHub CLI tool
+brew "sqlite"       # Command-line interface for SQLite databases
+brew "mas"          # Mac App Store command-line interface
+brew "mole"         # Clean, uninstall, optimize, and monitor your Mac from the terminal
+brew "fileicon"     # macOS CLI for managing custom icons for files and folders
+brew "watchexec"    # Executes commands in response to file modifications
+
+## =====================
+## Fonts
+## =====================
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-maple-mono-cn"
+cask "font-maple-mono-nf-cn"
+cask "font-source-code-pro"
+cask "font-symbols-only-nerd-font"
+
+## =====================
+## Input method
+## =====================
+cask "input-source-pro"
+tap "laishulu/homebrew", trusted: true
+brew "macism"
+
+## =====================
+## Dev langs & environments
+## =====================
+brew "bun"
+brew "cmake"
+brew "chezscheme"
+cask "flutter"
+brew "fvm"
+brew "node"
+brew "ruby"
+brew "rust"
+brew "python"
+brew "swiftlint"
+brew "shellcheck"
+brew "shfmt"
+brew "tree-sitter"
+brew "tree-sitter-cli"
+brew "zig"
+
+brew "lua"
+brew "luajit"
+brew "luarocks"
+brew "stylua"
+
+cask "visual-studio-code"
+cask "android-studio"
+cask "cc-switch"
+cask "claude-code@latest"
+cask "codex"
+cask "codex-app"
+cask "codexbar"
+
+# Applications
+cask "google-chrome"
+cask "raycast"
+cask "rectangle-pro"
+cask "mac-mouse-fix"
