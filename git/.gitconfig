@@ -1,12 +1,24 @@
+[core]
+  excludesfile = ~/.gitignore
+  pager = delta
+
 [pager]
-  	branch = false
+  branch = false
+
+[interactive]
+  diffFilter = delta --color-onlypager = delta
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  dark = true      # or light = true, or omit for auto-detection
+  side-by-side = false
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [user]
 	name = Sam
 	email = samray.tian@gmail.com
-[core]
-	excludesfile = ~/.gitignore
