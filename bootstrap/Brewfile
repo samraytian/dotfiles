@@ -80,20 +80,26 @@ brew "tree-sitter"
 brew "tree-sitter-cli"
 brew "zig"
 
+# Lua and related tools
 brew "lua"
 brew "luajit"
 brew "luarocks"
 brew "stylua"
 
+# IDE
 cask "visual-studio-code"
 cask "android-studio"
+
+# AI tools
+brew "codeburn"
 cask "cc-switch"
 cask "claude-code@latest"
 cask "codex"
 cask "codex-app"
-brew "codeburn"
 
-# Applications
+## =====================
+## Applications
+## =====================
 cask "google-chrome"
 cask "raycast"
 cask "rectangle-pro"
