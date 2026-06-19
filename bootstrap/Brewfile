@@ -34,6 +34,7 @@ brew "lazygit"
 
 brew "asc"          # App Store Connect CLI tool https://asccli.sh/
 brew "awscli"       # AWS Command Line Interface
+brew "btop"         # Resource monitor
 brew "codeburn"     # See where your AI spend goes
 brew "gh"           # GitHub CLI tool
 brew "sqlite"       # Command-line interface for SQLite databases
@@ -92,7 +93,6 @@ cask "fork"
 ## =====================
 ## AI
 ## =====================
-brew "codeburn"
 cask "cc-switch"
 cask "claude-code@latest"
 cask "codex"
@@ -102,6 +102,9 @@ cask "codex-app"
 ## Applications
 ## =====================
 cask "google-chrome"
+cask "mac-mouse-fix"
+cask "movist-pro"
+cask "obsidian"
 cask "raycast"
 cask "rectangle-pro"
-cask "mac-mouse-fix"
+cask "tableplus"
