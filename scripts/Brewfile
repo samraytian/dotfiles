@@ -49,8 +49,8 @@ brew "watchexec"    # Executes commands in response to file modifications
 ## =====================
 cask "font-aporetic"
 cask "font-hack"
-cask "font-jetbrains-maple-mono"
-cask "font-maple-mono-cn"
+cask "font-jetbrains-maple-mono-nf"
+cask "font-maple-mono-nf-cn"
 cask "font-source-code-pro"
 cask "font-symbols-only-nerd-font"
 

@@ -8,8 +8,8 @@ theme = Gruvbox Dark Hard
 
 # Font
 # Nerd Fonts are not necessary in Ghostty
-# Alternatives: SF Mono, Hack, Maple Mono CN, Source Code Pro, JetBrains Maple Mono
-font-family = JetBrains Maple Mono
+# Alternatives: SF Mono, c, Maple Mono NF CN, Source Code Pro, JetBrains Maple Mono
+font-family = Maple Mono NF CN
 font-size = 13
 font-thicken = true
 
