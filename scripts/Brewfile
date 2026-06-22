@@ -13,17 +13,6 @@ brew "delta"        # syntax highlighting pager for git and diff output
 brew "zoxide"       # zoxide is a smarter cd command, inspired by z and autojump
 
 ## =====================
-## Neovim
-## =====================
-brew "neovim"
-
-## =====================
-## Emacs
-## =====================
-tap "d12frosted/emacs-plus", trusted: true
-cask "emacs-plus-app"
-
-## =====================
 ## Terminal utilities
 ## =====================
 cask "ghostty"
@@ -38,6 +27,7 @@ brew "awscli"       # AWS Command Line Interface
 brew "btop"         # Resource monitor
 brew "codeburn"     # See where your AI spend goes
 brew "gh"           # GitHub CLI tool
+brew "pandoc"       # Universal document converter
 brew "sqlite"       # Command-line interface for SQLite databases
 brew "mas"          # Mac App Store command-line interface
 brew "mole"         # Clean, uninstall, optimize, and monitor your Mac from the terminal
@@ -60,6 +50,17 @@ cask "font-symbols-only-nerd-font"
 cask "input-source-pro"
 tap "laishulu/homebrew", trusted: true
 brew "macism"
+
+## =====================
+## Neovim
+## =====================
+brew "neovim"
+
+## =====================
+## Emacs
+## =====================
+tap "d12frosted/emacs-plus", trusted: true
+cask "emacs-plus-app"
 
 ## =====================
 ## Development environment
