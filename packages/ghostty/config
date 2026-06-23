@@ -4,12 +4,17 @@
 term = xterm-256color
 
 # Theme
-theme = Gruvbox Dark Hard
+theme = TokyoNights
 
-# Font
 # Nerd Fonts are not necessary in Ghostty
-# Alternatives: SF Mono, c, Maple Mono NF CN, Source Code Pro, JetBrains Maple Mono
-font-family = Maple Mono NF CN
+# 
+# Alternatives: 
+#  - SF Mono
+#  - Hack
+#  - Maple Mono NF CN
+#  - Source Code Pro
+#  - JetBrains Maple Mono
+font-family = JetBrains Maple Mono
 font-size = 13
 font-thicken = true
 
