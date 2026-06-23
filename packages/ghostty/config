@@ -5,16 +5,14 @@ term = xterm-256color
 
 # Theme
 theme = TokyoNight
-
-# Nerd Fonts are not necessary in Ghostty
-# 
-# Alternatives: 
+ 
+# Font Alternatives: 
 #  - SF Mono
 #  - Hack
 #  - Maple Mono NF CN
 #  - Source Code Pro
-#  - JetBrains Maple Mono
-font-family = JetBrains Maple Mono
+#  - JetBrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font
 font-size = 13
 font-thicken = true
 
