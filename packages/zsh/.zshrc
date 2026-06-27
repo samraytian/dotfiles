@@ -8,6 +8,8 @@ LANG=en_US.UTF-8
 export TERMINFO=/usr/share/terminfo/
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
+[ -f "$HOME/dotfiles/.secrets" ] && source "$HOME/dotfiles/.secrets"
+
 # ====================
 # History
 # ====================
