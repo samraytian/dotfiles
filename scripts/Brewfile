@@ -98,6 +98,7 @@ cask "cc-switch"
 cask "claude-code@latest"
 cask "codex"
 cask "codex-app"
+brew "pi-coding-agent"
 
 ## =====================
 ## Applications
