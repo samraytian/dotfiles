@@ -5,6 +5,10 @@ set -o emacs
 # ====================
 LANG=en_US.UTF-8
 
+export SHELL_SESSIONS_DISABLE=1
+export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
+
 export TERMINFO=/usr/share/terminfo/
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
