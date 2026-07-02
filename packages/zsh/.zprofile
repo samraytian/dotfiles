@@ -15,8 +15,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Zsh
 [[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
 [[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
-export SHELL_SESSIONS_DISABLE=1
-export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 
 # Bun
 export BUN_INSTALL="$XDG_DATA_HOME/bun"
