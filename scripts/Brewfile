@@ -85,6 +85,7 @@ brew "swift-format"
 brew "swiftlint"
 brew "tree-sitter"
 brew "tree-sitter-cli"
+brew "xcode-build-server"
 brew "zig"
 
 cask "visual-studio-code"
