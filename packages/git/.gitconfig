@@ -22,3 +22,5 @@
 [user]
 	name = Sam
 	email = samray.tian@gmail.com
+[init]
+	defaultBranch = main
