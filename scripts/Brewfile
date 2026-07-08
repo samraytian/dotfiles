@@ -113,6 +113,7 @@ cask "raycast"
 cask "rectangle-pro"
 cask "tableplus"
 cask "telegram"
+cask "localsend"
 
 ## =====================
 ## App Store
