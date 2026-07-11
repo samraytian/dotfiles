@@ -2,18 +2,6 @@
 
 set -euo pipefail
 
-echo "Change Emacs icons..."
-if command -v fileicon &>/dev/null; then
-  if [ -d "/Applications/Emacs.app" ]; then
-    fileicon set /Applications/Emacs.app "$HOME/dotfiles/assets/icons/emacs-curvy-3d.icns"
-  fi
-  if [ -d "/Applications/Emacs Client.app" ]; then
-    fileicon set /Applications/Emacs\ Client.app "$HOME/dotfiles/assets/icons/emacs-curvy-3d.icns"
-  fi
-else
-  echo "fileicon not found, skipping Emacs icon change."
-fi
-
 echo "Set key repeat rate and delay..."
 defaults write NSGlobalDomain KeyRepeat -int 1         # Set a blazingly fast key repeat rate
 defaults write NSGlobalDomain InitialKeyRepeat -int 10 # Shorten the delay before the repeat starts
