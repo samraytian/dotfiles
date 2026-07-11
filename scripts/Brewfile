@@ -87,6 +87,7 @@ brew "tree-sitter"
 brew "tree-sitter-cli"
 brew "xcode-build-server"
 brew "zig"
+brew "zls"
 
 cask "visual-studio-code"
 cask "android-studio"
