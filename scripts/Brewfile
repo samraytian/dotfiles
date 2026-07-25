@@ -25,7 +25,6 @@ brew "lazygit"
 brew "asc"          # App Store Connect CLI tool https://asccli.sh/
 brew "awscli"       # AWS Command Line Interface
 brew "btop"         # Resource monitor
-brew "codeburn"     # See where your AI spend goes
 brew "gh"           # GitHub CLI tool
 brew "pandoc"       # Universal document converter
 brew "sqlite"       # Command-line interface for SQLite databases
@@ -92,15 +91,6 @@ brew "zls"
 cask "visual-studio-code"
 cask "android-studio"
 cask "fork"
-
-## =====================
-## AI
-## =====================
-cask "cc-switch"
-cask "claude-code@latest"
-cask "codex"
-cask "codex-app"
-brew "pi-coding-agent"
 
 ## =====================
 ## Applications
