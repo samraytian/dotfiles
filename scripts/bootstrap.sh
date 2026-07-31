@@ -89,14 +89,14 @@ fi
 ## MacOS settings
 ## =====================
 if [[ "$(uname)" == "Darwin" ]]; then
-  echo "Setting Emacs icons..."
-  "$HOME/dotfiles/scripts/macos-emacs-icons.sh"
-
   echo "Applying macOS defaults..."
   "$HOME/dotfiles/scripts/macos-defaults.sh"
 
   echo "Installing AI tools..."
   "$HOME/dotfiles/scripts/install-ai-tools.sh"
+
+  echo "Installing Emacs..."
+  "$HOME/dotfiles/scripts/install-emacs.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"
