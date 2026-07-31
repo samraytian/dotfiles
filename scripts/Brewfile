@@ -1,15 +1,15 @@
 ## =====================
 ## Install Core formulae
 ## =====================
-
-brew "git"
 brew "bat"          # cat clone with syntax highlighting and Git integration
+brew "coreutils"    # GNU core utilities, commands prefixed with "g" (gls, gcp, ...)
+brew "delta"        # syntax highlighting pager for git and diff output
 brew "eza"          # ls clone with more features
 brew "fd"           # find clone with more features
 brew "fzf"          # fuzzy finder
+brew "git"
 brew "jq"           # JSON processor
 brew "ripgrep"      # faster grep clone
-brew "delta"        # syntax highlighting pager for git and diff output
 brew "zoxide"       # zoxide is a smarter cd command, inspired by z and autojump
 
 ## =====================
@@ -19,18 +19,17 @@ cask "ghostty"
 cask "iterm2"
 cask "termius"
 
-brew "tmux"
-brew "lazygit"
-
 brew "asc"          # App Store Connect CLI tool https://asccli.sh/
 brew "awscli"       # AWS Command Line Interface
 brew "btop"         # Resource monitor
+brew "fileicon"     # macOS CLI for managing custom icons for files and folders
 brew "gh"           # GitHub CLI tool
-brew "pandoc"       # Universal document converter
-brew "sqlite"       # Command-line interface for SQLite databases
+brew "lazygit"
 brew "mas"          # Mac App Store command-line interface
 brew "mole"         # Clean, uninstall, optimize, and monitor your Mac from the terminal
-brew "fileicon"     # macOS CLI for managing custom icons for files and folders
+brew "pandoc"       # Universal document converter
+brew "sqlite"       # Command-line interface for SQLite databases
+brew "tmux"
 brew "watchexec"    # Executes commands in response to file modifications
 
 ## =====================
@@ -66,17 +65,16 @@ cask "emacs-plus-app"
 ## Development environment
 ## =====================
 brew "bun"
-brew "cmake"
 brew "chezscheme"
-cask "flutter"
+brew "cmake"
 brew "fvm"
 brew "lua"
 brew "luajit"
 brew "luarocks"
 brew "node"
+brew "python"
 brew "ruby"
 brew "rust"
-brew "python"
 brew "shellcheck"
 brew "shfmt"
 brew "stylua"
@@ -88,14 +86,16 @@ brew "xcode-build-server"
 brew "zig"
 brew "zls"
 
-cask "visual-studio-code"
 cask "android-studio"
+cask "flutter"
 cask "fork"
+cask "visual-studio-code"
 
 ## =====================
 ## Applications
 ## =====================
 cask "google-chrome"
+cask "localsend"
 cask "mac-mouse-fix"
 cask "movist-pro"
 cask "numi"
@@ -104,24 +104,23 @@ cask "raycast"
 cask "rectangle-pro"
 cask "tableplus"
 cask "telegram"
-cask "localsend"
 
 ## =====================
 ## App Store
 ## =====================
-mas "抖音", id: 1640407382
-mas "企业微信", id: 1189898970
-mas "腾讯会议", id: 1484048379
-mas "微信", id: 836500024
-mas "ColorSlurp", id: 1287239339
-mas "Core Data Lab", id: 1460684638
-mas "Developer", id: 640199958
-mas "Marked 2", id: 890031187
-mas "MindNode Classic", id: 1289197285
-mas "QQ", id: 451108668
-mas "RocketSim", id: 1504940162
-mas "Shadowrocket", id: 932747118
-mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
-mas "Things", id: 904280696
+mas "QQ", id: 451108668
 mas "Xcode", id: 497799835
+mas "Developer", id: 640199958
+mas "微信", id: 836500024
+mas "Marked 2", id: 890031187
+mas "TestFlight", id: 899247664
+mas "Things", id: 904280696
+mas "Shadowrocket", id: 932747118
+mas "企业微信", id: 1189898970
+mas "ColorSlurp", id: 1287239339
+mas "MindNode Classic", id: 1289197285
+mas "Core Data Lab", id: 1460684638
+mas "腾讯会议", id: 1484048379
+mas "RocketSim", id: 1504940162
+mas "抖音", id: 1640407382
