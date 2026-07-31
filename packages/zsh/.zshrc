@@ -47,7 +47,7 @@ alias cat='bat'
 # Editor
 # ====================
 
-export EDITOR='nvim'
+export EDITOR='emacs'
 export VISUAL="$EDITOR"
 
 alias vi='nvim'
