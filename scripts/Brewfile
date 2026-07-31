@@ -56,12 +56,6 @@ brew "macism"
 brew "neovim"
 
 ## =====================
-## Emacs
-## =====================
-tap "d12frosted/emacs-plus", trusted: true
-cask "emacs-plus-app"
-
-## =====================
 ## Development environment
 ## =====================
 brew "bun"
