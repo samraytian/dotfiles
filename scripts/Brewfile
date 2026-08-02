@@ -88,6 +88,8 @@ cask "visual-studio-code"
 ## =====================
 ## Applications
 ## =====================
+tap "alielsokary/tap", trusted: { cask: "caskhub" }
+cask "caskhub"
 cask "google-chrome"
 cask "localsend"
 cask "mac-mouse-fix"
