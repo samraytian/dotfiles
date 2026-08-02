@@ -3,17 +3,6 @@
 set -euo pipefail
 
 ## =====================
-## Check for ssh key
-## =====================
-
-if [ ! -f "$HOME/.ssh/github_ed25519" ]; then
-  echo "No SSH key found for GitHub. Please generate one and add it to your GitHub account."
-  echo "You can generate an SSH key with the following command:"
-  echo "ssh-keygen -t ed25519 -C 'samray.tian@gmail.com' -f \$HOME/.ssh/github_ed25519"
-  exit 1
-fi
-
-## =====================
 ## Xcode Command Line Tools
 ## =====================
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -53,15 +42,32 @@ brew analytics off
 brew update
 
 ## =====================
+## Git Credential Manager
+## =====================
+
+if ! brew list --cask git-credential-manager &>/dev/null; then
+  echo "Installing Git Credential Manager..."
+  brew install --cask git-credential-manager
+else
+  echo "✅ Git Credential Manager already installed"
+fi
+
+echo "Configuring Git Credential Manager..."
+git-credential-manager configure
+
+echo "✅ Git Credential Manager configured"
+
+## =====================
 ## Clone dotfiles repository
 ## =====================
 
 if [ ! -d "$HOME/dotfiles" ]; then
   echo "Cloning dotfiles repository..."
-  git clone git@github.com:samraytian/dotfiles.git "$HOME/dotfiles"
+  git clone https://github.com/samraytian/dotfiles.git "$HOME/dotfiles"
 else
   echo "Dotfiles repository already cloned, pulling latest..."
   pushd "$HOME/dotfiles" >/dev/null || exit 1
+  git remote set-url origin https://github.com/samraytian/dotfiles.git
   if [ -z "$(git status --porcelain)" ]; then
     git pull origin main
   else
