@@ -72,3 +72,8 @@ export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_DATA_HOME/dartServer"
 
 # AI Tools
 export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
+
+# Secrets: export API keys for AI completion and other tools.  Also sourced
+# by .zshrc for interactive shells; keeping it here ensures non-interactive
+# login shells (e.g. Emacs' exec-path-from-shell) can read them too.
+[ -f "$HOME/dotfiles/.secrets" ] && source "$HOME/dotfiles/.secrets"
