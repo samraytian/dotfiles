@@ -46,7 +46,6 @@ cask "sf-symbols"
 ## =====================
 ## Input method
 ## =====================
-cask "input-source-pro"
 tap "laishulu/homebrew", trusted: true
 brew "macism"
 
