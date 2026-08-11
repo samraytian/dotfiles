@@ -18,19 +18,19 @@ export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 # History
 # ====================
 HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=20000  # 当前会话内存中保留的历史条数
-SAVEHIST=20000  # 写入 HISTFILE 持久化的历史条数（与 HISTSIZE 保持一致，避免退出时被截断）
+HISTSIZE=20000  # number of history entries kept in memory for the current session
+SAVEHIST=20000  # number of history entries persisted to HISTFILE (keep in sync with HISTSIZE to avoid truncation on exit)
 
-# 过滤掉首个词不是已知命令的条目（避免 typo 进入历史）
+# Drop entries whose first word is not a known command (avoid typos entering history)
 zshaddhistory() {
   whence ${${(z)1}[1]} >/dev/null || return 1
 }
 
 setopt SHARE_HISTORY
-setopt HIST_IGNORE_ALL_DUPS    # 新条目会删除旧的相同条目
-setopt HIST_SAVE_NO_DUPS       # 保存到文件时去重
-setopt HIST_FIND_NO_DUPS       # 搜索时不显示重复
-setopt HIST_REDUCE_BLANKS      # 去除多余空格
+setopt HIST_IGNORE_ALL_DUPS    # new entries delete older duplicates
+setopt HIST_SAVE_NO_DUPS       # deduplicate when saving to file
+setopt HIST_FIND_NO_DUPS       # don't show duplicates when searching
+setopt HIST_REDUCE_BLANKS      # strip excess whitespace
 
 # ====================
 # Alias
@@ -47,7 +47,7 @@ alias cat='bat'
 # Editor
 # ====================
 
-# 优先 GUI emacsclient(打开新 GUI frame);若 Emacs server 未运行,自动回退到终端 emacs
+# Prefer GUI emacsclient (opens a new GUI frame); fall back to terminal emacs if the server is not running
 export EDITOR='emacsclient -c -a emacs'
 export VISUAL="$EDITOR"
 
