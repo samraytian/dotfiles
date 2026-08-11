@@ -47,7 +47,8 @@ alias cat='bat'
 # Editor
 # ====================
 
-export EDITOR='emacs'
+# 优先 GUI emacsclient(打开新 GUI frame);若 Emacs server 未运行,自动回退到终端 emacs
+export EDITOR='emacsclient -c -a emacs'
 export VISUAL="$EDITOR"
 
 alias vi='nvim'
