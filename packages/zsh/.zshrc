@@ -47,8 +47,12 @@ alias cat='bat'
 # Editor
 # ====================
 
-# Prefer GUI emacsclient (opens a new GUI frame); fall back to terminal emacs if the server is not running
-export EDITOR='emacsclient -c -a emacs'
+# Use neovim as the default editor; fall back to vim if not available
+if (( $+commands[nvim] )); then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 export VISUAL="$EDITOR"
 
 alias vi='nvim'
