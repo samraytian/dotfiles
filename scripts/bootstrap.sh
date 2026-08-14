@@ -77,7 +77,7 @@ else
 fi
 
 echo "Setting up symlinks for dotfiles..."
-"$HOME/dotfiles/dots" install
+"$HOME/dotfiles/scripts/symlinks.sh" install
 
 ## =====================
 ## Install packages from Brewfile
