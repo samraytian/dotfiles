@@ -25,7 +25,7 @@ dest_dir() {
   case "$1" in
     HOME) printf '%s' "$HOME" ;;
     CONFIG) printf '%s' "$HOME/.config" ;;
-    *) echo "dots: unknown destination '$1'" >&2; return 1 ;;
+    *) echo "symlinks.sh: unknown destination '$1'" >&2; return 1 ;;
   esac
 }
 
@@ -91,7 +91,7 @@ case "${1:-}" in
     uninstall
     ;;
   *)
-    echo "Usage: dots {install|uninstall}" >&2
+    echo "Usage: symlinks.sh {install|uninstall}" >&2
     exit 1
     ;;
 esac
