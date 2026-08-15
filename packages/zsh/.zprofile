@@ -4,7 +4,7 @@
 
 # Homebrew (macOS)
 if [[ $(uname -s) == 'Darwin' ]]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Local bin
@@ -18,14 +18,17 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Python
-if [ -d "$(brew --prefix python)/libexec/bin" ]; then
-  export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+python_libexec="$(brew --prefix python)/libexec/bin"
+if [ -d "$python_libexec" ]; then
+  export PATH="$python_libexec:$PATH"
 fi
 
 # Ruby
-if [ -d "$(brew --prefix ruby)/bin" ]; then
-  export PATH="$(brew --prefix ruby)/bin:$PATH"
-  export PATH="$(gem environment gemdir)/bin:$PATH"
+ruby_bin="$(brew --prefix ruby)/bin"
+if [ -d "$ruby_bin" ]; then
+  export PATH="$ruby_bin:$PATH"
+  gem_bin="$(gem environment gemdir)/bin"
+  export PATH="$gem_bin:$PATH"
 fi
 
 # Rust
