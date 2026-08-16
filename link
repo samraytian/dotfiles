@@ -25,7 +25,7 @@ dest_dir() {
   case "$1" in
     HOME) printf '%s' "$HOME" ;;
     CONFIG) printf '%s' "$HOME/.config" ;;
-    *) echo "symlinks.sh: unknown destination '$1'" >&2; return 1 ;;
+    *) echo "link: unknown destination '$1'" >&2; return 1 ;;
   esac
 }
 
@@ -40,7 +40,7 @@ link_one() {
   ln -sfn "$src" "$dst"
 }
 
-install() {
+link_all() {
   local name mode dest target src f
   for entry in "${PKGS[@]}"; do
     IFS='|' read -r name _ mode dest <<< "$entry"
@@ -62,7 +62,7 @@ install() {
   return 0
 }
 
-uninstall() {
+unlink_all() {
   local name mode dest target src f link
   for entry in "${PKGS[@]}"; do
     IFS='|' read -r name _ mode dest <<< "$entry"
@@ -84,14 +84,14 @@ uninstall() {
 }
 
 case "${1:-}" in
-  install)
-    install
+  "")
+    link_all
     ;;
-  uninstall)
-    uninstall
+  --unlink)
+    unlink_all
     ;;
   *)
-    echo "Usage: symlinks.sh {install|uninstall}" >&2
+    echo "Usage: link [--unlink]" >&2
     exit 1
     ;;
 esac
