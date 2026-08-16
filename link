@@ -2,86 +2,44 @@
 
 set -euo pipefail
 
-# Match dotfiles (e.g. .gitconfig) when expanding "$src"/*
-shopt -s nullglob dotglob
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+PKG_DIR="$SCRIPT_DIR/packages"
 
-PKG_DIR="$HOME/dotfiles/packages"
+HOME_PKGS=(git zsh)
 
-# Package definitions: NAME|TYPE|MODE|DEST
-#   NAME  entry name under PKG_DIR
-#   TYPE  D = directory, F = file
-#   MODE  - = link the entry itself, * = link every file inside the directory
-#   DEST  HOME or CONFIG (target base directory)
-PKGS=(
-  "git|D|*|HOME"
-  "zsh|D|*|HOME"
-  "ghostty|D|-|CONFIG"
-  "tmux|D|-|CONFIG"
-  "starship.toml|F|-|CONFIG"
-)
-
-# Resolve a DEST keyword to an absolute base directory.
-dest_dir() {
-  case "$1" in
-    HOME) printf '%s' "$HOME" ;;
-    CONFIG) printf '%s' "$HOME/.config" ;;
-    *) echo "link: unknown destination '$1'" >&2; return 1 ;;
-  esac
-}
-
-# Symlink $src -> $dst, replacing any existing real file/dir at $dst.
-# Existing symlinks are left for `ln -sfn` to overwrite; only real
-# files/dirs (which `ln` would otherwise link *into*) are removed.
-link_one() {
-  local src="$1" dst="$2"
-  if [ -e "$dst" ] && [ ! -L "$dst" ]; then
-    rm -rf "$dst"
+require_stow() {
+  if ! command -v stow >/dev/null 2>&1; then
+    echo "link: GNU Stow is required; install it with 'brew install stow'" >&2
+    exit 1
   fi
-  ln -sfn "$src" "$dst"
 }
 
 link_all() {
-  local name mode dest target src f
-  for entry in "${PKGS[@]}"; do
-    IFS='|' read -r name _ mode dest <<< "$entry"
-    target="$(dest_dir "$dest")"
-    src="$PKG_DIR/$name"
-    mkdir -p "$target"
+  mkdir -p "$HOME/.config"
+  mkdir -p "$HOME/.config/ghostty" "$HOME/.config/tmux"
 
-    if [ "$mode" = "*" ]; then
-      # Link every file inside the directory into the target
-      for f in "$src"/*; do
-        link_one "$f" "$target/$(basename "$f")"
-      done
-    else
-      # Link the entry (file or directory) itself
-      link_one "$src" "$target/$name"
-    fi
-  done
+  stow --dir="$PKG_DIR" --target="$HOME" --restow "${HOME_PKGS[@]}"
+  stow --dir="$PKG_DIR" --target="$HOME/.config/ghostty" --restow ghostty
+  stow --dir="$PKG_DIR" --target="$HOME/.config/tmux" --restow tmux
+  stow --dir="$PKG_DIR" --target="$HOME/.config" --restow starship
   echo "✅ Dotfiles symlinks created"
-  return 0
 }
 
 unlink_all() {
-  local name mode dest target src f link
-  for entry in "${PKGS[@]}"; do
-    IFS='|' read -r name _ mode dest <<< "$entry"
-    target="$(dest_dir "$dest")"
-    src="$PKG_DIR/$name"
-
-    if [ "$mode" = "*" ]; then
-      for f in "$src"/*; do
-        link="$target/$(basename "$f")"
-        [ -L "$link" ] && rm -f "$link"
-      done
-    else
-      link="$target/$name"
-      [ -L "$link" ] && rm -f "$link"
-    fi
-  done
+  stow --dir="$PKG_DIR" --target="$HOME" --delete "${HOME_PKGS[@]}"
+  if [ -d "$HOME/.config/ghostty" ]; then
+    stow --dir="$PKG_DIR" --target="$HOME/.config/ghostty" --delete ghostty
+  fi
+  if [ -d "$HOME/.config/tmux" ]; then
+    stow --dir="$PKG_DIR" --target="$HOME/.config/tmux" --delete tmux
+  fi
+  if [ -d "$HOME/.config" ]; then
+    stow --dir="$PKG_DIR" --target="$HOME/.config" --delete starship
+  fi
   echo "✅ Dotfiles symlinks removed"
-  return 0
 }
+
+require_stow
 
 case "${1:-}" in
   "")

@@ -76,9 +76,6 @@ else
   popd >/dev/null || exit 1
 fi
 
-echo "Setting up symlinks for dotfiles..."
-"$HOME/dotfiles/link"
-
 ## =====================
 ## Install packages from Brewfile
 ## =====================
@@ -90,6 +87,9 @@ if [ -f "$BREWFILE" ]; then
 else
   echo "No Brewfile found, skipping package installation."
 fi
+
+echo "Setting up symlinks for dotfiles..."
+"$HOME/dotfiles/link"
 
 ## =====================
 ## MacOS settings
