@@ -7,7 +7,6 @@ DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 ZINIT_HOME="$DATA_HOME/zinit/zinit.git"
 PLUGIN_MARKER="$DATA_HOME/zsh/dotfiles-plugins-installed"
 PLUGIN_SPEC="$DOTFILES_DIR/scripts/zsh-plugins.zsh"
-PLUGIN_VERSION=1
 
 if ! command -v git >/dev/null 2>&1; then
   echo "git is required to install zsh plugins." >&2
@@ -36,15 +35,23 @@ if [[ ! -r "$ZINIT_HOME/zinit.zsh" ]]; then
 fi
 
 echo "Installing zsh plugins..."
-ZINIT_HOME="$ZINIT_HOME" PLUGIN_SPEC="$PLUGIN_SPEC" zsh -f -c '
+ZINIT_HOME="$ZINIT_HOME" PLUGIN_SPEC="$PLUGIN_SPEC" PLUGIN_MARKER="$PLUGIN_MARKER" zsh -f -c '
   emulate -L zsh
-  setopt errexit
-  source "$ZINIT_HOME/zinit.zsh"
-  source "$PLUGIN_SPEC"
-  zinit ice cloneonly
-  zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"
+  if ! source "$ZINIT_HOME/zinit.zsh"; then
+    print -u2 "Failed to load zinit: $ZINIT_HOME/zinit.zsh"
+    exit 1
+  fi
+  if ! source "$PLUGIN_SPEC"; then
+    print -u2 "Failed to load plugin specification: $PLUGIN_SPEC"
+    exit 1
+  fi
+  if ! zinit ice cloneonly || ! zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"; then
+    print -u2 "Failed to install zsh plugins."
+    exit 1
+  fi
+
+  mkdir -p -- "${PLUGIN_MARKER:h}"
+  print -r -- "$DOTFILES_ZSH_PLUGINS_VERSION" > "$PLUGIN_MARKER"
 '
 
-mkdir -p "$(dirname "$PLUGIN_MARKER")"
-printf '%s\n' "$PLUGIN_VERSION" > "$PLUGIN_MARKER"
 echo "✅ Zsh plugins installed"

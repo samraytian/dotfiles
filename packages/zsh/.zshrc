@@ -64,7 +64,9 @@ alias vim='nvim'
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 ZSH_PLUGIN_MARKER="${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/dotfiles-plugins-installed"
-ZSH_PLUGIN_SPEC="$HOME/dotfiles/scripts/zsh-plugins.zsh"
+ZSHRC_PATH="${${(%):-%N}:A}"
+DOTFILES_DIR="${ZSHRC_PATH:h:h:h}"
+ZSH_PLUGIN_SPEC="$DOTFILES_DIR/scripts/zsh-plugins.zsh"
 
 if [[ -r "$ZSH_PLUGIN_SPEC" ]]; then
   source "$ZSH_PLUGIN_SPEC"
@@ -72,13 +74,16 @@ fi
 
 # Plugins are installed explicitly by install-zsh-plugins.sh. Do not perform
 # network operations while starting an interactive shell.
-if [[ -r "$ZINIT_HOME/zinit.zsh" \
-    && -f "$ZSH_PLUGIN_MARKER" \
-    && "$(<"$ZSH_PLUGIN_MARKER")" == "${DOTFILES_ZSH_PLUGINS_VERSION:-}" ]]; then
-  source "$ZINIT_HOME/zinit.zsh"
+if [[ -r "$ZINIT_HOME/zinit.zsh" && -n "${DOTFILES_ZSH_PLUGINS_VERSION:-}" ]]; then
+  if [[ -r "$ZSH_PLUGIN_MARKER" \
+      && "$(<"$ZSH_PLUGIN_MARKER")" == "$DOTFILES_ZSH_PLUGINS_VERSION" ]]; then
+    source "$ZINIT_HOME/zinit.zsh"
 
-  zinit ice wait"0" lucid
-  zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"
+    zinit ice wait"0" lucid
+    zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"
+  elif [[ -o interactive ]]; then
+    print -u2 -P "%F{yellow}zsh plugins are not installed or are out of date. Run: $DOTFILES_DIR/scripts/install-zsh-plugins.sh%f"
+  fi
 fi
 
 # ====================
