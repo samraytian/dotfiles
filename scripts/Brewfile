@@ -86,6 +86,15 @@ cask "fork"
 cask "visual-studio-code"
 
 ## =====================
+## AI
+## =====================
+cask "cc-switch"
+cask "claude-code"
+cask "codex"
+cask "chatgpt"
+brew "codeburn"     # See where your AI spend goes
+
+## =====================
 ## Applications
 ## =====================
 cask "caskhub"

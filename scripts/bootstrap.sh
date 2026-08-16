@@ -100,9 +100,6 @@ fi
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Applying macOS defaults..."
   "$HOME/dotfiles/scripts/macos-defaults.sh"
-
-  echo "Installing AI tools..."
-  "$HOME/dotfiles/scripts/install-ai-tools.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"
