@@ -1,5 +1,5 @@
 ## =====================
-## Install Core formulae
+## Core formulae
 ## =====================
 brew "bat"          # cat clone with syntax highlighting and Git integration
 brew "coreutils"    # GNU core utilities, commands prefixed with "g" (gls, gcp, ...)
