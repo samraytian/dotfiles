@@ -59,41 +59,18 @@ alias vi='nvim'
 alias vim='nvim'
 
 # ====================
-# Plugins
-# ====================
-
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-ZSH_PLUGIN_MARKER="${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/dotfiles-plugins-installed"
-ZSHRC_PATH="${${(%):-%N}:A}"
-DOTFILES_DIR="${ZSHRC_PATH:h:h:h}"
-ZSH_PLUGIN_SPEC="$DOTFILES_DIR/scripts/zsh-plugins.zsh"
-
-if [[ -r "$ZSH_PLUGIN_SPEC" ]]; then
-  source "$ZSH_PLUGIN_SPEC"
-fi
-
-# Plugins are installed explicitly by install-zsh-plugins.sh. Do not perform
-# network operations while starting an interactive shell.
-if [[ -r "$ZINIT_HOME/zinit.zsh" && -n "${DOTFILES_ZSH_PLUGINS_VERSION:-}" ]]; then
-  if [[ -r "$ZSH_PLUGIN_MARKER" \
-      && "$(<"$ZSH_PLUGIN_MARKER")" == "$DOTFILES_ZSH_PLUGINS_VERSION" ]]; then
-    source "$ZINIT_HOME/zinit.zsh"
-
-    zinit ice wait"0" lucid
-    zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"
-  elif [[ -o interactive ]]; then
-    print -u2 -P "%F{yellow}zsh plugins are not installed or are out of date. Run: $DOTFILES_DIR/scripts/install-zsh-plugins.sh%f"
-  fi
-fi
-
-# ====================
 # Utilities
 # ====================
 
-if type brew &>/dev/null; then
-	FPATH="$HOMEBREW_PREFIX/share/zsh-completions:$FPATH"
-	autoload -Uz compinit
-	compinit -d "$ZSH_COMPDUMP"
+if (( $+commands[brew] )); then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  fpath=("$HOMEBREW_PREFIX/share/zsh-completions" $fpath)
+
+  autoload -Uz compinit
+  compinit -d "$ZSH_COMPDUMP"
+
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 # zoxide, a faster way to navigate your filesystem

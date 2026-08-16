@@ -11,6 +11,9 @@ brew "git"
 brew "jq"           # JSON processor
 brew "ripgrep"      # faster grep clone
 brew "zoxide"       # zoxide is a smarter cd command, inspired by z and autojump
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
 
 ## =====================
 ## Terminal utilities
