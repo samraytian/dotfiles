@@ -77,7 +77,7 @@ else
 fi
 
 echo "Setting up symlinks for dotfiles..."
-"$HOME/dotfiles/scripts/symlinks.sh" install
+"$HOME/dotfiles/link"
 
 echo "Installing zsh plugins..."
 "$HOME/dotfiles/scripts/install-zsh-plugins.sh"

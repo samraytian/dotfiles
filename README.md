@@ -11,14 +11,14 @@ curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bo
 
 ## Managing symlinks
 
-The `symlinks.sh` command manages the symlinks from `~/.config` (and `$HOME`) to the configs in `packages/`.
+The `link` command manages the symlinks from `~/.config` (and `$HOME`) to the configs in `packages/`.
 
 ```bash
 # Create all symlinks
-~/dotfiles/scripts/symlinks.sh install
+~/dotfiles/link
 
 # Remove all symlinks
-~/dotfiles/scripts/symlinks.sh uninstall
+~/dotfiles/link --unlink
 ```
 
-`uninstall` only removes entries that are symlinks, so your real config files are left untouched.
+`--unlink` only removes entries that are symlinks, so your real config files are left untouched.
