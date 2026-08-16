@@ -63,18 +63,23 @@ alias vim='nvim'
 # ====================
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
-[ ! -d "$ZINIT_HOME/.git" ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
+ZSH_PLUGIN_MARKER="${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/dotfiles-plugins-installed"
+ZSH_PLUGIN_SPEC="$HOME/dotfiles/scripts/zsh-plugins.zsh"
 
-zinit ice wait"0" lucid
+if [[ -r "$ZSH_PLUGIN_SPEC" ]]; then
+  source "$ZSH_PLUGIN_SPEC"
+fi
 
-zinit light-mode for \
-    zsh-users/zsh-syntax-highlighting \
-    zsh-users/zsh-autosuggestions \
-    zsh-users/zsh-completions \
-    OMZP::git \
-    wfxr/forgit
+# Plugins are installed explicitly by install-zsh-plugins.sh. Do not perform
+# network operations while starting an interactive shell.
+if [[ -r "$ZINIT_HOME/zinit.zsh" \
+    && -f "$ZSH_PLUGIN_MARKER" \
+    && "$(<"$ZSH_PLUGIN_MARKER")" == "${DOTFILES_ZSH_PLUGINS_VERSION:-}" ]]; then
+  source "$ZINIT_HOME/zinit.zsh"
+
+  zinit ice wait"0" lucid
+  zinit light-mode for "${DOTFILES_ZSH_PLUGINS[@]}"
+fi
 
 # ====================
 # Utilities

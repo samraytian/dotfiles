@@ -79,6 +79,9 @@ fi
 echo "Setting up symlinks for dotfiles..."
 "$HOME/dotfiles/scripts/symlinks.sh" install
 
+echo "Installing zsh plugins..."
+"$HOME/dotfiles/scripts/install-zsh-plugins.sh"
+
 ## =====================
 ## Install packages from Brewfile
 ## =====================
