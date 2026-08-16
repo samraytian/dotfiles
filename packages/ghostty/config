@@ -4,7 +4,7 @@
 term = xterm-256color
 
 # Theme
-theme = TokyoNight
+theme = Ayu
  
 # Font Alternatives: 
 #  - SF Mono
