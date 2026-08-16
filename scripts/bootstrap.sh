@@ -100,9 +100,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
   echo "Installing AI tools..."
   "$HOME/dotfiles/scripts/install-ai-tools.sh"
-
-  echo "Installing Emacs..."
-  "$HOME/dotfiles/scripts/install-emacs.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"
