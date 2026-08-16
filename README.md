@@ -11,14 +11,14 @@ curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bo
 
 ## Managing symlinks
 
-The `link` command uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks from `~/.config` (and `$HOME`) to the configs in `packages/`.
+The Makefile uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks from `~/.config` (and `$HOME`) to the configs in `packages/`.
 
 ```bash
 # Create all symlinks
-~/dotfiles/link
+cd ~/dotfiles && make link
 
 # Remove all symlinks
-~/dotfiles/link --unlink
+cd ~/dotfiles && make unlink
 ```
 
-`--unlink` removes only links managed by Stow, so real config files are left untouched. Creating links fails safely if a target already contains a real file or an unrelated symlink; resolve that conflict manually before retrying.
+`make unlink` removes only links managed by Stow, so real config files are left untouched. Creating links fails safely if a target already contains a real file or an unrelated symlink; resolve that conflict manually before retrying.

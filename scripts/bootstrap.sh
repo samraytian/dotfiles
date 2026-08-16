@@ -89,7 +89,7 @@ else
 fi
 
 echo "Setting up symlinks for dotfiles..."
-"$HOME/dotfiles/link"
+make -C "$HOME/dotfiles" link
 
 ## =====================
 ## MacOS settings
