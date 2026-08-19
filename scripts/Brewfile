@@ -10,7 +10,6 @@ brew "fzf"          # fuzzy finder
 brew "git"
 brew "jq"           # JSON processor
 brew "ripgrep"      # faster grep clone
-brew "stow"         # symlink farm manager for dotfiles
 brew "zoxide"       # zoxide is a smarter cd command, inspired by z and autojump
 brew "zsh-autosuggestions"
 brew "zsh-completions"

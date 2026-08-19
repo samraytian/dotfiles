@@ -1,27 +1,56 @@
 .DEFAULT_GOAL := help
+SHELL := /bin/sh
 
 PKG_DIR := $(CURDIR)/packages
-HOME_PKGS := git zsh
 
-.PHONY: help link unlink check-stow
+.PHONY: help link unlink
 
 help:
 	@printf '%s\n' 'Usage: make <target>' '' 'Targets:' '  link    Create dotfile symlinks' '  unlink  Remove dotfile symlinks'
 
-check-stow:
-	@command -v stow >/dev/null 2>&1 || { echo 'GNU Stow is required; install it with: brew install stow' >&2; exit 1; }
+# Create a link only when the destination is absent or already points to source.
+define create_link
+	@source="$(1)"; target="$(2)"; \
+	if [ ! -e "$$source" ]; then \
+		echo "Source path does not exist: $$source" >&2; exit 1; \
+	elif [ -L "$$target" ]; then \
+		if [ "$$(/usr/bin/readlink "$$target")" != "$$source" ]; then \
+			echo "Refusing to replace unrelated symlink: $$target" >&2; exit 1; \
+		fi; \
+	elif [ -e "$$target" ]; then \
+		echo "Refusing to replace existing path: $$target" >&2; exit 1; \
+	else \
+		/bin/mkdir -p "$$(/usr/bin/dirname "$$target")"; \
+		/bin/ln -s "$$source" "$$target"; \
+	fi
+endef
 
-link: check-stow
-	@mkdir -p "$(HOME)/.config/ghostty" "$(HOME)/.config/tmux"
-	@stow --dir="$(PKG_DIR)" --target="$(HOME)" --restow $(HOME_PKGS)
-	@stow --dir="$(PKG_DIR)" --target="$(HOME)/.config/ghostty" --restow ghostty
-	@stow --dir="$(PKG_DIR)" --target="$(HOME)/.config/tmux" --restow tmux
-	@stow --dir="$(PKG_DIR)" --target="$(HOME)/.config" --restow starship
-	@echo '✅ Dotfiles symlinks created'
+# Remove a link only when it points to the corresponding source path.
+define remove_link
+	@source="$(1)"; target="$(2)"; \
+	if [ -L "$$target" ] && [ "$$(/usr/bin/readlink "$$target")" = "$$source" ]; then \
+		/bin/rm "$$target"; \
+	fi
+endef
 
-unlink: check-stow
-	@stow --dir="$(PKG_DIR)" --target="$(HOME)" --delete $(HOME_PKGS)
-	@if [ -d "$(HOME)/.config/ghostty" ]; then stow --dir="$(PKG_DIR)" --target="$(HOME)/.config/ghostty" --delete ghostty; fi
-	@if [ -d "$(HOME)/.config/tmux" ]; then stow --dir="$(PKG_DIR)" --target="$(HOME)/.config/tmux" --delete tmux; fi
-	@if [ -d "$(HOME)/.config" ]; then stow --dir="$(PKG_DIR)" --target="$(HOME)/.config" --delete starship; fi
-	@echo '✅ Dotfiles symlinks removed'
+link:
+	$(call create_link,$(PKG_DIR)/git/.gitconfig,$(HOME)/.gitconfig)
+	$(call create_link,$(PKG_DIR)/zsh/.zprofile,$(HOME)/.zprofile)
+	$(call create_link,$(PKG_DIR)/zsh/.zshenv,$(HOME)/.zshenv)
+	$(call create_link,$(PKG_DIR)/zsh/.zshrc,$(HOME)/.zshrc)
+	$(call create_link,$(PKG_DIR)/starship/starship.toml,$(HOME)/.config/starship.toml)
+	$(call create_link,$(PKG_DIR)/ghostty,$(HOME)/.config/ghostty)
+	$(call create_link,$(PKG_DIR)/tmux,$(HOME)/.config/tmux)
+	$(call create_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
+	@/bin/echo '✅ Dotfiles symlinks created'
+
+unlink:
+	$(call remove_link,$(PKG_DIR)/git/.gitconfig,$(HOME)/.gitconfig)
+	$(call remove_link,$(PKG_DIR)/zsh/.zprofile,$(HOME)/.zprofile)
+	$(call remove_link,$(PKG_DIR)/zsh/.zshenv,$(HOME)/.zshenv)
+	$(call remove_link,$(PKG_DIR)/zsh/.zshrc,$(HOME)/.zshrc)
+	$(call remove_link,$(PKG_DIR)/starship/starship.toml,$(HOME)/.config/starship.toml)
+	$(call remove_link,$(PKG_DIR)/ghostty,$(HOME)/.config/ghostty)
+	$(call remove_link,$(PKG_DIR)/tmux,$(HOME)/.config/tmux)
+	$(call remove_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
+	@/bin/echo '✅ Dotfiles symlinks removed'
