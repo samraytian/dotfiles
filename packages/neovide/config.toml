@@ -1,0 +1,3 @@
+# Keep macOS window controls while visually merging the title bar with Neovide.
+frame = "transparent"
+title-hidden = true
