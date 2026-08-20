@@ -7,6 +7,9 @@ if [[ $(uname -s) == 'Darwin' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Neovim runtime path; lua-language-server auto-loads it via VIMRUNTIME
+export VIMRUNTIME="$(nvim -u NONE -i NONE --headless +'lua io.write(vim.env.VIMRUNTIME)' +qa)"
+
 # Local bin
 export PATH="$HOME/.local/bin:$PATH"
 
