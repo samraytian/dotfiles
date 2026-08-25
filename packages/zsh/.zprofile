@@ -8,7 +8,8 @@ if [[ $(uname -s) == 'Darwin' ]]; then
 fi
 
 # Neovim runtime path; lua-language-server auto-loads it via VIMRUNTIME
-export VIMRUNTIME="$(nvim -u NONE -i NONE --headless +'lua io.write(vim.env.VIMRUNTIME)' +qa)"
+VIMRUNTIME="$(nvim -u NONE -i NONE --headless +'lua io.write(vim.env.VIMRUNTIME)' +qa)"
+export VIMRUNTIME
 
 # Local bin
 export PATH="$HOME/.local/bin:$PATH"
