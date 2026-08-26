@@ -86,4 +86,4 @@ eval "$(starship init zsh)"
 eval "$(codex completion zsh)"
 
 # bun completions
-[ -s "/Users/samray/.local/share/bun/_bun" ] && source "/Users/samray/.local/share/bun/_bun"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
