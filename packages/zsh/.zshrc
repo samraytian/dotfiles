@@ -43,6 +43,15 @@ alias ll='eza -la --git'
 alias tree="eza --tree -a -I '.git|.vendor'"
 alias cat='bat'
 
+# git
+alias gst='git status'
+alias gaa='git add --all'
+alias gco='git checkout'
+alias gb='git branch'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias glog='git log --oneline --decorate --graph'
+
 # ====================
 # Editor
 # ====================
