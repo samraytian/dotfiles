@@ -5,8 +5,8 @@ term = xterm-256color
 
 # Theme
 theme = Ayu
- 
-# Font Alternatives: 
+
+# Font Alternatives:
 #  - SF Mono
 #  - Hack
 #  - Maple Mono NF CN
@@ -32,7 +32,7 @@ window-width = 160
 
 # macOS
 # Available values are: "native", "transparent", "tabs", and "hidden".
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 macos-option-as-alt = true
 
 # Shell
