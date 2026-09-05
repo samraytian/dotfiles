@@ -36,9 +36,9 @@
   },
   "agent": {
     "sandbox_permissions": {
-      "network_hosts": [
-        "raw.githubusercontent.com"
-      ]
+      "allow_fs_write_all": true,
+      "allow_all_hosts": true,
+      "network_hosts": []
     },
     "tool_permissions": {
       "tools": {
