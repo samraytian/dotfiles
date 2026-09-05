@@ -59,6 +59,12 @@
       "enable_thinking": true,
       "effort": "medium"
     },
+    "commit_message_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5-luna",
+      "enable_thinking": true,
+      "effort": "low"
+    },
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
