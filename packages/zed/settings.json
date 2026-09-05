@@ -12,9 +12,9 @@
     "provider": "ollama",
     "ollama": {
       "api_url": "http://localhost:11434",
-      "model": "qwen2.5-coder:3b-base",
+      "model": "qwen2.5-coder:1.5b-base",
       "prompt_format": "qwen",
-      "max_output_tokens": 64,
+      "max_output_tokens": 256,
       "prediction_debounce": 150
     }
   },
