@@ -86,7 +86,6 @@
   },
   "terminal": {
     "font_family": "Hack Nerd Font Mono",
-    "font_size": 14.0,
-    "fallback_font_family": "Zed Sans"
+    "font_size": 14.0
   },
 }
