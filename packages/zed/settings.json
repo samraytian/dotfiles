@@ -8,7 +8,15 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "edit_predictions": {
-    "mode": "eager"
+    "mode": "eager",
+    "provider": "ollama",
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "model": "qwen2.5-coder:7b-base",
+      "prompt_format": "qwen",
+      "max_output_tokens": 128,
+      "prediction_debounce": 150
+    }
   },
   "diff_view_style": "unified",
   "icon_theme": {
