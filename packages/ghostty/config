@@ -23,10 +23,10 @@ background-opacity = 1.0
 
 # Window
 window-decoration = auto
-window-padding-color = extend
+window-padding-color = background
 window-padding-balance = true
 window-padding-x = 8
-window-padding-y = 0
+window-padding-y = 8
 window-height = 52
 window-width = 160
 
