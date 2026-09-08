@@ -96,7 +96,7 @@ cask "cc-switch"
 cask "claude-code"
 cask "codex"
 cask "chatgpt"
-brew "codeburn"     # See where your AI spend goes
+brew "codexbar"     # See where your AI spend goes
 brew "ollama"       # Run large language models locally
 
 ## =====================
