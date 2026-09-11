@@ -1,0 +1,7 @@
+[
+  {
+    "bindings": {
+      "ctrl-/": "terminal_panel::ToggleFocus"
+    }
+  }
+]
