@@ -36,6 +36,7 @@
   },
   "agent": {
     "sandbox_permissions": {
+      "allow_unsandboxed": true,
       "allow_fs_write_all": true,
       "allow_all_hosts": true,
       "network_hosts": []
