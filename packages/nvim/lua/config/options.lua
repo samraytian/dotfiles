@@ -3,9 +3,8 @@ local vim = vim -- Provided by the Neovim runtime.
 
 require("vim._core.ui2").enable({})
 
--- Space as leader key.
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = " "       -- space as leader key.
+vim.g.maplocalleader = " "  -- space as local leader key.
 
 vim.o.tabstop = 2           -- Display each tab character as 2 columns.
 vim.o.shiftwidth = 2        -- Use 2 spaces for each indentation level.
