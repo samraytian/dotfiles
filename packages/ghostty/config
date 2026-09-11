@@ -4,7 +4,8 @@
 term = xterm-256color
 
 # Theme
-theme = Ayu
+theme = TokyoNight
+background = 090B10
 
 # Font Alternatives:
 #  - SF Mono
@@ -18,8 +19,8 @@ font-thicken = true
 
 # Background
 background-opacity-cells = true
-background-opacity = 1.0
-# background-blur = macos-glass-regular
+background-opacity = 0.9
+background-blur = macos-glass-regular
 
 # Window
 window-decoration = auto
