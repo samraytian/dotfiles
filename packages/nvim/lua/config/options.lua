@@ -1,6 +1,3 @@
----@diagnostic disable-next-line: undefined-global
-local vim = vim -- Provided by the Neovim runtime.
-
 require("vim._core.ui2").enable({})
 
 vim.g.mapleader = " "              -- space as leader key.
