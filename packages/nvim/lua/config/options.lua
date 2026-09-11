@@ -7,6 +7,13 @@ require("vim._core.ui2").enable({})
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.o.tabstop = 2           -- Display each tab character as 2 columns.
+vim.o.shiftwidth = 2        -- Use 2 spaces for each indentation level.
+vim.o.softtabstop = 2       -- Use 2-column tab stops when inserting tabs or pressing Backspace.
+vim.o.autoindent = true     -- Copy the current line's indentation when starting a new line.
+vim.o.expandtab = true      -- Insert spaces instead of tab characters.
+vim.o.smartindent = true    -- Apply C-like automatic indentation when starting a new line.
+
 -- Neovide configurations.
 if vim.fn.exists("g:neovide") == 1 then
   vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
