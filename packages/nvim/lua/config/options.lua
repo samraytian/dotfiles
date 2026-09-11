@@ -4,6 +4,7 @@ vim.g.mapleader = " "              -- space as leader key.
 vim.g.maplocalleader = " "         -- space as local leader key.
 
 vim.o.termguicolors = true         -- Enable 24-bit RGB colors in supported terminals.
+vim.o.clipboard = "unnamedplus"    -- Use the system clipboard for unnamed register operations.
 
 vim.o.swapfile = false             -- Disable swap files for buffers.
 vim.o.backup = false               -- Do not keep a backup file after overwriting a file.
