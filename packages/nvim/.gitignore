@@ -1,0 +1,22 @@
+# Swap files
+*.swp
+*.swo
+*.swn
+
+# Backup and undo files
+*~
+*.un~
+
+# Session and ShaDa files
+Session.vim
+Sessionx.vim
+*.shada
+*.shada.tmp.*
+
+# Lock files
+*.lock
+lazy-lock.json
+nvim-pack-lock.json
+
+# Log files
+*.log
