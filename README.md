@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bo
 
 ## Managing symlinks
 
-The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/tmux/`, `packages/ghostty/`, and `packages/nvim/` are linked as complete configuration directories; Zed links only `packages/zed/settings.json` to `~/.config/zed/settings.json`, leaving local prompt databases and other untracked files outside the repository.
+The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/tmux/`, `packages/ghostty/`, `packages/nvim/`, and `packages/zed/` are linked as complete configuration directories.
 
 ```bash
 # Create all symlinks
@@ -38,11 +38,15 @@ Use an unused backup path, and ensure the original directory was moved successfu
 
 ### Zed
 
-Before the first `make link`, back up an existing regular Zed settings file:
+The entire `packages/zed/` directory is linked to `~/.config/zed`, including settings, keymaps, and themes.
+
+Before the first `make link`, or when migrating from the previous settings-only link, quit Zed and back up the existing configuration directory:
 
 ```bash
-mv -i ~/.config/zed/settings.json ~/.config/zed/settings.json.backup
+mv -i ~/.config/zed ~/.config/zed.backup
 make link
 ```
 
-After linking, changes to Zed's user settings are stored in `packages/zed/settings.json`. Review them before committing: do not add credentials, private settings, or machine-specific paths. Local prompt databases under `~/.config/zed/prompts/` are not tracked.
+Use an unused backup path, and ensure the original directory was moved successfully before running `make link`. Restore any needed keymaps, themes, or local `prompts/` data from the backup into `packages/zed/`. Do not copy the old `settings.json` symlink back: it already points to the repository's settings file. If the backup contains a regular settings file, compare and merge it instead of overwriting the repository's version.
+
+After linking, configuration edits under `~/.config/zed` are stored in `packages/zed/`. Review them before committing: do not add credentials, private settings, or machine-specific paths. Local prompt databases under `packages/zed/prompts/` are ignored by Git.
