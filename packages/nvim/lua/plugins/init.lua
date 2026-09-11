@@ -5,7 +5,9 @@ vim.pack.add({
 
   -- Appearance
   "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
 })
 
 require("plugins.colorscheme")
+require("plugins.lualine")
 require("plugins.oil")
