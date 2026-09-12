@@ -11,6 +11,11 @@ vim.pack.add({
   -- Appearance
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/MunifTanjim/nui.nvim",
+  "https://github.com/rcarriga/nvim-notify",
+  "https://github.com/folke/noice.nvim",
+
+  -- LSP, Completion, Formatting
 
   -- Utilities
   "https://github.com/nvim-lua/plenary.nvim",
@@ -32,5 +37,6 @@ end
 
 require("plugins.colorscheme")
 require("plugins.lualine")
+require("plugins.noice")
 require("plugins.oil")
 require("plugins.telescope")

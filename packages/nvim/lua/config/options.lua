@@ -1,4 +1,3 @@
-require("vim._core.ui2").enable({})
 
 vim.g.mapleader = " "              -- space as leader key.
 vim.g.maplocalleader = " "         -- space as local leader key.
@@ -18,6 +17,7 @@ vim.o.completeopt = "menu,preview" -- Show a menu for multiple matches and previ
 vim.o.pumheight = 10               -- Limit the completion popup menu to 10 visible entries.
 vim.o.winborder = "rounded"        -- Use rounded borders by default for floating windows.
 vim.o.showmode = false             -- Hide the mode indicator in the command line.
+vim.o.cmdheight = 0                -- Let Noice display the command line without reserving bottom space.
 vim.o.cursorline = true            -- Highlight the screen line containing the cursor.
 vim.o.signcolumn = "yes"           -- Always reserve space for signs to prevent horizontal text shifts.
 vim.o.ignorecase = true            -- Ignore case in search patterns by default.
