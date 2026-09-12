@@ -16,7 +16,15 @@ vim.pack.add({
   "https://github.com/rcarriga/nvim-notify",
   "https://github.com/folke/noice.nvim",
 
+  -- Editing
+
   -- LSP, Completion, Formatting
+
+  -- Diagnostics
+
+  -- Git
+
+  -- AI
 
   -- Utilities
   "https://github.com/nvim-lua/plenary.nvim",
