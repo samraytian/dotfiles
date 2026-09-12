@@ -8,6 +8,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Highlight the cursor line only in the active window
+vim.api.nvim_create_autocmd({ "WinEnter", "WinLeave" }, {
+	group = vim.api.nvim_create_augroup("active_cursorline", { clear = true }),
+	desc = "show cursorline only in the active window",
+	callback = function(args)
+		vim.opt_local.cursorline = args.event == "WinEnter"
+	end,
+})
+
 -- Disable automatic comment continuation on new lines
 vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
 	group = vim.api.nvim_create_augroup("no_comment_continuation", { clear = true }),
