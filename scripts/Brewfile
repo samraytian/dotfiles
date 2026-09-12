@@ -23,7 +23,6 @@ cask "iterm2"
 cask "termius"
 
 brew "asc"          # App Store Connect CLI tool https://asccli.sh/
-brew "awscli"       # AWS Command Line Interface
 brew "btop"         # Resource monitor
 brew "fileicon"     # macOS CLI for managing custom icons for files and folders
 brew "gh"           # GitHub CLI tool
