@@ -52,6 +52,7 @@ autoformat; manual formatting still works.
 | `<leader>cw` | Populate diagnostics for unopened workspace files |
 | `<leader>xx`, `<leader>xd` | Search workspace / current-buffer diagnostics |
 | `<leader>xt` | Toggle inline diagnostic messages |
+| `<leader>sn` | Search notification history |
 | `Ctrl-Space` | Open completion menu / documentation |
 | `Ctrl-n`, `Ctrl-p` | Select next / previous completion |
 | `Ctrl-y`, `Ctrl-e` | Accept / cancel completion |
@@ -73,9 +74,13 @@ projects can take time to analyze; results arrive asynchronously and can be
 browsed with `<leader>xx`. The fallback scan requires a Git workspace.
 
 Tiny Cmdline uses native `ui2` for a centered command window, with blink.cmp
-completion aligned below it. `/` and `?` searches stay at the bottom. Noice
-retains notifications, hover documentation, and LSP progress, while its command
-line, message, popup-menu, and signature handlers are disabled.
+completion aligned below it. `/` and `?` searches stay at the bottom. Hover
+documentation uses Neovim's built-in UI; blink.cmp provides signature help.
+
+nvim-notify handles `vim.notify` with compact notifications in the top-right
+corner that fade out after three seconds. It uses Tokyonight's background color
+for animations with the transparent theme. Use `<leader>sn` to search notification
+history, `:Notifications` to display it, or `:NotificationsClear` to clear it.
 
 For troubleshooting, use `:checkhealth vim.lsp`, `:checkhealth blink.cmp`,
 `:ConformInfo`, and `:messages`.

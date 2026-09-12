@@ -12,9 +12,7 @@ vim.pack.add({
 	"https://github.com/folke/tokyonight.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
-	"https://github.com/MunifTanjim/nui.nvim",
 	"https://github.com/rcarriga/nvim-notify",
-	"https://github.com/folke/noice.nvim",
 	"https://github.com/rachartier/tiny-cmdline.nvim",
 
 	-- Editing
@@ -53,8 +51,8 @@ if #inactive_plugins > 0 then
 end
 
 require("plugins.colorscheme")
+require("plugins.notify")
 require("plugins.lualine")
-require("plugins.noice")
 require("plugins.blink")
 require("plugins.cmdline")
 require("plugins.diagnostics")
