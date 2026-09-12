@@ -8,6 +8,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Disable automatic comment continuation on new lines
+vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
+	group = vim.api.nvim_create_augroup("no_comment_continuation", { clear = true }),
+	desc = "disable comment continuation with Enter and o/O",
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "r", "o" })
+	end,
+})
+
 -- Open help windows in a vertical split
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("vertical_help", { clear = true }),
