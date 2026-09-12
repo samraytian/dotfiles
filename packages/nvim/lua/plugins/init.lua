@@ -32,6 +32,8 @@ vim.pack.add({
 	"https://github.com/artemave/workspace-diagnostics.nvim",
 
 	-- Git
+	"https://github.com/lewis6991/gitsigns.nvim",
+	"https://github.com/NeogitOrg/neogit",
 
 	-- AI
 
@@ -65,4 +67,6 @@ require("plugins.lsp")
 require("plugins.conform")
 require("plugins.oil")
 require("plugins.telescope")
+require("plugins.gitsigns")
+require("plugins.neogit")
 require("plugins.which-key")

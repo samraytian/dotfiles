@@ -72,6 +72,31 @@ Use `:Inspect` on code to check Tree-sitter captures.
 | `Tab`, `Shift-Tab` | Move between snippet placeholders in insert mode |
 | `Ctrl-k` | Show Noice signature help in insert mode |
 
+## Git
+
+[Gitsigns](https://github.com/lewis6991/gitsigns.nvim) shows changed and staged
+lines in the sign column. [Neogit](https://github.com/NeogitOrg/neogit) provides
+a Git status interface with Telescope selection lists. Both are installed by
+`vim.pack` on the next launch; Git must be on `PATH`.
+
+| Keys | Action |
+| --- | --- |
+| `<leader>gg` | Open Neogit for the current working directory |
+| `[c`, `]c` | Previous / next hunk; retain native navigation in diff windows |
+| `<leader>gs` | Stage / unstage hunk or visually selected lines |
+| `<leader>gS` | Stage the current buffer |
+| `<leader>gr` | Reset hunk or visually selected lines (discard those edits) |
+| `<leader>gp` | Preview hunk |
+| `<leader>gb` | Show current-line blame in a popup |
+| `<leader>gB` | Toggle inline blame (off by default) |
+| `<leader>gd` | Diff current buffer against the index; `:diffoff!` exits diff mode |
+| `ih` | Hunk text object in operator-pending and visual modes |
+
+Gitsigns mappings are buffer-local and available when Gitsigns attaches to a file.
+In Neogit, press `?` for available actions and `q` to close the status view.
+Use `:Neogit cwd=%:p:h` to open the repository containing the current file when
+it differs from the working directory.
+
 ## Diagnostics and command line
 
 Tiny Inline Diagnostic displays inline messages; native virtual text and virtual
