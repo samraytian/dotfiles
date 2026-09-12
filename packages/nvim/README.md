@@ -65,12 +65,12 @@ Use `:Inspect` on code to check Tree-sitter captures.
 | `<leader>cw` | Populate diagnostics for unopened workspace files |
 | `<leader>xx`, `<leader>xd` | Search workspace / current-buffer diagnostics |
 | `<leader>xt` | Toggle inline diagnostic messages |
-| `<leader>sn` | Search notification history |
+| `<leader>sn` | Search Noice message history |
 | `Ctrl-Space` | Open completion menu / documentation |
 | `Ctrl-n`, `Ctrl-p` | Select next / previous completion |
 | `Ctrl-y`, `Ctrl-e` | Accept / cancel completion |
 | `Tab`, `Shift-Tab` | Move between snippet placeholders in insert mode |
-| `Ctrl-k` | Toggle signature help in insert mode |
+| `Ctrl-k` | Show Noice signature help in insert mode |
 
 ## Diagnostics and command line
 
@@ -86,18 +86,30 @@ to that server. Run `:lsp restart` before rescanning newly created files. Large
 projects can take time to analyze; results arrive asynchronously and can be
 browsed with `<leader>xx`. The fallback scan requires a Git workspace.
 
-Tiny Cmdline uses native `ui2` for a centered command window, with blink.cmp
-completion aligned below it. `/` and `?` searches stay at the bottom. Hover
-documentation uses Neovim's built-in UI; blink.cmp provides signature help.
+Noice displays a horizontally centered command window at 20% of the screen height,
+with blink.cmp completion aligned to it. `/` and `?` searches stay at the bottom. Hover
+documentation and signature help use Noice's bordered popups. Signature help
+opens automatically on LSP trigger characters (such as `(` and `,`, depending
+on the server), or manually with `Ctrl-k`. blink.cmp handles completion.
 
-nvim-notify handles `vim.notify` with compact notifications in the top-right
-corner that fade out after three seconds. It uses Tokyonight's background color
-for animations with the transparent theme. Use `<leader>sn` to search notification
-history, `:Notifications` to display it, or `:NotificationsClear` to clear it.
+Noice handles `vim.notify` and routes notifications to nvim-notify for compact
+popups in the top-right corner that fade out after three seconds. The renderer
+uses Tokyonight's background color for animations with the transparent theme.
+Use `<leader>sn` to search Noice's message history, including notifications.
+LSP server messages (`window/showMessage`) also go directly to Noice, retaining
+their server name and severity. A compatibility shim covers Noice revisions
+whose message setup references a missing `_on_message` handler.
 
-Fidget shows LSP progress in a transparent window in the bottom-right corner.
-Completed tasks disappear after three seconds. General notifications continue
-to use nvim-notify. Use `:Fidget clear` to dismiss active progress messages.
+Noice also handles command output, errors, warnings, input prompts (including
+LSP rename), confirmation dialogs, search counts, and `:messages`. Its Markdown
+overrides cover callers of Neovim's LSP Markdown utilities. Completion menus
+and their documentation remain in blink.cmp; selection lists stay in Telescope,
+and diagnostics stay in Tiny Inline Diagnostic and Neovim.
+
+Noice shows LSP progress in a transparent window in the bottom-right corner.
+Completed tasks disappear after three seconds. Use `:Noice dismiss` to dismiss visible Noice messages,
+`:Noice` for message history, and `:Noice errors` for errors. Long messages open
+in a split. Noice uses nui.nvim and replaces the native `ui2` integration.
 
 For troubleshooting, use `:checkhealth vim.lsp`, `:checkhealth blink.cmp`,
-`:ConformInfo`, and `:messages`.
+`:checkhealth noice`, `:ConformInfo`, and `:messages`.

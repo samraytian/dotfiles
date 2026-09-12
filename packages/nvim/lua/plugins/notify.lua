@@ -6,4 +6,5 @@ notify.setup({
   timeout = 3000,
 })
 
+-- Startup fallback; Noice takes over vim.notify after VimEnter and uses this renderer.
 vim.notify = notify

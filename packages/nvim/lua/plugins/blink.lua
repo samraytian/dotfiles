@@ -12,14 +12,22 @@ if not cmp.library_available() then
 end
 
 cmp.setup({
-  keymap = { preset = "default" },
+  keymap = {
+    preset = "default",
+    ["<C-k>"] = {
+      function()
+        vim.lsp.buf.signature_help()
+        return true
+      end,
+    },
+  },
   sources = { default = { "lsp", "path", "snippets", "buffer" } },
   fuzzy = { implementation = "prefer_rust" },
   completion = {
     documentation = { auto_show = true, auto_show_delay_ms = 250 },
     menu = { border = "rounded" },
   },
-  signature = { enabled = true },
+  signature = { enabled = false },
   cmdline = {
     completion = {
       menu = { auto_show = true },

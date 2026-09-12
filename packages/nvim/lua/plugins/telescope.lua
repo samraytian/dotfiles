@@ -16,7 +16,7 @@ telescope.setup({
 
 telescope.load_extension("ui-select")
 telescope.load_extension("frecency")
-telescope.load_extension("notify")
+telescope.load_extension("noice")
 
 local builtin = require("telescope.builtin")
 
@@ -36,5 +36,5 @@ vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Find recent files"
 vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Search project text" })
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Search help tags" })
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "Search keymaps" })
-vim.keymap.set("n", "<leader>sn", telescope.extensions.notify.notify, { desc = "Search notifications" })
+vim.keymap.set("n", "<leader>sn", telescope.extensions.noice.noice, { desc = "Search message history" })
 vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Search word under cursor" })

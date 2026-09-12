@@ -13,7 +13,8 @@ vim.pack.add({
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/rcarriga/nvim-notify",
-	"https://github.com/rachartier/tiny-cmdline.nvim",
+	"https://github.com/MunifTanjim/nui.nvim",
+	"https://github.com/folke/noice.nvim",
 
 	-- Editing
 
@@ -21,7 +22,6 @@ vim.pack.add({
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 
 	-- LSP, Completion, Formatting
-	"https://github.com/j-hui/fidget.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
@@ -57,10 +57,9 @@ end
 require("plugins.colorscheme")
 require("plugins.treesitter")
 require("plugins.notify")
-require("plugins.fidget")
+require("plugins.noice")
 require("plugins.lualine")
 require("plugins.blink")
-require("plugins.cmdline")
 require("plugins.diagnostics")
 require("plugins.lsp")
 require("plugins.conform")
