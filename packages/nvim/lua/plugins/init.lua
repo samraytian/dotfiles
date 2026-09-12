@@ -19,6 +19,7 @@ vim.pack.add({
 
   -- Utilities
   "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/folke/which-key.nvim",
 })
 
 -- Clean up plugins removed from the declarations above.
@@ -40,3 +41,4 @@ require("plugins.lualine")
 require("plugins.noice")
 require("plugins.oil")
 require("plugins.telescope")
+require("plugins.which-key")
