@@ -59,7 +59,6 @@ end
 require("plugins.colorscheme")
 require("plugins.treesitter")
 require("plugins.notify")
-require("plugins.noice")
 require("plugins.lualine")
 require("plugins.blink")
 require("plugins.diagnostics")
