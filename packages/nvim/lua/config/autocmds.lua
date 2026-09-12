@@ -8,6 +8,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Open help windows in a vertical split
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("vertical_help", { clear = true }),
+	pattern = "help",
+	desc = "open help in a right-hand vertical split",
+	callback = function()
+		vim.cmd("wincmd L")
+	end,
+})
+
 -- Restore cursor to file position in previous editing session
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function(args)
