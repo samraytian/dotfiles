@@ -8,12 +8,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Highlight the cursor line only in the active window
+-- Highlight the cursor line only in the active non-floating window
 vim.api.nvim_create_autocmd({ "WinEnter", "WinLeave" }, {
 	group = vim.api.nvim_create_augroup("active_cursorline", { clear = true }),
-	desc = "show cursorline only in the active window",
+	desc = "show cursorline only in the active non-floating window",
 	callback = function(args)
-		vim.opt_local.cursorline = args.event == "WinEnter"
+		local is_floating = vim.api.nvim_win_get_config(0).relative ~= ""
+		vim.opt_local.cursorline = args.event == "WinEnter" and not is_floating
 	end,
 })
 
