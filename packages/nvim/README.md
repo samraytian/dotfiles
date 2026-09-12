@@ -82,5 +82,9 @@ corner that fade out after three seconds. It uses Tokyonight's background color
 for animations with the transparent theme. Use `<leader>sn` to search notification
 history, `:Notifications` to display it, or `:NotificationsClear` to clear it.
 
+Fidget shows LSP progress in a transparent window in the bottom-right corner.
+Completed tasks disappear after three seconds. General notifications continue
+to use nvim-notify. Use `:Fidget clear` to dismiss active progress messages.
+
 For troubleshooting, use `:checkhealth vim.lsp`, `:checkhealth blink.cmp`,
 `:ConformInfo`, and `:messages`.

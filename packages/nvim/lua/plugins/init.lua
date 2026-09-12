@@ -18,6 +18,7 @@ vim.pack.add({
 	-- Editing
 
 	-- LSP, Completion, Formatting
+	"https://github.com/j-hui/fidget.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
@@ -52,6 +53,7 @@ end
 
 require("plugins.colorscheme")
 require("plugins.notify")
+require("plugins.fidget")
 require("plugins.lualine")
 require("plugins.blink")
 require("plugins.cmdline")
