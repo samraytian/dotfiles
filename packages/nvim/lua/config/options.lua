@@ -38,6 +38,8 @@ vim.o.splitright = true            -- Open new vertical splits to the right of t
 vim.o.wrap = false                 -- Display long lines without wrapping.
 vim.o.breakindent = true           -- Preserve indentation on wrapped lines if wrapping is enabled.
 
+vim.opt.fillchars:append({ eob = " " }) -- Hide tilde markers on lines past the end of the buffer.
+
 -- Neovide configurations.
 if vim.fn.exists("g:neovide") == 1 then
   vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
