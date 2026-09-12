@@ -1,6 +1,9 @@
 local cmdline = require("tiny-cmdline")
 
 cmdline.setup({
+  position = {
+    y = "20%",
+  },
   on_reposition = cmdline.adapters.blink,
 })
 
