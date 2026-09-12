@@ -56,6 +56,9 @@ cask "input-source-pro"
 ## Neovim
 ## =====================
 brew "neovim"
+brew "lua-language-server"
+brew "basedpyright"
+brew "ruff"
 
 ## =====================
 ## Development environment
