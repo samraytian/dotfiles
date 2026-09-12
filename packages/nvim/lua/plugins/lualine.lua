@@ -50,7 +50,7 @@ require("lualine").setup({
       },
       { "filename", path = 1, padding = { left = 0, right = 1 } },
     },
-    lualine_x = { "encoding", "fileformat", "filetype" },
+    lualine_x = { "encoding", "filetype" },
     lualine_y = { "progress" },
     lualine_z = { "location" },
   },
