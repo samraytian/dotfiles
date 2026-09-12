@@ -4,6 +4,8 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- Pair u (undo) with U (redo), replacing U's default line-undo behavior.
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo" })
 
+vim.keymap.set({ "n", "x", "o" }, "gl", "$", { desc = "Go to end of line" })
+
 -- Save without switching modes.
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Cmd>write<CR>", { desc = "Save file" })
 
