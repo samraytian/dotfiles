@@ -17,6 +17,9 @@ vim.pack.add({
 
 	-- Editing
 
+	-- Syntax / Tree-sitter
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+
 	-- LSP, Completion, Formatting
 	"https://github.com/j-hui/fidget.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
@@ -52,6 +55,7 @@ if #inactive_plugins > 0 then
 end
 
 require("plugins.colorscheme")
+require("plugins.treesitter")
 require("plugins.notify")
 require("plugins.fidget")
 require("plugins.lualine")

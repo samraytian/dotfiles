@@ -36,6 +36,19 @@ Use `:FormatDisable` / `:FormatEnable` for the global autoformat switch. Add `!`
 to change only the current buffer's switch. Either disabled switch prevents
 autoformat; manual formatting still works.
 
+## Tree-sitter highlighting
+
+Tree-sitter highlighting starts automatically for every filetype with an installed
+parser and highlight queries. Supported parsers are installed asynchronously on
+first use, then highlighting starts in matching open buffers. Installation requires
+`tree-sitter` CLI 0.26.1+ and a C compiler. Unsupported languages and pending or
+failed installations retain Vim syntax highlighting. Failed downloads are attempted
+only once per language per session; retry with `:TSInstall <language>` and reopen
+the file. Run `:TSUpdate` after updating nvim-treesitter to keep parsers and queries
+compatible.
+
+Use `:Inspect` on code to check Tree-sitter captures.
+
 ## Keys
 
 `<leader>` is Space.
