@@ -1,13 +1,16 @@
 local telescope = require("telescope")
 
 telescope.setup({
+  defaults = {
+    path_display = { "truncate", "filename_first" },
+  },
   extensions = {
-    ["ui-select"] = require("telescope.themes").get_dropdown({}),
     frecency = {
       db_safe_mode = false,
       db_validate_threshold = 0,
       show_filter_column = false,
     },
+    ["ui-select"] = require("telescope.themes").get_dropdown({}),
   },
 })
 
