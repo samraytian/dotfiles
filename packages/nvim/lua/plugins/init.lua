@@ -27,6 +27,7 @@ vim.pack.add({
   "https://github.com/saghen/blink.lib",
   "https://github.com/saghen/blink.cmp",
   "https://github.com/stevearc/conform.nvim",
+  "https://github.com/rachartier/tiny-code-action.nvim",
 
   -- Diagnostics
   "https://github.com/rachartier/tiny-inline-diagnostic.nvim",

@@ -1,3 +1,18 @@
+require("tiny-code-action").setup({
+  backend = "vim",
+  picker = {
+    "telescope",
+    opts = {
+      layout_strategy = "horizontal",
+      layout_config = {
+        width = 0.9,
+        height = 0.8,
+        preview_width = 0.6,
+      },
+    },
+  },
+})
+
 vim.lsp.config("*", {
   capabilities = require("blink.cmp").get_lsp_capabilities(),
 })
@@ -38,7 +53,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gI", telescope.lsp_implementations, "Go to implementation")
     map("gy", telescope.lsp_type_definitions, "Go to type definition")
     map("K", vim.lsp.buf.hover, "Hover documentation")
-    map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "x" })
+    map("<leader>ca", function()
+      require("tiny-code-action").code_action()
+    end, "Code action", { "n", "x" })
     map("<leader>cr", vim.lsp.buf.rename, "Rename symbol")
     map("<leader>cs", telescope.lsp_document_symbols, "Document symbols")
   end,
