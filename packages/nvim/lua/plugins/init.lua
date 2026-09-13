@@ -27,6 +27,7 @@ vim.pack.add({
   "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/folke/flash.nvim",
   "https://github.com/Wansmer/treesj",
+  "https://github.com/abecodes/tabout.nvim",
 
   -- Syntax
   "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -70,6 +71,8 @@ require("plugins.misc")
 require("plugins.mini")
 require("plugins.flash")
 require("plugins.treesj")
+-- Install Tab mappings before Blink captures them as snippet fallbacks.
+require("plugins.tabout")
 require("plugins.blink")
 require("plugins.diagnostics")
 require("plugins.lsp")

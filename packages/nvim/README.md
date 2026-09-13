@@ -37,6 +37,7 @@ formatting for shell scripts as well.
 | `<leader>xx`, `<leader>xd` | Search workspace / buffer diagnostics |
 | `Ctrl-Space` | Open completion menu |
 | `Ctrl-y`, `Ctrl-e` | Accept / cancel completion |
+| `Tab`, `Shift-Tab` | Jump to next / previous snippet placeholder, otherwise tab out forward / backward (insert mode) |
 | `<leader>gg` | Open Git status (`?` for actions) |
 | `<leader>gd`, `<leader>gc` | Open / close Git diff |
 | `<leader>gh` | View file history |
@@ -47,5 +48,6 @@ formatting for shell scripts as well.
 - `:FormatDisable` / `:FormatEnable`: turn format-on-save off / on; add `!` for the current buffer only.
 - `:WorkspaceDiagnostics`: request diagnostics for unopened workspace files.
 - `:TSJToggle` / `:TSJSplit` / `:TSJJoin`: toggle / split / join supported code structures; requires the language's Tree-sitter parser.
+- `:TaboutToggle`: enable / disable tabbing out of brackets and quotes; requires the language's Tree-sitter parser.
 - `:lua vim.pack.update()`: update plugins; run `:TSUpdate` afterward to update syntax parsers.
 - `:checkhealth`: check the environment when something is not working.
