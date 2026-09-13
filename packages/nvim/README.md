@@ -26,6 +26,8 @@ formatting for shell scripts as well.
 | `r` | Remote Flash (operator-pending) |
 | `R` | Treesitter search (visual, operator-pending) |
 | `Ctrl-s` | Toggle Flash search (command-line) |
+| `gsa`, `gsd`, `gsr` | Add / delete / replace surrounding |
+| `gsf`, `gsF`, `gsh` | Find surrounding right / left / highlight surrounding |
 | `gd`, `grr` | Go to definition / find references |
 | `K` | Show documentation |
 | `<leader>ca`, `<leader>cr` | Code action / rename |
