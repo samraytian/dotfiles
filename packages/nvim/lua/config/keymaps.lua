@@ -1,6 +1,9 @@
 -- Disable Space's default motion because it is reserved for <leader> mappings.
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
+-- Clear search highlights until the next search.
+vim.keymap.set("n", "<leader>l", "<Cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+
 -- Pair u (undo) with U (redo), replacing U's default line-undo behavior.
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo" })
 

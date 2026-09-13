@@ -21,6 +21,7 @@ formatting for shell scripts as well.
 
 | Keys | Action |
 | --- | --- |
+| `<leader>l` | Clear search highlights |
 | `gd`, `grr` | Go to definition / find references |
 | `K` | Show documentation |
 | `<leader>ca`, `<leader>cr` | Code action / rename |
