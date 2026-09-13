@@ -33,15 +33,22 @@ gitsigns.setup({
     map("n", "<leader>gp", gitsigns.preview_hunk, "Preview hunk")
     map("n", "<leader>gb", gitsigns.blame_line, "Blame current line")
     map("n", "<leader>gB", gitsigns.toggle_current_line_blame, "Toggle inline blame")
-    map("n", "<leader>gd", gitsigns.diffthis, "Diff against index")
     map({ "o", "x" }, "ih", "<Cmd>Gitsigns select_hunk<CR>", "Select Git hunk")
   end,
 })
+
+require("diffview").setup({})
+
+vim.keymap.set("n", "<leader>gd", "<Cmd>DiffviewOpen<CR>", { desc = "Open repository diff" })
+vim.keymap.set("n", "<leader>gc", "<Cmd>DiffviewClose<CR>", { desc = "Close Diffview" })
+vim.keymap.set("n", "<leader>gh", "<Cmd>DiffviewFileHistory %<CR>", { desc = "Current file history" })
+vim.keymap.set("n", "<leader>gH", "<Cmd>DiffviewFileHistory<CR>", { desc = "Repository file history" })
 
 local neogit = require("neogit")
 
 neogit.setup({
   integrations = {
+    diffview = true,
     telescope = true,
   },
 })

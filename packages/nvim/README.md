@@ -76,8 +76,10 @@ Use `:Inspect` on code to check Tree-sitter captures.
 
 [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) shows changed and staged
 lines in the sign column. [Neogit](https://github.com/NeogitOrg/neogit) provides
-a Git status interface with Telescope selection lists. Both are installed by
-`vim.pack` on the next launch; Git must be on `PATH`.
+a Git status interface with Telescope selection lists and Diffview integration.
+[Diffview](https://github.com/sindrets/diffview.nvim) provides repository diffs,
+file history, and merge conflict views. These plugins are installed by `vim.pack`
+on the next launch; Git 2.31+ must be on `PATH`.
 
 | Keys | Action |
 | --- | --- |
@@ -89,13 +91,21 @@ a Git status interface with Telescope selection lists. Both are installed by
 | `<leader>gp` | Preview hunk |
 | `<leader>gb` | Show current-line blame in a popup |
 | `<leader>gB` | Toggle inline blame (off by default) |
-| `<leader>gd` | Diff current buffer against the index; `:diffoff!` exits diff mode |
+| `<leader>gd` | Open Diffview for working-tree and staged changes |
+| `<leader>gc` | Close the current Diffview |
+| `<leader>gh` | View the current file's history |
+| `<leader>gH` | View the repository's file history |
 | `ih` | Hunk text object in operator-pending and visual modes |
 
 Gitsigns mappings are buffer-local and available when Gitsigns attaches to a file.
 In Neogit, press `?` for available actions and `q` to close the status view.
 Use `:Neogit cwd=%:p:h` to open the repository containing the current file when
 it differs from the working directory.
+
+In Diffview, use `Tab` / `Shift-Tab` to cycle through changed files and
+`:DiffviewToggleFiles` to toggle the file panel. Use `:DiffviewOpen main...HEAD`
+to review changes since the merge base with `main`, or `:DiffviewOpen --cached`
+to review only staged changes. Conflicted files open in a three-way diff view.
 
 ## Diagnostics and command line
 
