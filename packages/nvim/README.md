@@ -22,6 +22,10 @@ formatting for shell scripts as well.
 | Keys | Action |
 | --- | --- |
 | `<leader>l` | Clear search highlights |
+| `s`, `S` | Flash jump / Treesitter selection (normal, visual, operator-pending) |
+| `r` | Remote Flash (operator-pending) |
+| `R` | Treesitter search (visual, operator-pending) |
+| `Ctrl-s` | Toggle Flash search (command-line) |
 | `gd`, `grr` | Go to definition / find references |
 | `K` | Show documentation |
 | `<leader>ca`, `<leader>cr` | Code action / rename |
