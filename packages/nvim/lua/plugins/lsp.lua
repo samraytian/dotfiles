@@ -57,7 +57,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       require("tiny-code-action").code_action()
     end, "Code action", { "n", "x" })
     map("<leader>cr", vim.lsp.buf.rename, "Rename symbol")
-    map("<leader>cs", telescope.lsp_document_symbols, "Document symbols")
+    map("<leader>cS", telescope.lsp_document_symbols, "Document symbols")
   end,
 })
 
