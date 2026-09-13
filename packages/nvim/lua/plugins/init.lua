@@ -1,4 +1,19 @@
 vim.pack.add({
+  -- Shared dependencies
+  "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/MunifTanjim/nui.nvim",
+  "https://github.com/nvim-tree/nvim-web-devicons",
+
+  -- Appearance
+  "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/mawkler/modicator.nvim",
+
+  -- UI and keybinding hints
+  "https://github.com/rcarriga/nvim-notify",
+  "https://github.com/folke/noice.nvim",
+  "https://github.com/folke/which-key.nvim",
+
   -- File navigation
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/refractalize/oil-git-status.nvim",
@@ -8,21 +23,13 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope-ui-select.nvim",
   "https://github.com/nvim-telescope/telescope-frecency.nvim",
 
-  -- Appearance
-  "https://github.com/folke/tokyonight.nvim",
-  "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/mawkler/modicator.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons",
-  "https://github.com/rcarriga/nvim-notify",
-  "https://github.com/MunifTanjim/nui.nvim",
-  "https://github.com/folke/noice.nvim",
-
   -- Editing
+  "https://github.com/nvim-mini/mini.nvim",
 
-  -- Syntax / Tree-sitter
+  -- Syntax
   "https://github.com/nvim-treesitter/nvim-treesitter",
 
-  -- LSP, Completion, Formatting
+  -- Language tooling
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/saghen/blink.lib",
   "https://github.com/saghen/blink.cmp",
@@ -37,12 +44,6 @@ vim.pack.add({
   "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/sindrets/diffview.nvim",
   "https://github.com/NeogitOrg/neogit",
-
-  -- AI
-
-  -- Utilities
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/folke/which-key.nvim",
 })
 
 -- Clean up plugins removed from the declarations above.
@@ -64,6 +65,7 @@ require("plugins.treesitter")
 require("plugins.notify")
 require("plugins.lualine")
 require("plugins.misc")
+require("plugins.mini")
 require("plugins.blink")
 require("plugins.diagnostics")
 require("plugins.lsp")
