@@ -11,6 +11,7 @@ vim.pack.add({
   -- Appearance
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/mawkler/modicator.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/rcarriga/nvim-notify",
   "https://github.com/MunifTanjim/nui.nvim",
@@ -61,6 +62,7 @@ require("plugins.colorscheme")
 require("plugins.treesitter")
 require("plugins.notify")
 require("plugins.lualine")
+require("plugins.misc")
 require("plugins.blink")
 require("plugins.diagnostics")
 require("plugins.lsp")
