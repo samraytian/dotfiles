@@ -26,6 +26,7 @@ vim.pack.add({
   -- Editing
   "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/folke/flash.nvim",
+  "https://github.com/Wansmer/treesj",
 
   -- Syntax
   "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -68,6 +69,7 @@ require("plugins.lualine")
 require("plugins.misc")
 require("plugins.mini")
 require("plugins.flash")
+require("plugins.treesj")
 require("plugins.blink")
 require("plugins.diagnostics")
 require("plugins.lsp")

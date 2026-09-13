@@ -32,6 +32,7 @@ formatting for shell scripts as well.
 | `K` | Show documentation |
 | `<leader>ca`, `<leader>cr` | Code action / rename |
 | `<leader>cf` | Format buffer or selection |
+| `<leader>cm`, `<leader>cs`, `<leader>cj` | Toggle / split / join code block (TreeSJ) |
 | `[d`, `]d` | Previous / next diagnostic |
 | `<leader>xx`, `<leader>xd` | Search workspace / buffer diagnostics |
 | `Ctrl-Space` | Open completion menu |
@@ -45,5 +46,6 @@ formatting for shell scripts as well.
 
 - `:FormatDisable` / `:FormatEnable`: turn format-on-save off / on; add `!` for the current buffer only.
 - `:WorkspaceDiagnostics`: request diagnostics for unopened workspace files.
+- `:TSJToggle` / `:TSJSplit` / `:TSJJoin`: toggle / split / join supported code structures; requires the language's Tree-sitter parser.
 - `:lua vim.pack.update()`: update plugins; run `:TSUpdate` afterward to update syntax parsers.
 - `:checkhealth`: check the environment when something is not working.
