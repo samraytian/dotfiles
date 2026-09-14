@@ -21,6 +21,7 @@ cmp.setup({
       end,
     },
   },
+  snippets = { preset = "luasnip" },
   sources = { default = { "lsp", "path", "snippets", "buffer" } },
   fuzzy = { implementation = "prefer_rust" },
   completion = {

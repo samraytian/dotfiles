@@ -34,6 +34,8 @@ vim.pack.add({
 
   -- Language tooling
   "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/L3MON4D3/LuaSnip",
+  "https://github.com/rafamadriz/friendly-snippets",
   "https://github.com/saghen/blink.lib",
   "https://github.com/saghen/blink.cmp",
   "https://github.com/stevearc/conform.nvim",
@@ -73,6 +75,7 @@ require("plugins.flash")
 require("plugins.treesj")
 -- Install Tab mappings before Blink captures them as snippet fallbacks.
 require("plugins.tabout")
+require("plugins.luasnip")
 require("plugins.blink")
 require("plugins.diagnostics")
 require("plugins.lsp")
