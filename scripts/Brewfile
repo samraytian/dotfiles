@@ -29,6 +29,7 @@ brew "gh"           # GitHub CLI tool
 brew "lazygit"
 brew "mas"          # Mac App Store command-line interface
 brew "mole"         # Clean, uninstall, optimize, and monitor your Mac from the terminal
+brew "pngpaste"     # Paste PNG images from the clipboard to files
 brew "pandoc"       # Universal document converter
 brew "sqlite"       # Command-line interface for SQLite databases
 brew "tmux"
