@@ -25,4 +25,10 @@ cd ~/dotfiles && make unlink
 
 ## Neovim
 
-The Neovim configuration lives in its own private repository, [samraytian/nvim](https://github.com/samraytian/nvim). `scripts/bootstrap.sh` clones it to `~/.config/nvim`; the Brewfile still installs the `neovim` binary and language tooling. Cloning requires Git Credential Manager authentication (interactive once per machine).
+The Neovim configuration lives in its own private repository, [samraytian/nvim](https://github.com/samraytian/nvim). Clone it manually:
+
+```bash
+git clone https://github.com/samraytian/nvim.git ~/.config/nvim
+```
+
+The Brewfile still installs the `neovim` binary and language tooling. Cloning requires Git Credential Manager authentication (interactive once per machine).

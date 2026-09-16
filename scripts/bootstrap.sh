@@ -88,32 +88,6 @@ else
   echo "No Brewfile found, skipping package installation."
 fi
 
-## =====================
-## Neovim configuration (separate private repository)
-## =====================
-
-NVIM_DIR="$HOME/.config/nvim"
-
-if [ -L "$NVIM_DIR" ]; then
-  echo "Removing legacy nvim symlink (pre-split setup)..."
-  rm "$NVIM_DIR"
-fi
-
-if [ ! -d "$NVIM_DIR" ]; then
-  echo "Cloning nvim configuration repository..."
-  git clone https://github.com/samraytian/nvim.git "$NVIM_DIR"
-else
-  echo "Nvim configuration already cloned, pulling latest..."
-  pushd "$NVIM_DIR" >/dev/null || exit 1
-  git remote set-url origin https://github.com/samraytian/nvim.git
-  if [ -z "$(git status --porcelain)" ]; then
-    git pull origin main
-  else
-    echo "⚠️ Local changes detected in nvim config, skipping git pull."
-  fi
-  popd >/dev/null || exit 1
-fi
-
 echo "Setting up symlinks for dotfiles..."
 make -C "$HOME/dotfiles" link
 

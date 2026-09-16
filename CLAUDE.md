@@ -6,12 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal macOS dotfiles. Configuration lives in `packages/<name>/` and is deployed by symlinking into `$HOME` and `~/.config`; edits are live immediately. There is no build, test, or lint step for the repo itself.
 
-The Neovim configuration lives in a separate private repository, `samraytian/nvim` (its history was extracted from this repo); `scripts/bootstrap.sh` clones it to `~/.config/nvim`.
+The Neovim configuration lives in a separate private repository, `samraytian/nvim` (its history was extracted from this repo); clone it to `~/.config/nvim` manually.
 
 ## Commands
 
 - `make link` / `make unlink` — create / remove dotfile symlinks. Both are safe: linking refuses to overwrite real files or unrelated symlinks, unlinking removes only links that point back into this repo.
-- `scripts/bootstrap.sh` — full environment bootstrap (Xcode CLT, Homebrew, Brewfile, nvim config clone, symlinks, macOS defaults). macOS-only. Cloning the private nvim repository requires Git Credential Manager authentication (interactive once per machine).
+- `scripts/bootstrap.sh` — full environment bootstrap (Xcode CLT, Homebrew, Brewfile, symlinks, macOS defaults). macOS-only. It does not clone the private nvim configuration repository — do that manually.
 
 ## Architecture
 
