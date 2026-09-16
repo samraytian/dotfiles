@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bo
 
 ## Managing symlinks
 
-The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/tmux/`, `packages/ghostty/`, `packages/nvim/`, and `packages/zed/` are linked as complete configuration directories.
+The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/tmux/`, `packages/ghostty/`, and `packages/zed/` are linked as complete configuration directories.
 
 ```bash
 # Create all symlinks
@@ -22,3 +22,7 @@ cd ~/dotfiles && make unlink
 ```
 
 `make unlink` removes only links that point to the corresponding package. Creating links fails safely if a target already contains a real file or an unrelated symlink; resolve that conflict manually before retrying.
+
+## Neovim
+
+The Neovim configuration lives in its own private repository, [samraytian/nvim](https://github.com/samraytian/nvim). `scripts/bootstrap.sh` clones it to `~/.config/nvim`; the Brewfile still installs the `neovim` binary and language tooling. Cloning requires Git Credential Manager authentication (interactive once per machine).

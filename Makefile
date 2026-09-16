@@ -41,7 +41,6 @@ link:
 	$(call create_link,$(PKG_DIR)/starship/starship.toml,$(HOME)/.config/starship.toml)
 	$(call create_link,$(PKG_DIR)/ghostty,$(HOME)/.config/ghostty)
 	$(call create_link,$(PKG_DIR)/tmux,$(HOME)/.config/tmux)
-	$(call create_link,$(PKG_DIR)/nvim,$(HOME)/.config/nvim)
 	$(call create_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
 	$(call create_link,$(PKG_DIR)/zed,$(HOME)/.config/zed)
 	@/bin/echo '✅ Dotfiles symlinks created'
@@ -54,7 +53,6 @@ unlink:
 	$(call remove_link,$(PKG_DIR)/starship/starship.toml,$(HOME)/.config/starship.toml)
 	$(call remove_link,$(PKG_DIR)/ghostty,$(HOME)/.config/ghostty)
 	$(call remove_link,$(PKG_DIR)/tmux,$(HOME)/.config/tmux)
-	$(call remove_link,$(PKG_DIR)/nvim,$(HOME)/.config/nvim)
 	$(call remove_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
 	$(call remove_link,$(PKG_DIR)/zed,$(HOME)/.config/zed)
 	@/bin/echo '✅ Dotfiles symlinks removed'
