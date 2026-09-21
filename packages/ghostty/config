@@ -28,7 +28,7 @@ window-padding-color = background
 window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8
-window-height = 52
+window-height = 53
 window-width = 160
 
 # macOS
