@@ -20,7 +20,7 @@ font-thicken = true
 # Background
 background-opacity-cells = true
 background-opacity = 1.0
-background-blur = macos-glass-regular
+# background-blur = macos-glass-regular
 
 # Window
 window-decoration = auto
