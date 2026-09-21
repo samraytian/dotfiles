@@ -1,7 +1,11 @@
-// Use Zellij's full interface with the tab bar and keybinding hints.
-default_layout "default"
+default_layout "compact"
 
-// Use Zellij's built-in Tokyo Night theme.
+plugins {
+    compact-bar location="zellij:compact-bar" {
+        tooltip "Alt /"
+    }
+}
+
 theme "tokyo-night"
 
 // Use the macOS clipboard explicitly instead of relying on terminal support.
