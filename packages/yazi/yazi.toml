@@ -1,1 +1,11 @@
 #:schema https://yazi-rs.github.io/schemas/yazi.json
+
+[[plugin.prepend_fetchers]]
+url = "*"
+run = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url = "*/"
+run = "git"
+group = "git"
