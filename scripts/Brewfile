@@ -34,6 +34,7 @@ brew "pandoc"       # Universal document converter
 brew "sqlite"       # Command-line interface for SQLite databases
 brew "tmux"
 brew "watchexec"    # Executes commands in response to file modifications
+brew "zellij"       # Terminal workspace and multiplexer
 
 ## =====================
 ## Fonts

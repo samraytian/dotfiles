@@ -1,0 +1,14 @@
+// Use Zellij's full interface with the tab bar and keybinding hints.
+default_layout "default"
+
+// Use Zellij's built-in Tokyo Night theme.
+theme "tokyo-night"
+
+// Use the macOS clipboard explicitly instead of relying on terminal support.
+copy_command "pbcopy"
+copy_clipboard "system"
+
+mouse_mode true
+pane_frames true
+scroll_buffer_size 10000
+show_release_notes false
