@@ -12,6 +12,23 @@ theme "tokyo-night"
 copy_command "pbcopy"
 copy_clipboard "system"
 
+// Ctrl-s belongs to the editor (nvim :write) and to readline, so stop swallowing it
+// and move Zellij's scroll mode to Alt-s. Scroll mode still exits with Esc / Ctrl c,
+// and Ctrl-b [ (tmux mode) remains available as a second entry point.
+keybinds {
+    unbind "Ctrl s"
+
+    normal {
+        bind "Alt s" { SwitchToMode "Scroll"; }
+    }
+    scroll {
+        bind "Alt s" { SwitchToMode "Normal"; }
+    }
+    search {
+        bind "Alt s" { SwitchToMode "Normal"; }
+    }
+}
+
 mouse_mode true
 pane_frames true
 scroll_buffer_size 10000
