@@ -15,8 +15,16 @@ copy_clipboard "system"
 // Ctrl-s belongs to the editor (nvim :write) and to readline, so stop swallowing it
 // and move Zellij's scroll mode to Alt-s. Scroll mode still exits with Esc / Ctrl c,
 // and Ctrl-b [ (tmux mode) remains available as a second entry point.
+//
+// Ctrl-h belongs to the editor as well (nvim <C-h> switches to the window on the
+// left). In current Zellij it only enters Move mode, while pane focus already lives
+// on Alt-h/j/k/l and the Alt-arrow keys, so stop swallowing it and put Move mode on
+// Alt-m instead.
+//
+// Zellij only reads the first top-level `unbind` node, so every unbound key has to
+// live in this one node.
 keybinds {
-    unbind "Ctrl s"
+    unbind "Ctrl s" "Ctrl h"
 
     normal {
         bind "Alt s" { SwitchToMode "Scroll"; }
@@ -26,6 +34,13 @@ keybinds {
     }
     search {
         bind "Alt s" { SwitchToMode "Normal"; }
+    }
+
+    shared_except "move" "locked" {
+        bind "Alt m" { SwitchToMode "Move"; }
+    }
+    move {
+        bind "Alt m" { SwitchToMode "Normal"; }
     }
 }
 
