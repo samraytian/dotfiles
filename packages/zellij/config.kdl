@@ -23,6 +23,9 @@ copy_clipboard "system"
 //
 // Zellij only reads the first top-level `unbind` node, so every unbound key has to
 // live in this one node.
+// Alt i moves the current tab left, Alt o moves it right (default Zellij
+// keybindings, kept as-is; documented here for discoverability).
+
 keybinds {
     unbind "Ctrl s" "Ctrl h"
 
