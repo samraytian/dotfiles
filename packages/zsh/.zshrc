@@ -18,6 +18,15 @@ export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 [ -f "$HOME/dotfiles/.secrets" ] && source "$HOME/dotfiles/.secrets"
 
 # ====================
+# Terminal
+# ====================
+
+# Release Ctrl-s from XOFF flow control, otherwise the tty driver swallows it and
+# freezes output. This lets apps receive it instead (nvim <C-s> save, and zellij
+# passing Ctrl-s through since it is unbound in the zellij keybinds).
+[[ -t 0 ]] && stty -ixon
+
+# ====================
 # History
 # ====================
 HISTFILE="$XDG_STATE_HOME/zsh/history"
