@@ -102,6 +102,7 @@ cask "claude-code"
 cask "codex"
 cask "chatgpt"
 brew "codexbar"     # See where your AI spend goes
+brew "herdr"       # Agent multiplexer that lives in your terminal
 
 ## =====================
 ## Applications
