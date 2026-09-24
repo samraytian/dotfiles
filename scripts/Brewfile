@@ -102,7 +102,6 @@ cask "claude-code"
 cask "codex"
 cask "chatgpt"
 brew "codexbar"     # See where your AI spend goes
-brew "ollama"       # Run large language models locally
 
 ## =====================
 ## Applications
