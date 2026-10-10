@@ -109,6 +109,7 @@ brew "herdr"       # Agent multiplexer that lives in your terminal
 ## =====================
 cask "caskhub"
 cask "google-chrome"
+cask "iina"
 cask "localsend"
 cask "mac-mouse-fix"
 cask "movist-pro"
