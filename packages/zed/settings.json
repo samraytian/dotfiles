@@ -46,9 +46,9 @@
     },
     "default_model": {
       "provider": "openai-subscribed",
-      "model": "gpt-6-astra",
+      "model": "gpt-6.1-sol",
       "enable_thinking": true,
-      "effort": "medium"
+      "effort": "low"
     },
     "commit_message_model": {
       "provider": "openai-subscribed",
@@ -75,9 +75,6 @@
       "default_config_options": {
         "fast-mode": true
       },
-      "type": "registry"
-    },
-    "claude-acp": {
       "type": "registry"
     }
   },
