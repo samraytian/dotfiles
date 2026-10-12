@@ -95,15 +95,6 @@ cask "fork"
 cask "visual-studio-code"
 
 ## =====================
-## AI
-## =====================
-cask "cc-switch"
-cask "claude-code"
-cask "codex"
-cask "chatgpt"
-brew "herdr"       # Agent multiplexer that lives in your terminal
-
-## =====================
 ## Applications
 ## =====================
 cask "caskhub"
