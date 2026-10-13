@@ -96,7 +96,7 @@ make -C "$HOME/dotfiles" link
 ## =====================
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Applying macOS defaults..."
-  "$HOME/dotfiles/scripts/macos-defaults.sh"
+  "$HOME/dotfiles/scripts/setup-macos.sh"
 fi
 
 echo "✅ Dotfiles installation complete!"

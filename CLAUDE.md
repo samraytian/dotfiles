@@ -30,4 +30,4 @@ Use Conventional Commits: `<type>(<scope>): <summary>`. Types: `feat`, `fix`, `r
 
 ## Security
 
-Never commit credentials, tokens, machine-specific paths, or private settings; `.secrets` is local-only (gitignored, sourced by `.zshrc`). Review changes to `scripts/bootstrap.sh`, `scripts/macos-defaults.sh`, and the `Makefile` especially carefully — they alter a contributor's shell environment and symlinked files.
+Never commit credentials, tokens, machine-specific paths, or private settings; `.secrets` is local-only (gitignored, sourced by `.zshrc`). Review changes to `scripts/bootstrap.sh`, `scripts/setup-macos.sh`, and the `Makefile` especially carefully — they alter a contributor's shell environment and symlinked files.
