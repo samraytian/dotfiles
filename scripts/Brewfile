@@ -64,6 +64,12 @@ brew "basedpyright"
 brew "ruff"
 
 ## =====================
+## Emacs
+## =====================
+tap "jimeh/emacs-builds"
+cask "jimeh/emacs-builds/emacs-app"
+
+## =====================
 ## Development environment
 ## =====================
 brew "bun"
