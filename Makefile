@@ -34,6 +34,7 @@ define remove_link
 endef
 
 link:
+	$(call create_link,$(PKG_DIR)/agents,$(HOME)/.config/agents)
 	$(call create_link,$(PKG_DIR)/git/.gitconfig,$(HOME)/.gitconfig)
 	$(call create_link,$(PKG_DIR)/zsh/.zprofile,$(HOME)/.zprofile)
 	$(call create_link,$(PKG_DIR)/zsh/.zshenv,$(HOME)/.zshenv)
@@ -48,6 +49,7 @@ link:
 	@/bin/echo '✅ Dotfiles symlinks created'
 
 unlink:
+	$(call remove_link,$(PKG_DIR)/agents,$(HOME)/.config/agents)
 	$(call remove_link,$(PKG_DIR)/git/.gitconfig,$(HOME)/.gitconfig)
 	$(call remove_link,$(PKG_DIR)/zsh/.zprofile,$(HOME)/.zprofile)
 	$(call remove_link,$(PKG_DIR)/zsh/.zshenv,$(HOME)/.zshenv)
