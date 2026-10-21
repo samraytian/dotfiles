@@ -66,8 +66,8 @@ brew "ruff"
 ## =====================
 ## Emacs
 ## =====================
-tap "jimeh/emacs-builds"
-cask "jimeh/emacs-builds/emacs-app"
+tap "d12frosted/emacs-plus"
+cask "d12frosted/emacs-plus/emacs-plus-app"
 
 ## =====================
 ## Development environment
