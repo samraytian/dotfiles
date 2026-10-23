@@ -103,6 +103,7 @@ cask "visual-studio-code"
 ## =====================
 ## Applications
 ## =====================
+cask "abue-ammar/tinycast/tinycast", trusted: true
 cask "caskhub"
 cask "google-chrome"
 cask "iina"
@@ -111,7 +112,6 @@ cask "mac-mouse-fix"
 cask "movist-pro"
 cask "numi"
 cask "obsidian"
-cask "raycast"
 cask "rectangle-pro"
 cask "tableplus"
 cask "telegram"
