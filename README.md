@@ -25,6 +25,8 @@ cd ~/dotfiles && make unlink
 
 `packages/agents/` manages `~/.config/agents`, including the shared `AGENTS.md` instructions. If that directory already exists, review and merge any local changes into `packages/agents/`, then move the original directory to a backup location before running `make link`.
 
+`packages/pi/extensions/` manages only `~/.pi/agent/extensions`. The rest of the Pi agent directory holds credentials, sessions, and runtime state (`auth.json`, `models-store.json`, `sessions/`, `install/`, `npm/`), so it is intentionally not versioned.
+
 ## Neovim
 
 The Neovim configuration lives in its own private repository, [samraytian/nvim](https://github.com/samraytian/nvim). Clone it manually:
