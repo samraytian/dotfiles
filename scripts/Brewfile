@@ -51,8 +51,7 @@ cask "sf-symbols"
 ## =====================
 ## Input method
 ## =====================
-tap "laishulu/homebrew", trusted: true
-brew "macism"
+brew "laishulu/homebrew/macism", trusted: true
 
 ## =====================
 ## Neovim
