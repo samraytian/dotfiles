@@ -45,7 +45,6 @@ link:
 	$(call create_link,$(PKG_DIR)/yazi,$(HOME)/.config/yazi)
 	$(call create_link,$(PKG_DIR)/zellij,$(HOME)/.config/zellij)
 	$(call create_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
-	$(call create_link,$(PKG_DIR)/zed,$(HOME)/.config/zed)
 	$(call create_link,$(PKG_DIR)/pi/extensions,$(HOME)/.pi/agent/extensions)
 	@/bin/echo '✅ Dotfiles symlinks created'
 
@@ -61,6 +60,5 @@ unlink:
 	$(call remove_link,$(PKG_DIR)/yazi,$(HOME)/.config/yazi)
 	$(call remove_link,$(PKG_DIR)/zellij,$(HOME)/.config/zellij)
 	$(call remove_link,$(PKG_DIR)/neovide,$(HOME)/.config/neovide)
-	$(call remove_link,$(PKG_DIR)/zed,$(HOME)/.config/zed)
 	$(call remove_link,$(PKG_DIR)/pi/extensions,$(HOME)/.pi/agent/extensions)
 	@/bin/echo '✅ Dotfiles symlinks removed'

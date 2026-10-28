@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/samraytian/dotfiles/main/scripts/bo
 
 ## Managing symlinks
 
-The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/agents/`, `packages/tmux/`, `packages/ghostty/`, and `packages/zed/` are linked as complete configuration directories.
+The Makefile manages symlinks from `$HOME` and `~/.config` to the configuration packages with `ln -s`. Application configurations are stored at the root of their package directories. Packages such as `packages/agents/`, `packages/tmux/`, and `packages/ghostty/` are linked as complete configuration directories.
 
 ```bash
 # Create all symlinks
