@@ -104,8 +104,5 @@ eval "$(fzf --zsh)"
 # starship prompt
 eval "$(starship init zsh)"
 
-# codex completions
-eval "$(codex completion zsh)"
-
 # bun completions
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"

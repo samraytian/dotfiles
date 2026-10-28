@@ -70,14 +70,6 @@
   },
   "helix_mode": false,
   "vim_mode": true,
-  "agent_servers": {
-    "codex-acp": {
-      "default_config_options": {
-        "fast-mode": true
-      },
-      "type": "registry"
-    }
-  },
   "languages": {
     "Lua": {
       "tab_size": 2,
