@@ -100,7 +100,7 @@ cask "visual-studio-code"
 ## =====================
 ## Applications
 ## =====================
-cask "abue-ammar/tinycast/tinycast", trusted: true
+cask "tinycast"
 cask "google-chrome"
 cask "iina"
 cask "localsend"
